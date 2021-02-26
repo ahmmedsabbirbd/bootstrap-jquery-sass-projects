@@ -1,0 +1,169 @@
+/************************* 
+	Media Queries
+*************************/
+@media only screen and(min-width: 1800px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 1800px */
+
+@media only screen and(max-width: 1800px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 1800px */
+
+@media only screen and(max-width: 1600px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 1600px */
+
+@media only screen and(max-width: 1460px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 1460px */
+
+@media only screen and(max-width: 1366px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 1366px */
+
+@media only screen and(max-width: 1199px) {
+
+	/*************************
+		Button
+	*************************/
+	.btn {
+	 	padding: 12px 30px;
+	}
+}/* 1199px */
+
+@media only screen and(max-width: 991px) {
+
+	/*************************
+		H1-H6
+	*************************/
+	h1, .h1 {
+		font-size: 28px;
+		line-height: 38px;
+	}
+	h2, .h2 {
+		line-height: 22px;
+	}
+	/*************************
+		Button
+	*************************/
+	.btn {
+	 	font-size: 19px;
+	 	padding: 11px 26px;
+	}
+	 
+}/* 991px */
+
+@media only screen and(max-width: 767px) {
+
+	/*************************
+		H1-H6
+	*************************/
+	h1, .h1 {
+		font-size: 26px;
+		line-height: 36px;
+	}
+	/*************************
+		Button
+	*************************/
+	.btn {
+	 	padding: 11px 22px;
+	}
+	/*************************
+		footer
+	*************************/
+	.footer {
+		padding: 40px 0;
+
+		.widget {
+			text-align: center;
+
+			ul {
+				display: inline-block; 
+			}
+		}
+
+		.socail-widget {
+				float: none;
+				margin-top: 10px;
+				text-align: center; 
+
+				ul { 
+					float: none;
+					margin-bottom: -6px; 
+				}
+		}
+	} 
+}/* 767px */
+
+@media only screen and(max-width: 680px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 680px */
+
+@media only screen and(max-width: 575px) {
+
+	/*************************
+		H1-H6
+	*************************/
+	h1, .h1 {
+		font-size: 25px;
+		line-height: 35px;
+	}
+	/*************************
+		Button
+	*************************/
+	.btn {
+	 	font-size: 17px;
+	 	padding: 9px 15px;
+	}
+	 
+}/* 575px */
+
+@media only screen and(max-width: 480px) {
+
+	/*************************
+		H1-H6
+	*************************/
+	h1, .h1 {
+		font-size: 24px;
+		line-height: 33px;
+	}
+	/*************************
+		Button
+	*************************/
+	.btn {
+	 	font-size: 16px;
+	 	padding: 8px 14px;
+	}
+}/* 480px */
+
+@media only screen and(max-width: 380px) {
+
+	/*************************
+		Home Style
+	*************************/
+	 
+}/* 380px */

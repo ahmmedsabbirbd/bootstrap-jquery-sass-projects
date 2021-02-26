@@ -1,0 +1,302 @@
+/*************************
+	Base style
+*************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* bootstrap-coustom */
+.btn {
+  border-radius: 0px;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* powerby 
+	sabbir  */
+/* base */
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/* extend */
+/* mixin */
+.container {
+  max-width: 1062px;
+}
+
+body * {
+  font-family: "Playfair Display", serif;
+}
+
+h1, .h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: "Playfair Display", serif;
+  color: #626262;
+}
+
+h2, .h2 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  font-family: "Ubuntu", sans-serif;
+  color: #b4ad9e;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  padding: 13px 32px;
+  color: #626262;
+  border: 1px solid #626262;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.btn:hover, .btn:focus {
+  color: #333333;
+  background: #626262;
+}
+
+/*************************
+	header
+*************************/
+/*************************
+	footer
+*************************/
+.footer {
+  padding: 40px 0;
+  background-color: #F0F0F0;
+}
+.footer .widget {
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+.footer .widget ul li {
+  float: left;
+}
+.footer .widget ul li:not(:last-child) {
+  margin-right: 17px;
+}
+.footer .widget ul li a {
+  color: #000;
+  font-size: 14px;
+}
+.footer .widget ul li a:hover {
+  color: #b4ad9e;
+  text-decoration: none;
+}
+.footer .socail-widget {
+  float: right;
+}
+.footer .socail-widget .follow {
+  color: #000;
+  font-size: 14px;
+  margin-right: 17px;
+  font-family: "Playfair Display", serif;
+}
+.footer .socail-widget .follow:hover {
+  color: #b4ad9e;
+  text-decoration: none;
+}
+.footer .socail-widget ul {
+  float: right;
+}
+.footer .socail-widget ul li a {
+  color: #626262;
+}
+
+/************************* 
+	Media Queries
+*************************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1600px */
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1460px */
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1366px */
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Button
+  *************************/
+  .btn {
+    padding: 12px 30px;
+  }
+}
+/* 1199px */
+@media only screen and (max-width: 991px) {
+  /*************************
+  	H1-H6
+  *************************/
+  h1, .h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  h2, .h2 {
+    line-height: 22px;
+  }
+
+  /*************************
+  	Button
+  *************************/
+  .btn {
+    font-size: 19px;
+    padding: 11px 26px;
+  }
+}
+/* 991px */
+@media only screen and (max-width: 767px) {
+  /*************************
+  	H1-H6
+  *************************/
+  h1, .h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  /*************************
+  	Button
+  *************************/
+  .btn {
+    padding: 11px 22px;
+  }
+
+  /*************************
+  	footer
+  *************************/
+  .footer {
+    padding: 40px 0;
+  }
+  .footer .widget {
+    text-align: center;
+  }
+  .footer .widget ul {
+    display: inline-block;
+  }
+  .footer .socail-widget {
+    float: none;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .footer .socail-widget ul {
+    float: none;
+    margin-bottom: -6px;
+  }
+}
+/* 767px */
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 680px */
+@media only screen and (max-width: 575px) {
+  /*************************
+  	H1-H6
+  *************************/
+  h1, .h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  /*************************
+  	Button
+  *************************/
+  .btn {
+    font-size: 17px;
+    padding: 9px 15px;
+  }
+}
+/* 575px */
+@media only screen and (max-width: 480px) {
+  /*************************
+  	H1-H6
+  *************************/
+  h1, .h1 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  /*************************
+  	Button
+  *************************/
+  .btn {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}
+/* 480px */
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 380px */
+/* Responsive */

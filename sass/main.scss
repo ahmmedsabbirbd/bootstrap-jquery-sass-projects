@@ -1,0 +1,127 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Container width
+	.container {
+		max-width: 1062px;
+	}
+
+	// Color
+	$black: #333333;
+	$dark_black: #626262;
+	$light_black: #b4ad9e;
+
+	// Font 
+	$buntu: 'Ubuntu', sans-serif;
+	$play: 'Playfair Display', serif;
+	$inlata: 'Inconsolata', monospace;
+
+	// Body
+	body * {
+		font-family: $play;
+	}
+
+	// H1 -- h6
+	h1, .h1 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 40px;
+		font-family: $play;
+		color: $dark_black;
+	}
+	h2, .h2 {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		font-family: $buntu;
+		color: $light_black;
+	}
+
+	/// Button /
+	.btn {
+		font-size: 20px;
+		font-weight: 400;
+		font-family: $play;
+		padding: 13px 32px;
+		color: $dark_black;
+		border: 1px solid $dark_black;
+		@include transition(all .3s ease);
+
+		&:hover, &:focus {
+			color: $black;
+			background: $dark_black;
+		}
+	}
+
+/*************************
+	header
+*************************/
+
+
+/*************************
+	footer
+*************************/
+.footer {
+	padding: 40px 0;
+	background-color: #F0F0F0;
+
+	.widget {
+			font-weight: 400;
+			font-family: $play;
+
+		ul {
+
+			li {
+				float: left;
+
+				&:not(:last-child) {
+					margin-right: 17px;
+				}
+
+				a {
+					color: #000;
+					font-size: 14px;
+
+					&:hover {
+						color: $light-black;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.socail-widget {
+		float: right;
+
+		.follow {
+			color: #000;
+			font-size: 14px;
+			margin-right: 17px;
+			font-family: $play;
+
+			&:hover {
+				color: $light_black;
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			float: right;
+
+			li {
+
+				a {
+					color: $dark_black;
+				}
+			}
+		}
+	}
+} 
+
+
+@import "responsive"; /* Responsive */
