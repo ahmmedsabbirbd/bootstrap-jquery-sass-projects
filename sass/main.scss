@@ -57,7 +57,23 @@
 			background: $dark_black;
 		}
 	}
+/*************************
+	popup overly
+*************************/
+.show-overly {
+	opacity: 0;
+	width: 100%;
+	z-index: -1;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	@include transition(all .3s ease);
 
+	&.active {
+		z-index: 9;
+		opacity: .7;
+	}
+}
 /*************************
 	header
 *************************/
@@ -158,6 +174,89 @@
 
 			&:focus {
 				outline: none;
+			}
+		}
+	}
+}
+/*************************
+	articale-area
+*************************/
+.articale-area {
+	margin-bottom: 40px;
+
+	.padding-left {
+		padding-left: 50px;
+
+		.single-articale {
+			margin-bottom: 80px;
+
+			.media {
+				margin-bottom: 30px;
+
+				img {
+					width: 420px;
+				}
+			}
+
+			.content { 
+
+				.title {
+					margin: 25px 0;
+				}
+
+				.descriptsion {
+					font-size: 14px;
+					font-weight: 400;
+					max-width: 430px;
+					line-height: 30px;
+					color: $dark_black;
+					font-family: $play;
+				}
+			}
+		}
+	}
+}
+/*************************
+	newsletter
+*************************/
+.newsletter {
+	padding: 70px 0;
+	background-color: #F0F0F0;
+
+	.content {
+
+		.title {
+			color: #333333;
+			font-size: 30px;
+			margin-bottom: 50px;
+		}
+
+		.form {
+
+			input[type="email"] {
+				border: none;
+				height: 36px;
+				font-size: 14px;
+				min-width: 410px;
+				padding: 8px 1px;
+				color: $dark_black;
+				font-family: $play;
+				padding-right: 42px;
+				background: transparent;
+				border-bottom: 2px solid $dark_black;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			img {
+				top: 72%;
+				right: 31%;
+				width: 38px;
+				height: 26px;
+				cursor: pointer;
+				position: absolute;
 			}
 		}
 	}

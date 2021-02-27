@@ -58,7 +58,34 @@
 			} 
 		}
 	}
-	 
+	/*************************
+		articale-area
+	*************************/
+	.articale-area {
+		margin-bottom: 35px;
+
+		.padding-left {
+
+			.single-articale {
+				margin-bottom: 60px;
+
+				.media {
+					margin-bottom: 25px;
+
+					img {
+						width: 420px;
+					}
+				}
+
+				.content { 
+
+					.title {
+						margin: 23px 0;
+					}
+				}
+			}
+		}
+	}
 }/* 1366px */
 
 @media only screen and(max-width: 1199px) {
@@ -241,6 +268,26 @@
 			}
 		}
 	}
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+		padding: 60px 0;
+
+		.content {
+
+			.title {
+				margin-bottom: 45px;
+			}
+
+			.form {
+
+				input[type="email"] {
+					min-width: 400px;
+				} 
+			}
+		}
+	}
 }/* 1199px */
 
 @media only screen and(max-width: 991px) {
@@ -272,6 +319,7 @@
 			margin-bottom: 60px; 
 
 			img {
+				width: 100%;
 				height: auto;
 			}
 		}
@@ -291,9 +339,84 @@
 				margin-bottom: 35px;
 			} 
 		}
-	}	 
-}/* 991px */
+	}
+	/*************************
+		articale-area
+	*************************/
+	.articale-area {
+		margin-bottom: 10px;
 
+		.padding-left {
+
+			.single-articale {
+				margin-bottom: 40px;
+
+				.media {
+					margin-bottom: 30px;
+
+					img {
+						width: 400px;
+					}
+
+				} 
+
+				.content {
+
+					.title {
+						margin: 10px 0;
+						font-size: 25px;
+					}
+
+					.descriptsion {
+						line-height: 25px;
+					}
+				}
+			}
+		}
+	}
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+		padding: 55px 0;
+
+		.content {
+
+			.title {
+				font-size: 28px;
+				margin-bottom: 35px;
+			}
+
+			.form {
+
+				input[type="email"] {
+					min-width: 370px;
+				} 
+
+				img {
+					top: 69%;
+				}
+			}
+		}
+	}
+}/* 991px */
+@media only screen and(max-width: 840px) { 
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+
+		.content { 
+
+			.form { 
+
+				img {
+					right: 28%;
+				}
+			}
+		}
+	}
+}/* 840px */
 @media only screen and(max-width: 767px) {
 
 	/*************************
@@ -335,7 +458,54 @@
 				margin-bottom: 30px;
 			} 
 		}
-	}	 
+	}
+	/*************************
+		articale-area
+	*************************/
+	.articale-area {
+
+		.padding-left {
+
+			.single-articale {
+
+				.media {
+
+					img {
+						width: 100%;
+						height: auto;
+					}
+
+				} 
+
+				.content { 
+
+					.descriptsion {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+		padding: 50px 0;
+
+		.content {
+
+			.title {
+				font-size: 26px;
+			}
+
+			.form {
+
+				input[type="email"] {
+					min-width: 350px;
+				}  
+			}
+		}
+	}
 	/*************************
 		footer
 	*************************/
@@ -366,8 +536,20 @@
 @media only screen and(max-width: 680px) {
 
 	/*************************
-		Home Style
+		newsletter
 	*************************/
+	.newsletter {
+
+		.content { 
+
+			.form { 
+
+				img {
+					right: 25%;
+				}
+			}
+		}
+	}
 	 
 }/* 680px */
 
@@ -400,7 +582,49 @@
 			padding-left: 30px;
 		}
 	}
-	 
+	/*************************
+		articale-area
+	*************************/
+	.articale-area {
+		
+		.padding-left {
+
+			.single-articale {
+
+				.media {
+
+					img {
+						width: 100%;
+						height: auto;
+					}
+
+				} 
+
+				.content { 
+					text-align: center;
+
+					.title {
+					 	font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+
+		.content { 
+
+			.form { 
+
+				img {
+					right: 20%;
+				}
+			}
+		}
+	}
 }/* 575px */
 
 @media only screen and(max-width: 480px) {
@@ -419,12 +643,39 @@
 	 	font-size: 16px;
 	 	padding: 8px 14px;
 	}
+	/*************************
+		newsletter
+	*************************/
+	.newsletter {
+
+		.content { 
+
+			.form { 
+
+				img {
+					right: 14%;
+				}
+			}
+		}
+	}
 }/* 480px */
 
 @media only screen and(max-width: 380px) {
 
 	/*************************
-		Home Style
+		newsletter
 	*************************/
+	.newsletter {
+
+		.content { 
+
+			.form { 
+
+				img {
+					right: 4%;
+				}
+			}
+		}
+	}
 	 
 }/* 380px */
