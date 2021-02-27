@@ -39,6 +39,7 @@
 		line-height: 24px;
 		font-family: $buntu;
 		color: $light_black;
+		text-transform: uppercase;
 	}
 
 	/// Button /
@@ -66,7 +67,7 @@
 }
 
 .header {
-		padding: 70px 0;
+	padding: 70px 0;
 
 	.navbar {
 
@@ -112,7 +113,55 @@
 		}
 	}
 }
+/*************************
+	header-media
+*************************/
+.header-media {
+	margin-bottom: 120px;
 
+	.media {
+		margin-bottom: 95px;
+
+		img {
+			width: 1032px;
+			height: 508px;
+		}
+	}
+
+	.content {
+		padding-left: 50px;
+
+		.sub-title {
+			margin-bottom: 25px;
+		}
+
+		.title {
+			margin-bottom: 25px;
+		}
+
+		.descriptsion {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 30px;
+			color: $dark_black;
+			font-family: $play;
+			margin-bottom: 45px;
+		}
+
+		input[type="submit"] {
+			border: none;
+			color: #B4AD9E;
+			font-size: 14px;
+			background: #fff;
+			font-weight: 400;
+			font-family: $buntu;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
 /*************************
 	footer
 *************************/

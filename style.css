@@ -79,6 +79,7 @@ h2, .h2 {
   line-height: 24px;
   font-family: "Ubuntu", sans-serif;
   color: #b4ad9e;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -138,6 +139,48 @@ h2, .h2 {
 .header .navbar .navbar-nav li a:hover, .header .navbar .navbar-nav li a:focus {
   color: #b4ad9e;
   text-decoration: none;
+}
+
+/*************************
+	header-media
+*************************/
+.header-media {
+  margin-bottom: 120px;
+}
+.header-media .media {
+  margin-bottom: 95px;
+}
+.header-media .media img {
+  width: 1032px;
+  height: 508px;
+}
+.header-media .content {
+  padding-left: 50px;
+}
+.header-media .content .sub-title {
+  margin-bottom: 25px;
+}
+.header-media .content .title {
+  margin-bottom: 25px;
+}
+.header-media .content .descriptsion {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #626262;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 45px;
+}
+.header-media .content input[type=submit] {
+  border: none;
+  color: #B4AD9E;
+  font-size: 14px;
+  background: #fff;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+.header-media .content input[type=submit]:focus {
+  outline: none;
 }
 
 /*************************
@@ -201,11 +244,6 @@ h2, .h2 {
   *************************/
 }
 /* 1800px */
-@media only screen and (max-width: 1600px) {
-  /*************************
-  	Home Style
-  *************************/
-}
 /* 1600px */
 @media only screen and (max-width: 1460px) {
   /*************************
@@ -215,8 +253,23 @@ h2, .h2 {
 /* 1460px */
 @media only screen and (max-width: 1366px) {
   /*************************
-  	Home Style
+  	header-media
   *************************/
+  .header-media {
+    margin-bottom: 100px;
+  }
+  .header-media .media {
+    margin-bottom: 75px;
+  }
+  .header-media .content .sub-title {
+    margin-bottom: 25px;
+  }
+  .header-media .content .title {
+    margin-bottom: 25px;
+  }
+  .header-media .content .descriptsion {
+    margin-bottom: 45px;
+  }
 }
 /* 1366px */
 @media only screen and (max-width: 1199px) {
@@ -372,6 +425,29 @@ h2, .h2 {
     font-size: 19px;
     padding: 11px 26px;
   }
+
+  /*************************
+  	header-media
+  *************************/
+  .header-media {
+    margin-bottom: 70px;
+  }
+  .header-media .media {
+    margin-bottom: 60px;
+  }
+  .header-media .media img {
+    height: auto;
+  }
+  .header-media .content .sub-title {
+    margin-bottom: 15px;
+  }
+  .header-media .content .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .header-media .content .descriptsion {
+    margin-bottom: 35px;
+  }
 }
 /* 991px */
 @media only screen and (max-width: 767px) {
@@ -388,6 +464,27 @@ h2, .h2 {
   *************************/
   .btn {
     padding: 11px 22px;
+  }
+
+  /*************************
+  	header-media
+  *************************/
+  .header-media {
+    margin-bottom: 70px;
+  }
+  .header-media .media {
+    margin-bottom: 55px;
+  }
+  .header-media .content .sub-title {
+    margin-bottom: 12px;
+  }
+  .header-media .content .title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .header-media .content .descriptsion {
+    line-height: 27px;
+    margin-bottom: 30px;
   }
 
   /*************************
@@ -434,6 +531,16 @@ h2, .h2 {
   .btn {
     font-size: 17px;
     padding: 9px 15px;
+  }
+
+  /*************************
+  	header-media
+  *************************/
+  .header-media .media {
+    margin-bottom: 45px;
+  }
+  .header-media .content {
+    padding-left: 30px;
   }
 }
 /* 575px */

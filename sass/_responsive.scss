@@ -19,9 +19,7 @@
 
 @media only screen and(max-width: 1600px) {
 
-	/*************************
-		Home Style
-	*************************/
+	
 	 
 }/* 1600px */
 
@@ -36,8 +34,30 @@
 @media only screen and(max-width: 1366px) {
 
 	/*************************
-		Home Style
+		header-media
 	*************************/
+	.header-media {
+		margin-bottom: 100px;
+
+		.media {
+			margin-bottom: 75px; 
+		}
+
+		.content {
+
+			.sub-title {
+				margin-bottom: 25px;
+			}
+
+			.title {
+				margin-bottom: 25px;
+			}
+
+			.descriptsion { 
+				margin-bottom: 45px;
+			} 
+		}
+	}
 	 
 }/* 1366px */
 
@@ -242,7 +262,36 @@
 	 	font-size: 19px;
 	 	padding: 11px 26px;
 	}
-	 
+	/*************************
+		header-media
+	*************************/
+	.header-media {
+		margin-bottom: 70px;
+
+		.media {
+			margin-bottom: 60px; 
+
+			img {
+				height: auto;
+			}
+		}
+
+		.content {
+
+			.sub-title {
+				margin-bottom: 15px;
+			}
+
+			.title {
+				font-size: 28px;
+				margin-bottom: 15px;
+			}
+
+			.descriptsion { 
+				margin-bottom: 35px;
+			} 
+		}
+	}	 
 }/* 991px */
 
 @media only screen and(max-width: 767px) {
@@ -260,6 +309,33 @@
 	.btn {
 	 	padding: 11px 22px;
 	}
+	/*************************
+		header-media
+	*************************/
+	.header-media {
+		margin-bottom: 70px;
+
+		.media {
+			margin-bottom: 55px;  
+		}
+
+		.content {
+
+			.sub-title {
+				margin-bottom: 12px;
+			}
+
+			.title {
+				font-size: 26px;
+				margin-bottom: 12px;
+			}
+
+			.descriptsion { 
+				line-height: 27px;
+				margin-bottom: 30px;
+			} 
+		}
+	}	 
 	/*************************
 		footer
 	*************************/
@@ -310,6 +386,19 @@
 	.btn {
 	 	font-size: 17px;
 	 	padding: 9px 15px;
+	}
+	/*************************
+		header-media
+	*************************/
+	.header-media {
+
+		.media {
+			margin-bottom: 45px;  
+		} 
+
+		.content {
+			padding-left: 30px;
+		}
 	}
 	 
 }/* 575px */
