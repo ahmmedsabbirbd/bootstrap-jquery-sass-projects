@@ -61,12 +61,64 @@
 	header
 *************************/
 
+.sidr {
+	display: none;
+}
+
+.header {
+		padding: 70px 0;
+
+	.navbar {
+
+		padding: 0 15px;
+
+		.navbar-header {
+
+			.logo-text {
+ 				
+ 				span {
+ 					color: #000;
+ 					font-size: 30px;
+ 					font-weight: 400;
+ 					letter-spacing: 5px;
+ 					font-family: $inlata;
+ 					text-transform: uppercase;
+ 				}
+			}
+		}
+
+		.navbar-nav {
+
+			margin-left: -50px;
+			margin-right: -50px;
+
+			li {
+				padding-left: 50px;
+				padding-right: 50px;
+
+				a {
+
+					font-size: 14px;
+					font-weight: 400;
+					font-family: $play;
+					color: $dark_black;
+
+					&:hover, &:focus {
+						color: $light_black;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
 
 /*************************
 	footer
 *************************/
 .footer {
 	padding: 40px 0;
+	margin-top: 50px;
 	background-color: #F0F0F0;
 
 	.widget {
