@@ -1,0 +1,61 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	//fonts 
+	$pango:'Pangolin', cursive;
+
+/*************************
+	video-popup
+*************************/
+.video-popup {
+	background-size: cover;
+	background-position: center center;
+	background-image: url('images/img/video-popup.jpg');
+
+	.content {
+		color: white;
+		padding: 150px 0;
+		text-align: center;
+
+		.popup-icon {
+			margin-bottom: 15px;
+
+			a {
+
+				i.fa-play {
+					color: red;
+					width: 100px;
+					height: 100px;
+					font-size: 40px;
+					padding-left: 5px;
+					background: white;
+					line-height: 97px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		span {
+
+			font-size: 18px;
+			font-family: $pango;
+		}
+
+		.title {
+			font-size: 40px;
+			line-height: 50px;
+		}
+
+		.sub-title {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 40px;
+		}
+	}
+}
+
+@import "responsive"; /* Responsive */

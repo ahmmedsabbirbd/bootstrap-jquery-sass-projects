@@ -1,0 +1,134 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$blue: #04A1ED;
+	$white: #F1F1F1;
+	$black: #A7A7A7;
+	$dark_white: #BABABA;
+	$dark_black: #D2D2D2;
+
+	// Font 
+
+	// H1 -- h6
+	h1, .h1 {
+		color: #383838;
+		font-size: 35px;
+		line-height: 45px;
+	}
+
+	h2, .h2 {
+		color: #373737;
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+/*************************
+	slick-staff
+*************************/
+.slick-staff {
+	padding: 110px 0; 
+
+	.content {
+		max-width: 370px;
+		margin-bottom: 15px;
+
+		.title {
+			position: relative;
+			margin-bottom: 35px;
+			padding-bottom: 20px;
+
+			&:after {
+				left: 0;
+				bottom: 0;
+				height: 6px;
+				content: "";
+				width: 70px;
+				background: $blue;
+				border-radius: 1px;
+				position: absolute;
+			}
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 25px;
+			color: $dark_white;
+		}
+	}
+
+	.slick {
+		padding: 70px 0;
+		position: relative;
+
+		.slick-prev {
+			top: 20px;
+			width: 20px;
+			left: 1102px;
+			position: absolute;
+
+			&:before {
+				color: #868686;
+				font-size: 30px;
+				content: "\f30a";
+				font-weight: 700;
+				background: $dark_white;
+				padding: 7px 6px 7px 11px;
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+
+		.slick-next {
+			top: 20px;
+			width: 20px;
+			position: absolute;
+
+			&:before {
+				color: $white;
+				font-size: 30px;
+				content: "\f30b";
+				font-weight: 700;
+				background: $blue;
+				padding: 7px 11px 7px 6px;
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+
+		.staff-item {
+
+			.media {
+				max-width: 200px;
+				overflow: hidden;
+				margin-left: auto;
+				max-height: 200px;
+				margin-right: auto;
+				border-radius: 50%; 
+				margin-bottom: 20px;
+
+				img {
+					width: 285px;
+					height: 285px;
+				}
+			}
+		}
+
+		.staff-meta {
+			margin-bottom: 20px; 
+
+			p {
+				color: $dark_white;
+			}
+		}
+
+		.description {
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
+} 
+
+@import "responsive"; /* Responsive */

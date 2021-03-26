@@ -1,0 +1,124 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$white: #EFFFFF;
+	$green: #C3C956;
+	$dark_white: #9EB7DE;
+	// Font 
+	$morat: 'Montserrat', sans-serif;
+
+	// H1, h2, h3, h4, h5, h6
+	h2, .h2	{
+		color: $white;
+		font-size: 34px;
+    	line-height: 44px;
+    	font-weight: 300;
+    }
+
+    p {
+    	font-size: 20px;
+    	font-weight: 200;
+    	line-height: 30px;
+    	color: $dark_white;
+    }
+
+    .btn {
+    	color: $white;
+    	font-size: 18px;
+    	background: $green;
+    	padding: 11px 20px;
+
+    	&:hover, &:focus { 
+    		box-shadow: none;
+    		background-color: red;
+    	}
+    }
+
+    body {
+    	font-family: $morat;
+    }
+
+    .zigzag-text {
+		z-index: 2;
+		padding: 80px 0;
+		max-width: 550px;
+    	position: relative;
+
+
+		.title {
+			margin-bottom: 15px;
+		}
+
+		p {
+			margin-bottom: 15px;
+		} 
+	}
+
+	.zigzag-text:after {
+		top: 0;
+		left: 0;
+		content: '';
+		width: 206%;
+		z-index: -1;
+		opacity: 0.9;
+		height: 100%;
+		position: absolute;
+		margin-left: -500px;
+		transform: skew(12deg);
+		background-color: #072250;
+	}
+
+
+hr {
+	margin: 0 0;
+	padding: 10px 0;
+	background-color: #BBC94C;
+}
+/*************************
+	commercial-services
+*************************/
+.commercial-services {
+	margin-top: 50px;
+	background-size: cover;
+	background-position: center center;
+	background-image: url("images/img/zigzag 1.jpg");
+}
+
+/*************************
+	residential-services
+*************************/
+.residential-services {
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	background-image: url("images/img/zigzag (1).jpg");
+
+	.zigzag-text {
+		margin-left: auto;
+	}
+
+	.zigzag-text:after {
+		top: 0;
+		left: 0;
+		content: '';
+		width: 206%;
+		z-index: -1;
+		opacity: 0.9;
+		height: 100%;
+		position: absolute;
+		margin-left: -100px;
+		transform: skew(12deg);
+		background-color: #072250;
+	}
+}
+
+.footer {
+	margin-top: 50px;
+}
+
+@import "responsive"; /* Responsive */

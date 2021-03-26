@@ -1,0 +1,70 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+ 
+/*************************
+	zigzag
+*************************/
+.zigzag {
+	position: relative;
+
+	&:after {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -2;
+		width: 100%;
+		content: '';
+		height: 102%;
+		margin-top: -61px;
+		position: absolute;
+		background-size: cover;
+		transform: skew(0deg, 3deg);
+		background-position: center center;
+		background-image: url("images/img/background.jpg");
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 102%;
+		opacity: 0.8;
+		margin-top: -61px;
+		position: absolute;
+		background-color: #262C3C;
+		transform: skew(0deg, 3deg);
+	}
+
+	.content {
+		max-width: 368px;
+		margin-left: auto;
+		padding: 250px 0px;
+
+		h2 {
+			color: #F7FDFD;
+			margin-bottom: 25px;
+		}
+
+		hr {
+			padding: 2px 0;
+			margin-left: 300px;
+			background: #F7FDFD;
+		}
+
+		p {
+			color: #F7FDFD;
+			margin-top: 25px;
+
+		}
+	}
+}
+
+
+@import "responsive"; /* Responsive */

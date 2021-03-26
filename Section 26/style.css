@@ -1,0 +1,229 @@
+/*************************
+	Base style
+///***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*/// base ///*/
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/*/// extend ///*/
+/*/// mixin ///*/
+/*************************
+	Bootstrap Coustom
+///***********************/
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*/// coustom-base ///*/
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  border: none;
+  color: #373737;
+  padding: 12px 0;
+  font-size: 15px;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: #F9F9F9;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  outline: none;
+}
+
+.btn {
+  color: #FFFFFF;
+  padding: 10px 31px;
+  background: #4DAEFE;
+}
+.btn:hover {
+  background: #F92672;
+}
+
+/*************************
+	Home pages Style
+///**********************/
+.form-area {
+  margin: 120px 0;
+}
+.form-area .title {
+  color: #373737;
+  margin-bottom: 60px;
+}
+.form-area .submit-form textarea {
+  resize: none;
+  height: 150px;
+}
+.form-area .contact-info {
+  min-height: 447px;
+  padding-top: 47px;
+  padding-left: 35px;
+  background: #4DAEFE;
+  position: relative;
+}
+.form-area .contact-info .title {
+  color: #FFFFFF;
+  margin-bottom: 35px;
+}
+.form-area .contact-info .socail-details li {
+  color: #FFFFFF;
+}
+.form-area .contact-info .socail-details li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.form-area .contact-info .socail-details li i {
+  font-size: 20px;
+  position: absolute;
+}
+.form-area .contact-info .socail-details li a {
+  color: #FFFFFF;
+  margin-left: 60px;
+}
+.form-area .contact-info .socail-details li a:hover {
+  text-decoration: none;
+}
+.form-area .contact-info .socail-link {
+  margin-top: 36px;
+}
+.form-area .contact-info .socail-link li {
+  display: inline;
+}
+.form-area .contact-info .socail-link li a {
+  width: 50px;
+  height: 50px;
+  color: #373737;
+  font-size: 20px;
+  line-height: 48px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding-left: 17px;
+  display: inline-block;
+}
+.form-area .contact-info .socail-link li a:hover {
+  color: #4DAEFE;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1600px ///*/
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1460px ///*/
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1366px ///*/
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Home Style
+  ///**********************/
+  .form-area .contact-info {
+    padding-left: 25px;
+  }
+  .form-area .contact-info .socail-details li a {
+    margin-left: 35px;
+  }
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  /*************************
+  	Home Style
+  ///**********************/
+  .form-area .contact-info {
+    margin-top: 40px;
+  }
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 680px ///*/
+@media only screen and (max-width: 575px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 575px ///*/
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 480px ///*/
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 380px ///*/
+/*/// Responsive ///*/

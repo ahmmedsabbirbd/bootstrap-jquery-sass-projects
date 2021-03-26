@@ -1,0 +1,124 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$blue: #90A23C;
+	$black: #231F20;
+	$dark_white: #8F8F8F; 
+
+	// H1 -- h6
+	h2, .h2 {
+		color: $black;
+		font-size: 35px;
+		line-height: 45px;
+	}
+
+	h4, .h4 {
+		color: $black;
+		font-size: 26px;
+		line-height: 35px;
+	}
+	
+
+/*************************
+	happy-clients
+*************************/
+.happy-clients {
+
+	.content {
+		margin-bottom: 50px;
+
+		.title {
+			margin-bottom: 10px;
+		}
+
+		.dot {
+
+			span {
+				height: 5px;
+				width: 50px;
+				background: $blue;
+				display: inline-block;
+			}
+
+			.black-dot {
+				width: 30px;
+				margin: 0px 5px;
+				background: $black;
+
+			}
+		}
+	}
+
+	.slick-client {
+
+		.client-item {
+			margin: 3px 0;
+			position: relative;
+			padding: 20px 20px 21px 75px;
+			@include box-shadow(0 0 4px #908980);
+
+			.description {
+				font-style: italic;
+				color: $dark_white;
+				margin-bottom: 15px;
+			}
+
+			.client-detailes { 
+
+				p {
+				color: $dark_white;
+				}
+			}
+
+			&:after {
+				top: 50%;
+				left: 15px;
+				color: $blue;
+				font-size: 25px;
+				content: "\f10e";
+				font-weight: 900;
+				line-height: 35px;
+				position: absolute;
+				margin-top: -17.5px;
+				font-family: "Font Awesome 5 Free";
+			}
+
+			&:before {
+				left: 60px;
+				width: 3px;
+				content: "";
+				height: 140px;
+				position: absolute;
+				background: #E4E4E4;
+			}
+		}
+ 
+ 		.slick-dots {
+ 			bottom:  -95px;
+
+			.slick-active {
+				background: $black;
+				@include transition ( all .3s ease);
+			}
+
+			li {
+				width: 30px;
+				height: 7px;
+				background: $blue;
+
+				button {
+					&:before {
+						content: "";
+					}
+				}				
+			}
+		}
+	}
+}
+
+@import "responsive"; /* Responsive */

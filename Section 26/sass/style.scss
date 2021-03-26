@@ -1,0 +1,126 @@
+/*************************
+	Base style
+///***********************/
+	@import "base";   /*/// base ///*/
+	@import "extend"; /*/// extend ///*/
+	@import "mixin";  /*/// mixin ///*/
+	@import "coustom-base";  /*/// coustom-base ///*/
+
+	/// Container width
+
+	/// Color
+	$white: #FFFFFF;
+	$black: #373737;
+	$green: #4DAEFE;
+	$dark_white: #F9F9F9;
+
+	/// Input
+	input[type="text"], input[type="email"], textarea {
+		width: 100%;
+		border: none;
+		color: $black;
+		padding: 12px 0;
+		font-size: 15px;
+		padding-left: 20px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		background: $dark_white;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	/// Button 
+	.btn {
+		color: $white;
+		padding: 10px 31px;
+		background: $green;
+
+		&:hover {
+			background: #F92672;
+		}
+	}
+/*************************
+	Home pages Style
+///**********************/
+.form-area {
+	margin: 120px 0;
+
+	.title {
+		color: $black;
+		margin-bottom: 60px;
+	}
+
+	.submit-form {
+
+		textarea {
+			resize: none;
+			height: 150px;
+		}
+	}
+
+	.contact-info {
+		min-height: 447px;
+		padding-top: 47px;
+		padding-left: 35px;
+		background: $green;
+		position: relative;
+
+		.title {
+			color: $white;
+			margin-bottom: 35px;
+		}
+
+		.socail-details {
+
+			li {
+				color: $white;
+
+				&:not(:last-child) {
+					margin-bottom: 30px;
+				}
+
+				i {
+					font-size: 20px;
+					position: absolute;
+				}
+
+				a {
+					color: $white;
+					margin-left: 60px;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		.socail-link {
+			margin-top: 36px;
+
+			li {
+				display: inline;
+
+				a {
+					width: 50px;
+					height: 50px;
+					color: $black;
+					font-size: 20px;		
+					line-height: 48px;
+					background: $white;
+					border-radius: 50px;
+					padding-left: 	17px;
+					display: inline-block;
+
+					&:hover {
+						color: $green;	
+					}
+				}
+			}
+		}
+	}
+}
+
+@import "responsive"; /*/// Responsive ///*/

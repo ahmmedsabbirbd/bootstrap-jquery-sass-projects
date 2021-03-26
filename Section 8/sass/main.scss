@@ -1,0 +1,101 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$green: #2FB576;
+	$black: #353535;
+	$white: #D5FEDC;
+	$dark_white: #353535;
+
+/*************************
+	service-area
+*************************/
+.service-area {
+	padding: 100px 0;
+
+	.content {
+		margin-bottom: 70px;
+
+		.title {
+			color: $black;
+		}
+	}
+
+	.service-item {
+		overflow: hidden;
+		border-radius: 4px;
+
+		&:hover {
+			box-shadow: 0 0 5px #555555;
+		}
+
+		.service-header {
+			margin-bottom: 30px;
+
+			.media {
+				height: 250px;
+				background-size: cover;
+				background-position: center center;
+
+				&.item-1 {
+					background-image: url("images/img/item-1.jpg");
+				}
+
+				&.item-2 {
+					background-image: url("images/img/item-2.jpg");
+				}
+
+				&.item-3 {
+					background-image: url("images/img/item-3.jpg");
+				}
+
+				&.item-4 {
+					background-image: url("images/img/item-2.jpg");
+				}
+			}
+		}
+
+		.service-body {
+			padding-left: 10px;
+			margin-bottom: 20px;
+
+			.title {
+				color: $black;
+				margin-bottom: 25px;
+			}
+
+			p {
+				font-size: 15px;
+				line-height: 28px;
+			}
+		}
+
+		.rdm-button {
+			padding-left: 10px;
+
+			.btn {
+				color: $green;
+				padding: 10px 0;
+				border-radius: 30px;
+				@include transition(all .3s ease .1s);
+
+				&:hover {
+					color: $white;
+					padding: 10px 29px;
+					background: $green;
+				}
+
+				.fas {
+					font-size: 14px;
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+}
+
+@import "responsive"; /* Responsive */

@@ -1,0 +1,17 @@
+/***********************
+	color
+///*********************/
+$black: #222222;
+$green: #6AAF08;
+/***********************
+	font-family
+///*********************/
+$noto: 'Noto Sans JP', sans-serif;
+/***********************
+	heading
+///*********************/
+h1, .h1 {font-size: 38px;line-height: 49px;}
+h3, .h3 {font-size: 27px;line-height: 38px;}
+ 
+
+

@@ -1,0 +1,117 @@
+/*************************
+	Base style
+///***********************/
+	@import "base";   /*/// base ///*/
+	@import "extend"; /*/// extend ///*/
+	@import "mixin";  /*/// mixin ///*/
+	@import "coustom-base";  /*/// coustom-base ///*/
+
+	/// Container width
+
+	/// Color
+	$white: #FFFFFF;
+	$black: #747474;
+	$green: #00DCD7;
+
+	/// Font
+
+	/// H1 -- h6
+	h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+
+	}
+	h1, .h1 {
+
+	}
+	h2, .h2 {
+
+	}
+	h3, .h3 {
+
+	}
+	h4, .h4 {
+
+	}
+	h5, .h5 {
+
+	}
+	h6, .h6 {
+
+	}
+/*************************
+	header
+///**********************/
+
+/*************************
+	home page
+///**********************/
+.product-area {
+	padding: 50px 0;
+
+	.product-filter-button {
+		margin-bottom: 20px;
+
+		ul {
+			margin-left: -15px;
+			margin-right: -15px;
+
+			button {
+				color: $black;
+				display: inline;
+				font-size: 20px;
+				cursor: pointer;
+				font-weight: 700;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				&.active {
+					color: $green;
+				}		
+			}
+		}
+	}
+
+	.product-filter {
+		margin-left: -7.5px;
+		margin-right: -7.5px;
+
+		.col-4 {
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+		}
+	}
+}
+
+.product-item {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 15px;
+
+	.media {
+
+		img {
+			width: 100%;
+			height: auto;
+			@include transition (all 0.3s ease);
+		}
+	}
+
+	.item-hover { 
+		width: 100%;
+		height: 100%;
+		padding: 15px;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.9);
+		@include transition (all 0.3s ease);
+
+		.title {
+			color: $white;
+		}
+
+		span {
+			font-size: 18px;
+		}
+	}
+}
+
+@import "responsive"; /*/// Responsive ///*/

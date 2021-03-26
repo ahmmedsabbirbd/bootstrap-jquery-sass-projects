@@ -1,0 +1,105 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+body * {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("images/img/background-pattern.jpg");
+}
+/*************************
+	collapse-section
+*************************/
+.collapse-section {
+	padding: 50px 0;
+
+	#accordion {
+		background: #1E324A;
+
+		.card {
+			background: #1E324A;
+
+			.card-header {
+				padding: 0;
+				background: #1E324A;
+
+				h3 {
+
+					button {
+						color: white;
+						padding: 30px;
+						font-size: 25px;
+						background: #1E324A;
+						letter-spacing: 8px;
+
+						.setting {
+							font-size: 35px;
+							margin-right: 10px;
+							background: #1E324A;
+
+							.fa-cog {
+								color: white;
+								background: #1E324A;
+
+							}
+						}
+
+						.icon {
+							float: right;
+							display: block;
+							background: #1E324A;
+
+							.fas {
+								width: 37px;
+								color: black;
+								height: 37px;
+								display: block;
+								display: none;
+								font-size: 30px;
+								background: white;
+								padding-left: 9px;
+								line-height: 37px;
+								border-radius: 50%;
+							}
+						}
+
+						&[aria-expanded="true"] {
+
+							.fa-angle-up {
+								display: block;
+							}
+						}
+
+						&[aria-expanded="false"] {
+
+							.fa-angle-down {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+			.card-body {
+				color: white;
+				font-size: 20px;
+				background: #1F1C27;
+				padding: 40px 42px 40px 80px;
+
+				.title {
+					font-size: 20px;
+					letter-spacing: 8px;
+					background: #1F1C27;
+
+				}
+			}
+		}
+	}
+}
+
+
+@import "responsive"; /* Responsive */

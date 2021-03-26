@@ -1,0 +1,128 @@
+/*************************
+	Base style
+///***********************/
+	@import "base";   /*/// base ///*/
+	@import "extend"; /*/// extend ///*/
+	@import "mixin";  /*/// mixin ///*/
+
+	/// Color
+	$black: #222222;
+	$green: #6AAF08;
+
+	/// Font 
+	$noto: 'Noto Sans JP', sans-serif;
+
+	/// H1 -- h6
+	h1, .h1 {
+		color: $black;
+		font-size: 38px;
+		font-weight: 700;
+		line-height: 49px;
+	}
+	h3, .h3 {
+		color: $black;
+		font-size: 27px;
+		font-weight: 700;
+		line-height: 38px;
+	}
+	/// Body 
+	body * {
+		font-family: $noto;
+	}
+
+/*************************
+	choose-us
+///**********************/
+.choose-us {
+	margin: 70px 0;
+
+	.content {
+		margin-bottom: 70px; 
+
+		.separetor {
+			margin-top: 20px;
+
+			span {
+				height: 7px;
+				width: 60px;
+				border-radius: 50px;
+				background: $green;
+				display: inline-block;
+
+				&.black {
+					width: 35px;
+					margin-left: 8px;
+					margin-right: 8px;
+					background: $black;
+				}
+			}
+		}
+	}
+
+	.single-item {
+		margin-right: 15px;
+		margin-bottom: -42px;
+
+		.media {
+			float: left;
+			width: 100px;
+			height: 120px;
+			position: relative;
+			border: 2px solid #FFFFFF;
+
+			&:before {
+				right: -10px;
+				width: 100%;
+				z-index: -1;
+				content: "";
+				height: 100%;
+				bottom: -10px;
+				position: absolute;
+				background: $green;
+
+			}
+		}
+
+		.content {
+			margin-left: 130px;
+
+			.sub-title {
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 2px dashed $green;
+			}
+		}
+	}
+
+	.choose-img {
+		width: 525px;
+		height: 400px;
+		position: relative;
+		background-size: cover;
+		border: 2px solid #fff;
+		background-position: center center;
+
+		&:after {
+			left: -10px;
+			width: 100%;
+			z-index: -1;
+			height: 100%;
+			content: "";
+			bottom: -10px;
+			position: absolute;
+			background: $green;
+		}
+
+		&:before {
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			opacity: 0.3;
+			background: $black;
+			position: absolute;
+		}
+	}
+}
+@import "responsive"; /*/// Responsive ///*/

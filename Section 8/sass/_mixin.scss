@@ -1,0 +1,8 @@
+@mixin transition ($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-ms-transition: $seconds;
+	-moz-transition: $seconds;
+	-khtml-transition: $seconds;
+	-webkit-transition: $seconds;
+}

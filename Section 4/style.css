@@ -1,0 +1,211 @@
+/*************************
+	Base style
+*************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* h1, h2, h3, h4, h5, h6, p,
+a, span, li, {
+
+} */
+/* powerby 
+	sabbir  */
+/* base */
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/* extend */
+/* mixin */
+p {
+  color: #9F9F9F;
+  font-weight: 300;
+}
+
+i {
+  color: #585826;
+  font-size: 100px;
+}
+
+/*************************
+	choose-us
+*************************/
+.choose-us {
+  margin: 50px 0;
+}
+.choose-us .content {
+  margin-bottom: 40px;
+}
+.choose-us .content .title {
+  color: #696969;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+.choose-us .content .title:before {
+  bottom: 0;
+  left: 50%;
+  content: "";
+  height: 5px;
+  width: 70px;
+  margin-left: -35px;
+  background: #FF888A;
+  position: absolute;
+}
+.choose-us .content .title:after {
+  left: 50%;
+  bottom: 0;
+  height: 5px;
+  width: 22px;
+  content: "";
+  margin-left: -11px;
+  position: absolute;
+  background: #FDDF74;
+}
+.choose-us .single-item {
+  margin-bottom: 30px;
+}
+.choose-us .single-item .single-item-icon {
+  width: 100%;
+  height: 110px;
+  display: table;
+}
+.choose-us .single-item .single-item-icon .icon {
+  display: table-cell;
+  vertical-align: middle;
+}
+.choose-us .single-item .title {
+  color: #696969;
+  margin: 20px 0;
+  font-size: 25px;
+  text-align: center;
+}
+.choose-us .single-item:hover .icon {
+  margin: 0 0.5rem;
+  animation: headShake;
+  animation-duration: 2s;
+}
+.choose-us .single-item:hover .title {
+  color: #FF888A;
+}
+.choose-us .single-item:hover p {
+  color: #FF888A;
+}
+.choose-us a.single-item {
+  display: block;
+}
+.choose-us a.single-item:hover {
+  text-decoration: none;
+}
+
+/************************* 
+	Media Queries
+*************************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1600px */
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1460px */
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1366px */
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1199px */
+@media only screen and (max-width: 991px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 991px */
+@media only screen and (max-width: 767px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 767px */
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 680px */
+@media only screen and (max-width: 575px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 575px */
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 480px */
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 380px */
+/* Responsive */

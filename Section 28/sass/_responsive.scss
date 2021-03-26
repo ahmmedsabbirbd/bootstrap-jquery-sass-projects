@@ -1,0 +1,130 @@
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and(min-width: 1800px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 1800px ///*/
+
+@media only screen and(max-width: 1800px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 1800px ///*/
+
+@media only screen and(max-width: 1600px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 1600px ///*/
+
+@media only screen and(max-width: 1460px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 1460px ///*/
+
+@media only screen and(max-width: 1366px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 1366px ///*/
+
+@media only screen and(max-width: 1199px) {
+
+h3, .h3 {
+    font-size: 26px;
+    line-height: 36px;
+} 
+	/*************************
+		footer
+	///**********************/
+	 .footer {
+
+	 	.widget {
+
+	 		&.margin-top {
+	 			margin-top: 40px;
+	 		}
+	 	}
+	 }
+	 
+}/*/// 1199px ///*/
+
+@media only screen and(max-width: 991px) {
+h3, .h3 {
+    font-size: 24px;
+    line-height: 35px;
+}
+h4, .h4 {
+    font-size: 21px;
+}
+	 
+}/*/// 991px ///*/
+
+@media only screen and(max-width: 767px) {
+h3, .h3 {
+    font-size: 22px;
+    line-height: 33px;
+}
+h4, .h4 {
+    font-size: 20px;
+    line-height: 30px;
+}
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 767px ///*/
+
+@media only screen and(max-width: 680px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 680px ///*/
+
+@media only screen and(max-width: 575px) {
+
+	/*************************
+		footer
+	///**********************/
+	 .footer {
+
+	 	.widget {
+
+	 		&.margin-top-575 {
+	 			margin-top: 40px;
+	 		}
+	 	}
+	}
+	 
+}/*/// 575px ///*/
+
+@media only screen and(max-width: 480px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 480px ///*/
+
+@media only screen and(max-width: 380px) {
+
+	/*************************
+		Home Style
+	///**********************/
+	 
+}/*/// 380px ///*/

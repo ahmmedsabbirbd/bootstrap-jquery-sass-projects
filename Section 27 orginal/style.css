@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*************************
+	Base style
+///***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*/// base ///*/
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/*/// extend ///*/
+/*/// mixin ///*/
+/*************************
+	Bootstrap Coustom
+///***********************/
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*/// coustom-base ///*/
+/*************************
+	home page
+///**********************/
+.horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-chevron-circle-left, .horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-chevron-circle-right {
+  display: none;
+}
+.horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-arrow-circle-left {
+  top: 275%;
+  left: -90px;
+  position: absolute;
+}
+.horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-arrow-circle-left:before {
+  content: "";
+}
+.horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-arrow-circle-right {
+  top: 275%;
+  right: -100px;
+  position: absolute;
+}
+.horizontal-years .horizontal-timeline .timeline .timeline-navigation a.fa-arrow-circle-right:before {
+  content: "";
+}
+.horizontal-years .horizontal-timeline .timeline .events-wrapper {
+  margin: 0px 100px;
+}
+.horizontal-years .horizontal-timeline .timeline .events-wrapper .events {
+  height: 8px;
+  background: #EEEEEE;
+}
+.horizontal-years .horizontal-timeline .timeline .events-wrapper .events span.filling-line {
+  background: #4DAEFE;
+}
+.horizontal-years .horizontal-timeline .timeline .events-wrapper .events a:after {
+  width: 15px;
+  height: 15px;
+  background: #EEEEEE;
+}
+.horizontal-years .horizontal-timeline .timeline .events-wrapper .events a.selected:after, .horizontal-years .horizontal-timeline .timeline .events-wrapper .events a.older-event:after {
+  background: #4DAEFE;
+}
+.horizontal-years .horizontal-timeline .events-content ol li {
+  z-index: -1;
+  display: table;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .media {
+  float: left;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .media img {
+  width: 400px;
+  height: 300px;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .content {
+  text-align: left;
+  padding-left: 70px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .content .date {
+  color: #9D9D9D;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .content .title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.horizontal-years .horizontal-timeline .events-content ol li .content .description {
+  color: #9D9D9D;
+  font-size: 17px;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1600px ///*/
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1460px ///*/
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1366px ///*/
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 680px ///*/
+@media only screen and (max-width: 575px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 575px ///*/
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 480px ///*/
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 380px ///*/
+/*/// Responsive ///*/

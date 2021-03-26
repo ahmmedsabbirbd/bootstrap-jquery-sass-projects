@@ -1,0 +1,210 @@
+/*************************
+	Base style
+*************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* h1, h2, h3, h4, h5, h6, p,
+a, span, li, {
+
+} */
+/* bootstrap-coustom */
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* powerby 
+	sabbir  */
+/* base */
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/* extend */
+/* mixin */
+body * {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("images/img/background-pattern.jpg");
+}
+
+/*************************
+	collapse-section
+*************************/
+.collapse-section {
+  padding: 50px 0;
+}
+.collapse-section #accordion {
+  background: #1E324A;
+}
+.collapse-section #accordion .card {
+  background: #1E324A;
+}
+.collapse-section #accordion .card .card-header {
+  padding: 0;
+  background: #1E324A;
+}
+.collapse-section #accordion .card .card-header h3 button {
+  color: white;
+  padding: 30px;
+  font-size: 25px;
+  background: #1E324A;
+  letter-spacing: 8px;
+}
+.collapse-section #accordion .card .card-header h3 button .setting {
+  font-size: 35px;
+  margin-right: 10px;
+  background: #1E324A;
+}
+.collapse-section #accordion .card .card-header h3 button .setting .fa-cog {
+  color: white;
+  background: #1E324A;
+}
+.collapse-section #accordion .card .card-header h3 button .icon {
+  float: right;
+  display: block;
+  background: #1E324A;
+}
+.collapse-section #accordion .card .card-header h3 button .icon .fas {
+  width: 37px;
+  color: black;
+  height: 37px;
+  display: block;
+  display: none;
+  font-size: 30px;
+  background: white;
+  padding-left: 9px;
+  line-height: 37px;
+  border-radius: 50%;
+}
+.collapse-section #accordion .card .card-header h3 button[aria-expanded=true] .fa-angle-up {
+  display: block;
+}
+.collapse-section #accordion .card .card-header h3 button[aria-expanded=false] .fa-angle-down {
+  display: block;
+}
+.collapse-section #accordion .card .card-body {
+  color: white;
+  font-size: 20px;
+  background: #1F1C27;
+  padding: 40px 42px 40px 80px;
+}
+.collapse-section #accordion .card .card-body .title {
+  font-size: 20px;
+  letter-spacing: 8px;
+  background: #1F1C27;
+}
+
+/************************* 
+	Media Queries
+*************************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1800px */
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1600px */
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1460px */
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1366px */
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 1199px */
+@media only screen and (max-width: 991px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 991px */
+@media only screen and (max-width: 767px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 767px */
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 680px */
+@media only screen and (max-width: 575px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 575px */
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 480px */
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  *************************/
+}
+/* 380px */
+/* Responsive */

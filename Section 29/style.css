@@ -1,0 +1,244 @@
+/*************************
+	Base style
+///***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*/// base ///*/
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/*/// extend ///*/
+/*/// mixin ///*/
+/*************************
+	Bootstrap Coustom
+///***********************/
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*/// coustom-base ///*/
+/*************************
+	header
+///**********************/
+/*************************
+	home page
+///**********************/
+.product-area {
+  padding: 50px 0;
+}
+.product-area .product-filter-button {
+  margin-bottom: 20px;
+}
+.product-area .product-filter-button ul {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.product-area .product-filter-button ul button {
+  color: #747474;
+  display: inline;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.product-area .product-filter-button ul button.active {
+  color: #00DCD7;
+}
+.product-area .product-filter {
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+}
+.product-area .product-filter .col-4 {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.product-item {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+}
+.product-item .media img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.product-item .item-hover {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.product-item .item-hover .title {
+  color: #FFFFFF;
+}
+.product-item .item-hover span {
+  font-size: 18px;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1600px ///*/
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1460px ///*/
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1366px ///*/
+@media only screen and (max-width: 1199px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  /*************************
+  	Home Style
+  ///**********************/
+  .product-area {
+    padding: 40px 0;
+  }
+  .product-area .product-filter-button {
+    margin-bottom: 18px;
+  }
+  .product-area .product-filter-button ul {
+    margin-left: -13px;
+    margin-right: -13px;
+  }
+  .product-area .product-filter-button ul button {
+    font-size: 18px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .product-area .product-filter {
+    margin-left: -6.5px;
+    margin-right: -6.5px;
+  }
+  .product-area .product-filter .col-4 {
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+  }
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 680px ///*/
+@media only screen and (max-width: 575px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 575px ///*/
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  ///**********************/
+  .product-area {
+    padding: 40px 0;
+  }
+  .product-area .product-filter-button {
+    margin-bottom: 18px;
+  }
+  .product-area .product-filter-button ul {
+    margin-left: -13px;
+    margin-right: -13px;
+  }
+  .product-area .product-filter-button ul button {
+    font-size: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+/*/// 480px ///*/
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 380px ///*/
+/*/// Responsive ///*/

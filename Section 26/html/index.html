@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>First Simple Form Validation</title>
+		<link rel="stylesheet" type="text/css" href="../css/plugin.css"><!--/// All plugin ///-->
+		<link rel="stylesheet" type="text/css" href="../style.css"><!--/// Style /// -->
+	</head>
+	<body>  
+		<section class="form-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<h3 class="title">Send us a Messages</h3>
+						<form class="submit-form" action="http://formspree.io/ribbasbd@gmail.com" method="POST">
+							<div class="row">
+								<div class="col-6">
+									<input required type="text" placeholder="First Name" name="firstName">
+								</div>
+								<div class="col-6">
+									<input required type="text" placeholder="Last Name" name="lastName">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<input required type="email" placeholder="Your Email" name="email">
+								</div>
+								<div class="col-6">
+									<input required type="text" placeholder="Subject" name="subject">
+								</div>
+							</div>
+							<textarea name="message" placeholder="Write Your Message" id="message" cols="30" rows="10"></textarea>
+							<input class="btn" type="submit" value="Send Message">
+						</form>
+					</div>
+					<div class="col-lg-4">
+						<div class="contact-info">
+							<h4 class="title">Get In Touch</h4>
+							<ul class="socail-details list-unstyled">
+								<li>
+									<i class="fas fa-home"></i>
+									<a>Fulbari, Walia, Lalpur, Natore</a>
+								</li>
+								<li>
+									<i class="fas fa-phone"></i>
+									<a href="tel:017112923446">++88 01712923446</a><br>
+									<a href="tel:01309877729">++88 01309877729</a>
+								</li>
+								<li>
+									<i class="fas fa-envelope"></i>
+									<a href="mailto:ahmmedsabbirbd@gmail.com">ahmmedsabbirbd@gmail.com</a><br>
+									<a href="mailto:ribas@gmail.com">ribas@gmail.com</a>
+								</li>
+							</ul>
+							<ul class="socail-link list-unstyled">
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								<li><a href="#"><i class="fab fa-skype"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+ 	<script type="text/javascript" src="js/jquery.min.js"></script><!--/// Jquery ///-->
+ 	<script type="text/javascript" src="../js/plugin.js"></script><!--/// All plugin ///-->
+ 	<script type="text/javascript" src="../js/script.js"></script><!--/// Style.js ///-->
+	</body>
+</html>

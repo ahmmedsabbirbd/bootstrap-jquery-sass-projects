@@ -1,0 +1,270 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$white: #DDDDDD;
+	$yellow: #FDC124;
+
+/*************************
+	popup overly
+*************************/
+/* body.sidr-open.asidr-main-open {
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	background: red;
+	position: fixed;
+	z-index: 99999999999999999999999;
+} */
+.show-overly {
+	opacity: 0;
+	width: 100%;
+	z-index: -1;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	@include transition(all .3s ease);
+
+	&.active {
+		z-index: 9;
+		opacity: .7;
+	}
+}
+/*************************
+	search-bar
+*************************/
+.search-bar {
+	top: 0;
+	width: 500px;
+	z-index: -999;
+	right: -500px;
+	display: table;
+	min-height: 250px;
+	position: absolute;
+	background: #f1f1df;
+	@include transition(all .4s ease);
+
+	&.active {
+		right: 0;
+		z-index: 999;
+	}
+
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+
+		input[type="search"] {
+			width: 40%;
+			background: #F4EAE8;
+			border-radius: 50px;
+			padding: 10px 51px 10px 20px;
+
+			&:focus {
+				outline: none;
+			}
+		} 
+
+		button[type="submit"] {
+				top: 46%;
+				left: 62%;
+				border: none;
+				position: absolute;
+				background: transparent;
+
+				.fa-search { 
+					font-size: 20px;
+					background: transparent;
+				}
+
+				&:focus {
+					outline: none;
+				}
+		}
+	}
+
+	.close-btn {
+		top: 2%;
+		right: 42px;
+		position: absolute;
+
+		.search-close {
+			float: right;
+			margin: 0;
+		    border: 0;
+		    padding: 0;
+		    width: 25px;
+		    display: block;
+		    border-radius: 0;
+		    background: transparent;
+
+		    span.bar-menu:first-child {
+		        transform: translateY(12px) rotate(45deg);
+		    }
+
+		    span.bar-menu:last-child {
+		        transform: translateY(-16px) rotate(-45deg);
+		    }
+
+			span.bar-menu {
+		        height: 4px;
+		        width: 100%;
+		        display: block;
+		        border-radius: 0;
+		        background-color: $yellow; 
+
+		        &:nth-child(2) {
+		        	opacity: 0;
+		        }
+		        &:not(:last-child) { 
+		        	margin: 10px 0;
+		        }
+			}
+
+	   		&:focus {
+
+		    	outline: none;
+		    }
+
+		}
+	}
+}
+/*************************
+	header
+*************************/
+.sidr {
+	display: none;
+}
+.header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	padding: 10px 0;
+	position: absolute;
+
+	.navbar {
+		padding: 0px 15px;
+
+		.navbar-header {
+
+			.logo {
+ 				
+ 				img {
+ 					width: 100%;
+ 					height: 45px;
+ 					max-width: 123px;
+ 				}
+			}
+		}
+
+		.navbar-nav {
+
+			li {
+
+				a {
+					color: $white;
+					font-size: 15px;
+					font-weight: 400;
+					position: relative;
+					padding: 10px 15px;
+					display: inline-block;
+
+					&:hover, &.active, &:focus {
+						color: $yellow;
+						text-decoration: none;
+
+						&:after {
+							top: 16px;
+							left: -2px;
+							content: "";
+							width: 12px;
+							height: 12px;
+							position: absolute;
+							border-radius: 50px;
+							background: $yellow;
+							border: 2px solid #fff;
+						}
+					}
+				}
+			}
+		}
+
+		.search-icon {
+
+			.search-triger {
+				color: $white;
+				font-size: 15px;
+
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+}
+/*************************
+	corporate
+*************************/
+.bg-1 {background-color: #263238;}
+.bg-2 {background-color: #333333}
+.bg-3 {background-color: #223332}
+.bg-4 {background-color: #555555}
+
+.corporate {
+	background: red;
+
+	.corporate-slider {
+
+		.row {
+			height: 670px;
+
+			.content {
+				padding: 190px 0;
+
+				.title {
+					margin: 20px 0;
+					color: $yellow;
+					font-weight: 300;
+				}
+
+				p {
+					color: $white;
+					font-size: 15px;
+					line-height: 27px;
+				}
+
+				.button {
+					margin-top: 15px;
+
+					.btn {
+						color: $yellow;
+						font-size: 18px;
+						border-radius: 5px;
+						padding: 10px 32px;	
+						border: 1px solid $white;
+
+						.fa-angle-right {
+							font-weight: 600;
+							padding-left: 5px;
+						}
+					}
+				}
+			}
+			position: relative;
+
+			.slider-img {
+				right: 0;
+				bottom: 0;
+				max-width: 520px;
+				max-height: 570px;
+				position: absolute;
+			}
+		}
+	}
+}
+
+@import "responsive"; /* Responsive */

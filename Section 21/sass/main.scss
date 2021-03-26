@@ -1,0 +1,188 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Container width
+
+	// Color
+	$white: #DCECFB;
+	$black: #515151;
+	$green: #218AE6;
+	// Font 
+	$lato: 'Lato', 'sans';
+	$mon: 'Montserrat', 'sans';
+	// H1 -- h6
+body * {
+	font-weight: 400;
+	font-family: $lato;
+}
+	/*************************
+		popup overly
+	*************************/
+	.show-overly {
+		opacity: 0;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+		position: fixed;
+		background: #000;
+		@include transition(all .3s ease);
+
+		&.active {
+			z-index: 9;
+			opacity: .7;
+		}
+	}
+ 
+/*************************
+	header-top
+*************************/
+
+/*************************
+	header
+*************************/
+.sidr {
+	display: none;
+}/* sidr-menu */
+.header {
+	padding: 0px;
+	background: #ffffff;
+	box-shadow: 0px 0px 10px rgb(0 0 0 / 26%);
+
+	.top-bar{
+		padding: 20px 0;
+		background-color: $green;
+
+		a, span {
+			color: $white;
+
+			.fas {
+				padding-right: 10px;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.content {
+			text-align: right;
+
+			.email {
+				font-weight: 100;
+				font-family: $mon;
+				margin-right: 20px;			
+			} 
+		}
+	}
+
+	.navbar {
+
+		padding: 0;
+
+		.navbar-header {
+
+			.logo {
+
+				.navbar-brand {
+					
+					img {
+						min-width: 140px;
+						height: auto;
+					}
+				}
+			}
+		}
+
+		.navbar-nav {
+
+			margin-left: -10px;
+			margin-right: -10px;
+
+			li {
+				padding-left: 10px;
+				padding-right: 10px;
+
+				a {
+					color: $black;
+
+					&:hover, &:focus, &.active {
+						color: $green;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+} 
+/*************************
+	business
+*************************/
+.business {
+	padding: 200px 0;
+	background-color: $green; 
+
+	.slick-dots {
+		margin-bottom: 65px;
+
+		.slick-active {
+			background: #F9D02A;
+			@include transition ( all .3s ease);
+		}
+
+		li {
+			width: 12px;
+			height: 12px;
+			background: $white;
+			border-radius: 50px;
+
+			button {
+				&:before {
+					content: "";
+				}
+			}				
+		}
+	}
+
+	.content {
+		color: $white;
+		padding-top: 35px;
+
+		.title {
+			font-size: 55px;
+			font-weight: 100;
+		}
+
+		.descriptsion {
+			margin: 20px 0;
+			max-width: 500px;
+		}
+
+		.button {
+
+			.btn {
+				padding: 10px 16px;
+				letter-spacing: 2px;
+				background: #F9CF25;
+
+				.fas {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.media {
+
+		img {
+			width: 540px;
+			height: 310px;
+		}
+	}
+}
+
+
+@import "responsive"; /* Responsive */

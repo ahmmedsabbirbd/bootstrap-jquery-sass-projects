@@ -1,0 +1,333 @@
+/*************************
+	Base style
+///***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*/// base ///*/
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+/*/// extend ///*/
+/*/// mixin ///*/
+/*************************
+	Bootstrap Coustom
+///***********************/
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input {
+  border: none;
+}
+
+input[type=email]:focus {
+  outline: none;
+}
+
+/*/// coustom-base ///*/
+.container {
+  max-width: 1170px !important;
+}
+
+h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #FFFEFF;
+}
+
+h3, .h3 {
+  font-size: 28px;
+  line-height: 37px;
+}
+
+h4, .h4 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h5, .h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn {
+  color: #14ADF3;
+  font-weight: 700;
+  padding: 4px 20px;
+  border-radius: 0px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.btn:hover {
+  color: #096BCD;
+  background: #F7F7F7;
+}
+
+input[type=submit] {
+  vertical-align: top;
+}
+
+input[type=email] {
+  padding: 5px 10px;
+  background: #F7F7F7;
+  width: calc(100% - 93px);
+}
+
+/*************************
+	footer
+///**********************/
+.footer {
+  padding-top: 40px;
+  background: #14ADF3;
+}
+.footer .widget .widget-title {
+  position: relative;
+  text-transform: uppercase;
+}
+.footer .widget p {
+  color: #FFFEFF;
+  font-size: 17px;
+  margin-top: 41px;
+  line-height: 26px;
+}
+.footer .widget ul {
+  margin-top: 20px;
+}
+.footer .widget ul li {
+  display: block;
+}
+.footer .widget ul li a {
+  display: block;
+  color: #FFFEFF;
+  font-size: 18px;
+  line-height: 30px;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.footer .widget ul li a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  transform: translateX(10px);
+}
+.footer .widget .socail-media {
+  margin-top: 50px;
+}
+.footer .widget .socail-media li {
+  display: inline;
+}
+.footer .widget .socail-media li:not(:last-child) {
+  margin-right: 20px;
+}
+.footer .widget .socail-media li a {
+  font-size: 20px;
+  display: inline;
+}
+.footer .widget .quick-contact {
+  margin-bottom: 40px;
+}
+.footer .widget .quick-contact li {
+  position: relative;
+}
+.footer .widget .quick-contact li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer .widget .quick-contact li i {
+  top: 8px;
+  color: #FFFEFF;
+  position: absolute;
+  display: inline-block;
+}
+.footer .widget .quick-contact li a {
+  margin-left: 40px;
+  display: inline-block;
+}
+.footer .widget .subscribe {
+  margin-top: 38px;
+}
+.footer .widget .subscribe .title {
+  margin-bottom: 15px;
+}
+.footer .widget .subscribe span {
+  color: #FFFEFF;
+  display: block;
+  font-size: 16px;
+  margin-top: 41px;
+  margin-top: 10px;
+  line-height: 26px;
+}
+.footer .footer-bottom {
+  padding: 20px 0;
+  margin-top: 40px;
+  background: white;
+}
+.footer .footer-bottom .coppyright {
+  float: left;
+  color: #9C9C9C;
+}
+.footer .footer-bottom .footer-menu ul {
+  float: right;
+}
+.footer .footer-bottom .footer-menu ul li {
+  color: #9C9C9C;
+  display: inline;
+  position: relative;
+}
+.footer .footer-bottom .footer-menu ul li:not(:last-child) {
+  padding-right: 10px;
+}
+.footer .footer-bottom .footer-menu ul li:not(:last-child):before {
+  width: 2px;
+  right: 5px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  background: #9C9C9C;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (min-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1800px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1800px ///*/
+@media only screen and (max-width: 1600px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1600px ///*/
+@media only screen and (max-width: 1460px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1460px ///*/
+@media only screen and (max-width: 1366px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 1366px ///*/
+@media only screen and (max-width: 1199px) {
+  h3, .h3 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  /*************************
+  	footer
+  ///**********************/
+  .footer .widget.margin-top {
+    margin-top: 40px;
+  }
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  h3, .h3 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  h4, .h4 {
+    font-size: 21px;
+  }
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  h3, .h3 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  h4, .h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 680px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 680px ///*/
+@media only screen and (max-width: 575px) {
+  /*************************
+  	footer
+  ///**********************/
+  .footer .widget.margin-top-575 {
+    margin-top: 40px;
+  }
+}
+/*/// 575px ///*/
+@media only screen and (max-width: 480px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 480px ///*/
+@media only screen and (max-width: 380px) {
+  /*************************
+  	Home Style
+  ///**********************/
+}
+/*/// 380px ///*/
+/*/// Responsive ///*/

@@ -1,0 +1,147 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+/*************************
+	pricing
+*************************/
+.pricing {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	padding: 50px 0;
+
+	.content {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+
+		.title {
+			margin-bottom: 20px;
+
+			color: #282828;
+			font-size: 35px;
+			line-height: 45px;
+
+			span {
+				color: #41826A;
+			}
+		}
+
+		p {
+			color: #C1C1C1;
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+
+	.pricing-table {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+		text-align: center;
+		border: 1px solid #E2E2E2;
+		padding: 45px 24px 45px 55px;
+
+		.pricing-header {
+			margin-bottom: 35px;
+
+			.title { 
+				font-size: 22px;
+				line-height: 32px;
+				margin-bottom: 26px;
+			}
+
+			.icon {
+				width: 110px;
+				height: 80px;
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+
+
+				i, img{
+					color: #299669;
+					-webkit-transition: all 0.3s ease 0s;
+					transition: all 0.3s ease 0s;
+					font-size: 70px;
+					display: table-cell;
+					vertical-align: middle; 
+				} 
+			}
+		}
+
+		.pricing-body {
+			text-align: left;
+			margin-bottom: 20px;
+
+
+			ul {
+				margin-left: -10px;
+				margin-bottom: 25px;
+
+				li {
+					color: #b4b4b4;
+					-webkit-transition: all 0.3s ease 0s;
+					transition:  all 0.3s ease 0s;
+					line-height: 30px;
+					text-transform: capitalize;
+
+					&.cros:before {
+						color: #F66463;						
+						content: "\f00d";
+					}
+
+					&:before { 
+						color: #299669;
+						content: "\f00c";
+						font-weight: 900;
+						margin-right: 10px;
+						font-family: "Font Awesome 5 Free";
+					}
+
+					&:hover {
+						margin-left: 3px;
+					}
+				}
+			}
+
+			.price {
+				color: #272727;
+				font-size: 35px;
+				text-align: center;
+			}
+		}
+
+		.button {
+
+			.btn {
+				font-size: 17px;
+				padding: 5px 25px;
+				border-radius: 20px;
+				border: 2px solid #6AB696;
+
+				&:hover {
+					background: #6AB696;
+				}
+			}
+		}
+
+		&:hover {
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+			border: 1px solid #299669;
+
+			.icon {
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+
+				i, img {
+					opacity: 0.7;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+				}
+			}
+		}
+	}
+}
+
+
+@import "responsive"; /* Responsive */

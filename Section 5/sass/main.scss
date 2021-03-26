@@ -1,0 +1,105 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+.card-body, p {
+		font-size: 18px;
+		line-height: 28px;
+		color: #CACACA;
+		font-weight: 300;
+	}
+/*************************
+	collapse-section
+*************************/
+.collapse-section {
+	padding: 45px;
+	position: relative;
+
+	&:after {
+		top: 0;
+		left: 0;
+		width: 46%;
+		content: '';
+		height: 100%;
+		position: absolute;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat; 
+		background-image: url('images/img/collapse.png');
+	}
+
+	.content {
+		margin-bottom: 40px;
+
+		.title {
+			color: black;
+			font-size: 36px;
+			font-weight: 900;
+			line-height: 46px;
+			margin-bottom: 20px;
+
+			span {
+				color: #11A6F9;
+			}
+		}
+	}
+
+	#accordion {
+		min-height: 315px;
+
+		.card {
+			border-radius: 0px;
+			margin-bottom: 10px;
+
+			.card-header {
+				border-bottom: none;
+
+				h3 {
+
+					button {
+
+						.icon {
+							float: right;
+							display: inline-block;
+							transition-delay:  1s;
+
+
+							i.fas {
+								display: none;
+								font-size: 25px;
+								transition:  1s ease;
+
+							}
+						}
+
+						&[aria-expanded="true"] {
+
+							.icon {
+
+								i.fa-angle-up {
+									display: block;
+								}
+							}
+						}
+
+						&[aria-expanded="false"] {
+
+							.icon {
+
+								i.fa-angle-down {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			} 
+		}
+	}
+}
+
+
+@import "responsive"; /* Responsive */

@@ -1,0 +1,105 @@
+/*************************
+	Base style
+*************************/
+	@import "base"; /* base */
+	@import "extend"; /* extend */
+	@import "mixin"; /* mixin */
+
+	// Color
+	$red: #F97230;
+	$white: #FFFEF8;
+	$black: #3A3A3A;
+	$dark_black: #E3E3E3;
+
+	.bg-1 {background-image: url('images/img/service-1.jpg')}
+	.bg-2 {background-image: url('images/img/team-2.jpg')}
+	.bg-3 {background-image: url('images/img/service-3.png')}
+
+/*************************
+	service
+*************************/
+.service {
+	padding: 100px 0;
+
+	.content {
+		padding-bottom: 70px;
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+
+		.title {
+			color: $black;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-weight: 300;
+			line-height: 30px;
+			text-align: center;
+		}
+	}
+
+	.service-item {
+		border: 1px solid $dark_black;
+
+		.service-bg {
+			width: 348px;
+			height: 170px;
+			position: relative;
+			background-size: cover;
+			background-position: center center;
+
+			.title {
+				left: 0;
+				right: 0;
+				width: 310px;
+				bottom: -22px;
+				padding: 10px;
+				color: $white;
+				font-size: 20px;
+				font-weight: 400;
+				background: $red;
+				margin-left: auto;
+				text-align: center;
+				margin-right: auto;
+				position: absolute;
+			}
+		}
+
+		.service-info {
+			margin-top: 60px;
+
+			p {
+				font-weight: 300;
+				max-width: 300px;
+				margin-left: auto;
+				line-height: 29px;
+				text-align: center;
+				margin-right: auto;
+			}
+
+
+			.button {
+				text-align: center;
+				margin-bottom: 20px;
+
+				.btn {
+					color: #0D0D0D;
+
+					i {
+						padding-left: s5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*************************
+	footer
+*************************/
+ 
+
+
+@import "responsive"; /* Responsive */
