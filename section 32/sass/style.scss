@@ -1,0 +1,121 @@
+/*************************
+	Base style
+///***********************/
+	@import "base";   /*/// base ///*/
+	@import "extend"; /*/// extend ///*/
+	@import "mixin";  /*/// mixin ///*/
+	@import "coustom-base";  /*/// coustom-base ///*/
+
+	/// Color
+	$blue: #454BED;
+	$black: #313131;
+	$white: #FFFEFF;
+	$dark_black: #878787;
+
+	/// Font
+
+	/// H1 -- h6
+	h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+		color: $white;
+	}
+	h1, .h1 {
+		font-size: 46px;
+		font-weight: 900;
+		line-height: 58px;
+	}
+	h2, .h2 {
+
+	}
+	h3, .h3 { 
+
+	}
+	h4, .h4 { 
+
+	}
+	h5, .h5 {
+		 
+	}
+	h6, .h6 {
+
+	}
+ 
+/*************************
+	Home page
+///**********************/
+.promo-area {
+	padding: 120px 0;
+
+	.single-item {
+		height: 340px;
+		display: block;
+		position: relative;
+		background-size: cover;
+		@include transition(all .3s ease);
+		background-position: center center;
+
+		.content {
+			width: 100%;
+			bottom: 50px;
+			padding: 10px;
+			position: absolute;
+			@include transition(all .2s ease);
+
+			.title {
+				margin-bottom: 10px;
+			}
+
+			p {
+				color: $white;
+			}
+		}
+
+		&:hover {
+			transform: scale(1.05);
+
+			.content {
+				bottom: 60px;
+			}
+		}
+	}
+}
+
+p {
+	color: green;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.scroll {
+
+	.scrollToTop{
+	    right:40px;
+	    width:80px; 
+	    height:80px;
+		bottom: 50px;
+	    display:none;
+	    color: $white;
+	    position:fixed;
+	    font-weight: 900;
+	    border-radius: 50%;
+	    background: $black;
+	    @include transition(all 0.3s ease);
+
+	    i {
+	    	font-size: 45px;
+	    	@include transition(all .2s ease);
+	    }
+
+		&:hover{
+			background: green;
+			transform: scale(1.05);
+			@include box-shadow(0px 0px 17px 0px #000);
+
+			i {
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+}
+
+@import "responsive"; /*/// Responsive ///*/
