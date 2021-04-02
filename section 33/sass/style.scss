@@ -1,0 +1,177 @@
+/*************************
+	Base style
+///***********************/
+	@import "base";   /*/// base ///*/
+	@import "extend"; /*/// extend ///*/
+	@import "mixin";  /*/// mixin ///*/
+	@import "coustom-base";  /*/// coustom-base ///*/
+
+	/// Color
+	$black: #313131;
+	$white: #FFFEFF;
+	$dark_blue: #2B2F41;
+
+	/// Font
+
+	/// H1 -- h6
+	h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+		color: $white;
+	}
+	h1, .h1 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	h2, .h2 {
+
+	}
+	h3, .h3 { 
+
+	}
+	h4, .h4 { 
+
+	}
+	h5, .h5 {
+		 
+	}
+	h6, .h6 {
+
+	}
+
+	/// Button 
+	.btn {
+		color: $white;
+		font-weight: 700;
+		border-radius: 0px;
+		padding: 25px 119px;
+		border: 2px solid #CDA872;
+		@include transition(all .3s ease);
+
+		&:hover {
+			color: black;
+			background: #CDA872;
+		}
+	}
+/*************************
+	Home page
+///**********************/
+.some-text {
+
+	p {
+		color: #0075B8;
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
+
+.about {
+	margin: 150px 0;
+	background: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-image: url('images/img/shadow-3.jpg');
+
+	.margin-minus {
+		padding: 30px;
+		margin: -50px 0;
+		background: $dark_blue;
+
+		.content {
+
+			.text {
+				padding: 20px 30px;
+				position: relative;
+
+				.title {
+					margin-bottom: 50px;
+				}
+
+				p {
+					color: $white;
+					font-size: 15px;
+					line-height: 26px;
+				}
+
+				.name {
+					color: $white;
+					display: block;
+					font-size: 22px;
+					margin-top: 50px;
+					position: relative;
+					padding-left: 55px;
+
+					span {
+						opacity: 0.5;
+						font-size: 15px;
+					}
+
+					&:after {
+						left: 0;
+						top: 50%;
+						width: 50px;
+						content: "";
+						height: 2px;
+						position: absolute;
+						background: $white;
+						@include transition(all .3s ease);
+					}
+				}
+
+				&:after {
+					top: 0;
+					left: 0;
+					content: "";
+					width: 80px;
+					height: 80px;
+					position: absolute;
+					border-top: 2px solid $white;
+					border-left: 2px solid $white;
+					@include transition(all .3s ease);
+				}
+
+				&:before {
+					right: 0;
+					bottom: 0;
+					content: "";
+					width: 80px;
+					height: 80px;
+					position: absolute;
+					border-right: 2px solid $white;
+					border-bottom: 2px solid $white;
+					@include transition(all .3s ease);
+				}
+			}
+
+			.button {
+				margin-top: 50px;
+			}
+
+			&:hover {
+
+				.text {
+
+					&:after, &:before{
+						border-color: green; 
+					}
+
+					.name {
+
+						&:after {
+							background: green;
+						}
+					}
+				}
+			}
+		}
+
+		.media {
+
+			img {
+				width: 100%;
+				max-width: 700px;
+				max-height: 680px;
+			}
+		}
+	}
+}
+ 
+@import "responsive"; /*/// Responsive ///*/
