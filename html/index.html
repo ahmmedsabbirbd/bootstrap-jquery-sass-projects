@@ -4,15 +4,252 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Starting_Ready</title>
+		<title>Bashboard</title>
 		<link rel="stylesheet" type="text/css" href="../css/plugin.css"><!--/// All plugin ///-->
+		<link rel="preconnect" href="https://fonts.gstatic.com"> <!--/// google fonts ///-->
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!--/// google fonts ///-->
 		<link rel="stylesheet" type="text/css" href="../style.css"><!--/// Style /// -->
 	</head>
 	<body>  
-		 
+		 <input type="checkbox" id="nav-toggle">
+		<section class="sidebar">
+			<div class="brand">
+				<h2 class="title"><i class="lab la-accusoft"></i><span class="m-hide">Accusoft </span></h2>
+			</div>
+
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#" class="active"><i class="las la-igloo"></i><span class="m-hide">Dashboard</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="las la-users"></i><span class="m-hide">Customers</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="las la-clipboard-list"></i><span class="m-hide">Projects</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="las la-shopping-bag"></i><span class="m-hide">Orders</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="las la-receipt"></i><span class="m-hide">Inventory</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="lar la-user-circle"></i><span class="m-hide">Accounts</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="las la-clipboard-list"></i><span class="m-hide">Tasks</span></a>
+					</li>
+				</ul>
+			</div>
+		</section> <!--/// sidebar ///-->
+
+		<section class="dashboard">
+			<header class="header">
+				<h1 class="title">
+					<label for="nav-toggle">
+						<i class="las la-bars"></i>
+					</label>
+					Dashboard
+				</h1>
+
+				<form action="index.html" class="search-wrapper">
+					<button type="submit" class="las la-search"></button>
+					<input type="search" placeholder="Search here">
+				</form> <!--/// search-wrapper ///-->
+
+				<div class="user-wrapper">
+					<img src="../images/img/user.jpg" width="45px" height="50px" alt="sabbir">
+					<div class="content">
+						<h4 class="title">Johb Deo</h4>
+						<span>super admin</span>
+					</div>
+				</div><!--/// user-wrapper ///-->
+			</header><!--/// header ///-->
+
+			<div class="dashboard-area">
+				<div class="items">
+					<div class="single-item">
+						<div class="header-item">
+							<span class="counter">55</span>
+							<h3 class="title">Customers</h3>
+						</div>
+						<i class="las la-users"></i>
+					</div><!--/// single item ///-->
+
+					<div class="single-item">
+						<div class="header-item">
+							<span class="counter">79</span>
+							<h3 class="title">Projects</h3>
+						</div>
+						<i class="las la-clipboard-list"></i>
+					</div><!--/// single item ///-->
+
+					<div class="single-item">
+						<div class="header-item">
+							<span class="counter">124</span>
+							<h3 class="title">Orders</h3>
+						</div>
+						<i class="las la-shopping-bag"></i>
+					</div><!--/// single item ///-->
+
+					<div class="single-item">
+						<div class="header-item">
+							<span class="counter">$6k</span>
+							<h3 class="title">Income</h3>
+						</div>
+						<i class="lab la-google-wallet"></i>
+					</div><!--/// single item ///-->
+				</div><!--/// item ///-->
+
+				<div class="recent-area">
+					<div class="projects">
+						<div class="card-header">
+							<h3 class="title">Recent Projects</h3>
+							<a href="#" class="btn">See all <i class="las la-arrow-right"></i></a>
+						</div>
+
+						<div class="card-body">
+							<table width="100%">
+								<thead>
+									<tr>
+										<td>Project Title</td>
+										<td>Department</td>
+										<td>Status</td>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>UL/UX Design</td>
+										<td>Ul Team</td>
+										<td><span class="beguni"></span>review</td>
+									</tr>
+									<tr>
+										<td>Web Devolopment</td>
+										<td>Frontend </td>
+										<td><span class="golapi"></span>in progress</td>
+									</tr>
+									<tr>
+										<td>Mobile Team</td>
+										<td>Ul Team</td>
+										<td><span class="pending"></span>pending</td>
+									</tr>
+									<tr>
+										<td>UL/UX Design</td>
+										<td>Ul Team</td>
+										<td><span class="beguni"></span>review</td>
+									</tr>
+									<tr>
+										<td>Web Devolopment</td>
+										<td>Frontend </td>
+										<td><span class="golapi"></span>in progress</td>
+									</tr>
+									<tr>
+										<td>Mobile Team</td>
+										<td>Ul Team</td>
+										<td><span class="pending"></span>pending</td>
+									</tr>
+									<tr>
+										<td>UL/UX Design</td>
+										<td>Ul Team</td> 
+										<td><span class="beguni"></span>review</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div><!--/// projects ///-->
+
+					<div class="coustomer">
+						<div class="card-header">
+							<h3 class="title">New coustomers</h3>
+							<a href="#" class="btn">See all <i class="las la-arrow-right"></i></a>
+						</div>
+
+						<div class="card-body">
+							<div class="coustomers">
+								<div class="meta">
+									<img width="40px" height="40px" src="../images/img/user.jpg" alt="sabbir">
+									<div class="meta-details">
+										<h4 class="title">Lewis s.Cunnigham</h4>
+										<span>CEO Excerpt</span>
+									</div>
+								</div>
+								<div class="meta-socail">
+									<i  class="las la-user-circle"></i>
+									<i  class="las la-comment"></i>
+									<a href="tel:01712923446" class="las la-phone"></a>
+								</div>
+							</div><!--/// single-coustomers ///-->
+
+							<div class="coustomers">
+								<div class="meta">
+									<img width="40px" height="40px" src="../images/img/user.jpg" alt="sabbir">
+									<div class="meta-details">
+										<h4 class="title">Lewis s.Cunnigham</h4>
+										<span>CEO Excerpt</span>
+									</div>
+								</div>
+								<div class="meta-socail">
+									<i  class="las la-user-circle"></i>
+									<i  class="las la-comment"></i>
+									<a href="tel:01712923446" class="las la-phone"></a>
+								</div>
+							</div><!--/// single-coustomers ///-->
+
+							<div class="coustomers">
+								<div class="meta">
+									<img width="40px" height="40px" src="../images/img/user.jpg" alt="sabbir">
+									<div class="meta-details">
+										<h4 class="title">Lewis s.Cunnigham</h4>
+										<span>CEO Excerpt</span>
+									</div>
+								</div>
+								<div class="meta-socail">
+									<i  class="las la-user-circle"></i>
+									<i  class="las la-comment"></i>
+									<a href="tel:01712923446" class="las la-phone"></a>
+								</div>
+							</div><!--/// single-coustomers ///-->
+
+							<div class="coustomers">
+								<div class="meta">
+									<img width="40px" height="40px" src="../images/img/user.jpg" alt="sabbir">
+									<div class="meta-details">
+										<h4 class="title">Lewis s.Cunnigham</h4>
+										<span>CEO Excerpt</span>
+									</div>
+								</div>
+								<div class="meta-socail">
+									<i  class="las la-user-circle"></i>
+									<i  class="las la-comment"></i>
+									<a href="tel:01712923446" class="las la-phone"></a>
+								</div>
+							</div><!--/// single-coustomers ///-->
+
+							<div class="coustomers">
+								<div class="meta">
+									<img width="40px" height="40px" src="../images/img/user.jpg" alt="sabbir">
+									<div class="meta-details">
+										<h4 class="title">Lewis s.Cunnigham</h4>
+										<span>CEO Excerpt</span>
+									</div>
+								</div>
+								<div class="meta-socail">
+									<i  class="las la-user-circle"></i>
+									<i  class="las la-comment"></i>
+									<a href="tel:01712923446" class="las la-phone"></a>
+								</div>
+							</div><!--/// single-coustomers ///-->
+
+						</div>
+					</div><!--/// coustomer ///-->
+
+				</div><!--/// recent-area ///-->
+
+			</div><!--/// dashboard ///-->
+			 
+		</section><!--/// dashboard ///-->
 		
- 	<script type="text/javascript" src="js/jquery.min.js"></script><!--/// Jquery ///-->
- 	<script type="text/javascript" src="../js/plugin.js"></script><!--/// All plugin ///-->
- 	<script type="text/javascript" src="../js/script.js"></script><!--/// Style.js ///-->
 	</body>
 </html>
