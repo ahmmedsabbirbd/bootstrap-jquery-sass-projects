@@ -1,19 +1,17 @@
-/***********************
-	color
-///*********************/
+/*************************
+	COLOR
+*************************/
 $blue: #099999;
 $black: #3D3D3D;
 $white: #DDDDDD;
 $yellow: #FDC124;
 $dark_black: #424C5E;
-/***********************
-	font-family
-///*********************/
+/*************************
+	FONT-FAMILY
+*************************/
 $aka: 'Akaya Kanadaka', cursive;
 $spori: 'Shippori Mincho', serif;
-/***********************
-	heading
-///*********************/
+
 h1, .h1 {font-size: 37px;line-height: 49px;}
 h2, .h2 {font-size: 32px;line-height: 41px;}
 h3, .h3 {font-size: 27px;line-height: 39px;}

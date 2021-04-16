@@ -33,12 +33,3 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-
-/*/// bootstrap-coustom ///*/
-.btn {
-	
-	&:focus {
-		outline: none;
-		box-shadow: none; 
-	}
-}

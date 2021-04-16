@@ -1,78 +1,78 @@
-/*************************
-	Base style
-///***********************/
-	@import "base";   /*/// base ///*/
-	@import "extend"; /*/// extend ///*/
-	@import "mixin";  /*/// mixin ///*/
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbAs/html/
+Version: 1.0.0
+*/
+@import "base"; 
+@import "extend"; 
+@import "mixin"; 
 
-	// Color
-	$blue: #099999;
-	$white: #DDDDDD;
-	$black: #3D3D3D;
-	$yellow: #FDC124;
-	$dark_black: #424C5E;
+// Color
+$blue: #099999;
+$white: #DDDDDD;
+$black: #3D3D3D;
+$yellow: #FDC124;
+$dark_black: #424C5E;
 
-	/// Font
-	$aka: 'Akaya Kanadaka', cursive;
-	$spori: 'Shippori Mincho', serif;
+// Font
+$aka: 'Akaya Kanadaka', cursive;
+$spori: 'Shippori Mincho', serif;
 
-	/// H1 -- h6
-	h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-		color: $yellow;
-		font-weight: 700;
-		font-family: $spori;
-	}
+h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	color: $yellow;
+	font-weight: 700;
+	font-family: $spori;
+}
 
-	h1, .h1 {
-		font-size: 37px;
-    	line-height: 49px;
-	}
-	h2, .h2 {
-		font-size: 32px;
-		line-height: 41px;
-	}
-	h3, .h3 {
-		font-size: 27px;
-		line-height: 39px;
-	}
-	h4, .h4 {
-		font-size: 25px;
-		line-height: 36px;
-	}
-	h5, .h5 {
-		font-size: 22px;
-		line-height: 33px;
-	}
-	/// Button 
-	.btn {
-		color: $yellow;
-		font-size: 18px;
-		background: $blue;
-		border-radius: 5px;
-		padding: 10px 32px;	
-		border: 1px solid $white;
-		@include transition(all .3s ease);
+h1, .h1 {
+	font-size: 37px;
+	line-height: 49px;
+}
+h2, .h2 {
+	font-size: 32px;
+	line-height: 41px;
+}
+h3, .h3 {
+	font-size: 27px;
+	line-height: 39px;
+}
+h4, .h4 {
+	font-size: 25px;
+	line-height: 36px;
+}
+h5, .h5 {
+	font-size: 22px;
+	line-height: 33px;
+}
 
-		&:hover, &:focus {
-			color: $black;
-			background: $yellow;
-		}
-	}
-	///Body 
-	body {
-		font-family: $aka;
-		color: $dark_black;
-		position: relative;
-		overflow-x: hidden;
-	}
+.btn {
+	color: $yellow;
+	font-size: 18px;
+	background: $blue;
+	border-radius: 5px;
+	padding: 10px 32px;	
+	border: 1px solid $white;
+	@include transition(all .3s ease);
 
-	html, body {
-		width: 100%;
-		height: 100%;
+	&:hover, &:focus {
+		color: $black;
+		background: $yellow;
 	}
-/*************************
-	show-overly
-///**********************/
+}
+
+body {
+	font-family: $aka;
+	color: $dark_black;
+	position: relative;
+	overflow-x: hidden;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+} 
+/// SHOW-OVERLY
 .show-overly {
 	opacity: 0;
 	width: 100%;
@@ -87,9 +87,7 @@
 		z-index: 19;
 	}
 }
-/*************************
-	search-bar
-///**********************/
+// SEARCH-BAR
 .search-bar {
 	top: 0;
 	width: 500px;
@@ -187,8 +185,8 @@
 	}
 }
 /*************************
-	header
-///**********************/
+	HEADER
+*************************/
 .header {
 	top: 0;
 	left: 0;
@@ -260,14 +258,13 @@
 		}
 	}
 }
-
 .headergutter {
 	height: 85px;
-}
+}// HEADER HIGHT FIX
 
 /*************************
-	woner
-///**********************/
+	HOME PAGE
+*************************/
 .woner {
 
 	.row {
@@ -314,8 +311,8 @@
 	}
 }
 /*************************
-	About Page
-\\\**********************/
+	ABOUT PAGE
+*************************/
 .details {
 	margin-top: 40px;
 	background: #011538;
@@ -367,24 +364,15 @@
 			}
 		}
 	}
-	.content {
-
-		h5.title {
-
-		}
-
-		p {
-
-		}
-	}
 }
-
-/// service page
+/*************************
+	ABOUT PAGE
+*************************/
 .incoming { 
 }
 /*************************
-	footer
-\\\**********************/
+	FOOTER
+*************************/
 .content-wrapper {
 	min-height: 100%;
 	position: relative;
@@ -456,4 +444,4 @@
 		}
 	}
 } 
-@import "responsive"; /*/// Responsive ///*/
+@import "responsive";
