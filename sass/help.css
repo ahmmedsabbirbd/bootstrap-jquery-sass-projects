@@ -1,0 +1,17 @@
+/// Color
+$red: #FF5157;
+$blue: #10cab7;
+$white: #FFFFFF;
+$black: #3f4244;
+$light_black: #929ba0;
+$light_white: #FFDFDD;
+
+/// Font
+$robo: 'Roboto', sans-serif;
+
+/// H1 -- h6
+h1, .h1 {font-size: 60px;font-weight: 300;}
+h2, .h2 {font-size: 40px;font-weight: 400;}
+h3, .h3 {font-size: 25px;line-height: 35px;}
+h4, .h4 {font-size: 20px;line-height: 28px;}
+h5, .h5 {font-size: 15px;font-weight: 500;}
