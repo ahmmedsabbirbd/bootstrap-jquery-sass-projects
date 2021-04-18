@@ -179,10 +179,10 @@ h5, .h5 {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
   padding: 25px 0;
   position: fixed;
   background: #FFFFFF;
+  width: calc(100% - 16.5px);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
 .header .navbar {
