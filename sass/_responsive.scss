@@ -241,7 +241,24 @@ HOME PAGE
 			max-width: 480px; 
 		}
 	}
-} 
+}
+/*************************
+Contact PAGE
+*************************/
+.contact {
+	padding: 70px 0;
+
+	.content {
+		margin-bottom: 50px;
+	}
+
+	.form {
+
+		.button {
+			margin-top: 35px;
+		}
+	}
+}
 }/* 991px */
 
 @media only screen and(max-width: 767px) {

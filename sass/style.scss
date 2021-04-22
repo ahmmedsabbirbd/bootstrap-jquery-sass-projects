@@ -258,9 +258,6 @@ html, body {
 		}
 	}
 }
-.headergutter {
-	height: 85px;
-}// HEADER HIGHT FIX
 
 /*************************
 	HOME PAGE
@@ -369,6 +366,50 @@ html, body {
 	ABOUT PAGE
 *************************/
 .incoming { 
+}
+/*************************
+	CONTACT PAGE
+*************************/
+.contact {
+	padding: 80px 0;
+	background: linear-gradient(to top left, #FF3558, #FF5B55);
+
+	.content {
+		margin-bottom: 70px; 
+
+		p {
+			font-size: 13px;
+		}
+	}
+
+	.form {
+
+		.button {
+			margin-top: 45px;
+
+			.btn {
+				width: fit-content;
+			}
+		}
+	}
+}
+
+input, textarea{
+	width: 100%;
+	resize: none;
+	color: $white;
+	font-size: 15px;
+	padding: 15px 30px;
+	background: transparent;
+	border: 1px solid $white;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+input[type="text"] {
+	margin-bottom: 100px;
 }
 /*************************
 	FOOTER
