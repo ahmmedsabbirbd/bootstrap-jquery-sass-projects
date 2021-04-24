@@ -96,6 +96,15 @@ h5, .h5 {
   background: #FDC124;
 }
 
+p {
+  font-size: 17px;
+  max-width: 780px;
+  margin-left: auto;
+  line-height: 27px;
+  margin-right: auto;
+  color: #424C5E;
+}
+
 body {
   font-family: "Akaya Kanadaka", cursive;
   color: #424C5E;
@@ -229,7 +238,10 @@ html, body {
 .header .navbar {
   padding: 0px 15px;
 }
-.header .navbar .navbar-header .logo img {
+.header .navbar .navbar-header .logo a {
+  display: block;
+}
+.header .navbar .navbar-header .logo a img {
   width: 100%;
   height: 45px;
   max-width: 123px;
@@ -269,6 +281,9 @@ html, body {
 /*************************
 	HOME PAGE
 *************************/
+.woner {
+  background: linear-gradient(to top left, #f999, #f1f1f1);
+}
 .woner .row {
   height: 670px;
   display: table;
@@ -281,11 +296,6 @@ html, body {
 }
 .woner .row .content .title {
   margin: 20px 0;
-}
-.woner .row .content p {
-  font-size: 15px;
-  line-height: 27px;
-  color: #424C5E;
 }
 .woner .row .content .button {
   margin-top: 15px;
@@ -306,17 +316,16 @@ html, body {
 	ABOUT PAGE
 *************************/
 .details {
-  margin-top: 40px;
   background: #011538;
 }
 .details .content {
-  padding: 100px;
+  padding: 100px 0;
 }
 .details .content .title {
   color: #DDDDDD;
 }
 .details .content .title.profesion {
-  float: right;
+  text-align: right;
   font-size: 30px;
 }
 .details .content .name {
@@ -357,16 +366,13 @@ html, body {
 *************************/
 .contact {
   padding: 80px 0;
-  background: linear-gradient(to top left, #FF3558, #FF5B55);
+  background: linear-gradient(to top left, #f9f9f9, #f1f1f1);
 }
 .contact .content {
-  margin-bottom: 70px;
-}
-.contact .content p {
-  font-size: 13px;
+  margin-bottom: 55px;
 }
 .contact .form .button {
-  margin-top: 45px;
+  margin-top: 30px;
 }
 .contact .form .button .btn {
   width: -webkit-fit-content;
@@ -377,18 +383,19 @@ html, body {
 input, textarea {
   width: 100%;
   resize: none;
-  color: #DDDDDD;
-  font-size: 15px;
+  color: #424C5E;
+  font-size: 17px;
   padding: 15px 30px;
   background: transparent;
-  border: 1px solid #DDDDDD;
+  border: 2px solid #DDDDDD;
+  border-radius: 20px;
 }
 input:focus, textarea:focus {
   outline: none;
 }
 
-input[type=text] {
-  margin-bottom: 100px;
+input[type=text], input[type=email] {
+  margin-bottom: 40px;
 }
 
 /*************************
@@ -533,7 +540,10 @@ input[type=text] {
     padding: 11px 17px 17px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
   }
-  .sidr .sidr-inner .mobile-menu .menu-header .logo img {
+  .sidr .sidr-inner .mobile-menu .menu-header .logo a {
+    display: block;
+  }
+  .sidr .sidr-inner .mobile-menu .menu-header .logo a img {
     width: 100%;
     height: 60px;
     max-width: 165px;
@@ -649,16 +659,38 @@ input[type=text] {
   }
 
   /*************************
-  Contact PAGE
+  ABOUT PAGE
+  *************************/
+  .details .content {
+    padding: 80px 0;
+  }
+  .details .content .title {
+    font-size: 25px;
+  }
+  .details .content .title.profesion {
+    font-size: 25px;
+  }
+  .details .content .name {
+    padding: 10px 15px;
+    font-size: 40px;
+    margin-left: 250px;
+  }
+
+  /*************************
+  CONTACT PAGE
   *************************/
   .contact {
-    padding: 70px 0;
+    padding: 60px 0;
   }
   .contact .content {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
   .contact .form .button {
-    margin-top: 35px;
+    margin-top: 25px;
+  }
+
+  input[type=text], input[type=email] {
+    margin-bottom: 30px;
   }
 }
 /* 991px */
@@ -682,6 +714,38 @@ input[type=text] {
   .woner .row .slider-img {
     left: 32%;
     max-width: 380px;
+  }
+
+  /*************************
+  ABOUT PAGE
+  *************************/
+  .details .content {
+    padding: 70px 0;
+  }
+  .details .content .title {
+    font-size: 22px;
+    text-align: right;
+  }
+  .details .content .title.profesion {
+    font-size: 22px;
+  }
+  .details .content .name {
+    padding: 5px 10px;
+    font-size: 35px;
+    margin-left: 150px;
+  }
+
+  /*************************
+  CONTACT PAGE
+  *************************/
+  .contact {
+    padding: 50px 0;
+  }
+  .contact .content {
+    margin-bottom: 40px;
+  }
+  .contact .form .button {
+    margin-top: 20px;
   }
 
   /*************************
@@ -740,6 +804,24 @@ input[type=text] {
   .woner .row .slider-img {
     left: 45%;
     max-width: 300px;
+  }
+
+  /*************************
+  ABOUT PAGE
+  *************************/
+  .details .content {
+    padding: 60px 0;
+  }
+  .details .content .title {
+    font-size: 19px;
+    text-align: right;
+  }
+  .details .content .title.profesion {
+    font-size: 19px;
+  }
+  .details .content .name {
+    font-size: 28px;
+    margin-left: 80px;
   }
 }
 /* 575px */
@@ -827,6 +909,24 @@ input[type=text] {
   *************************/
   .woner .row .slider-img {
     max-width: 215px;
+  }
+
+  /*************************
+  ABOUT PAGE
+  *************************/
+  .details .content {
+    padding: 60px 0;
+  }
+  .details .content .title {
+    font-size: 18px;
+    text-align: right;
+  }
+  .details .content .title.profesion {
+    font-size: 18px;
+  }
+  .details .content .name {
+    font-size: 25px;
+    text-align: right;
   }
 }
 /* 320px */
