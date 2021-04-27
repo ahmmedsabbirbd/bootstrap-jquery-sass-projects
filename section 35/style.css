@@ -1,0 +1,249 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+h1, .h1 {
+  color: #FFFEFF;
+  font-size: 38px;
+  line-height: 50px;
+}
+
+p {
+  color: #FFFEFF;
+  font-size: 16px;
+}
+
+.btn {
+  color: #FFFEFF;
+  font-weight: 700;
+  max-width: 295px;
+  border-radius: 0px;
+  padding: 20px 25px;
+  background: #313131;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #CDA872;
+}
+
+.item-right {
+  margin-left: 58.333333%;
+}
+
+.site-area {
+  background: #222931;
+}
+
+.site-item {
+  position: relative;
+}
+.site-item:hover .bg:after {
+  opacity: 0.5;
+}
+.site-item.right .bg {
+  right: 0;
+  background: #f9f9f9 url("images/img/background.jpg") no-repeat center center/cover;
+}
+.site-item.right .item {
+  z-index: 1;
+  position: relative;
+}
+.site-item.right .item:after {
+  width: 0;
+  height: 0;
+  content: "";
+  z-index: -1;
+  right: -94px;
+  position: absolute;
+  top: calc(50% - 50px);
+  border-left: 80px solid #222931;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+.site-item.left .bg {
+  left: 0;
+  background: #f9f9f9 url("images/img/background-1.jpg") no-repeat center center/cover;
+}
+.site-item.left .item {
+  z-index: 1;
+  position: relative;
+}
+.site-item.left .item:after {
+  width: 0;
+  height: 0;
+  content: "";
+  z-index: -1;
+  left: -180px;
+  position: absolute;
+  top: calc(50% - 50px);
+  border-right: 80px solid #222931;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+.site-item .bg {
+  top: 0;
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+.site-item .bg:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  opacity: 0.3;
+  height: 100%;
+  background: black;
+  position: absolute;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.site-item .item {
+  padding: 120px 0;
+}
+.site-item .item .content {
+  padding-left: 50px;
+  position: relative;
+}
+.site-item .item .content:before {
+  left: 0;
+  top: 12px;
+  width: 3px;
+  content: "";
+  height: 100px;
+  background: #767A7F;
+  position: absolute;
+}
+.site-item .item .content .title {
+  margin-bottom: 20px;
+}
+.site-item .item .content .button {
+  margin-top: 30px;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (max-width: 1199px) {
+  h1, .h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .item-right {
+    margin-left: 33.333333%;
+  }
+
+  .site-item .bg {
+    width: 33.333333%;
+  }
+  .site-item.left .item:after {
+    left: -102px;
+  }
+  .site-item .item {
+    padding: 100px 0;
+  }
+  .site-item .item .content {
+    padding-left: 35px;
+  }
+  .site-item .item .content .title {
+    margin-bottom: 15px;
+  }
+  .site-item .item .content .button {
+    margin-top: 25px;
+  }
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  h1, .h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .site-item .bg {
+    width: 33.333333%;
+  }
+  .site-item .item {
+    padding: 80px 0;
+  }
+  .site-item .item .content .title {
+    margin-bottom: 13px;
+  }
+  .site-item .item .content .button {
+    margin-top: 20px;
+  }
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  h1, .h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 575px) {
+  h1, .h1 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .site-item.left .item:after {
+    left: -94px;
+  }
+}
+/*/// 575px ///*/
+/*/// 480px ///*/

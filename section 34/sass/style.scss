@@ -1,0 +1,98 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+
+// COLOR 
+$black: #313131;
+$white: #FFFEFF;
+$dark_blue: #2B2F41;
+
+h1, .h1 {
+	color: $white;
+	font-size: 40px;
+	line-height: 50px;
+}
+
+html, body {
+	height: 100%;
+}
+p {
+	color: $white;
+	font-size: 18px;
+	max-width: 295px;
+}
+.btn {
+	color: $white;
+	font-weight: 700;
+	max-width: 295px;
+	border-radius: 0px;
+	padding: 20px 25px;
+	background: $black;
+	@include transition(all .3s ease);
+
+	&:hover {
+		background: #CDA872;
+	}
+}
+.slick-slider {
+	height: 100%;
+
+	.slider-item {
+		height: 100%;
+		position: relative;
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		background-image: url('images/img/background.jpg');
+
+		background: #f9f9f9 url('images/img/background.jpg') no-repeat center center/cover;
+
+		.content {
+			left: 0;
+			bottom: 0;
+			z-index: 2;
+			width: 100%;
+			padding: 100px 10px;
+			position: absolute;
+			background: #1783C7;
+
+			&:before {
+				top: 0;
+				left: -1000%;
+				content: "";
+				width: 1000%;
+				height: 100%;
+				position: absolute;
+				background: #1783C7;
+			}
+
+			&:after {
+				z-index: -1;
+				top: 100px;
+				right: -26px;
+				content: "";
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				background: #1783C7;
+				transform: rotate(45deg);
+			}
+
+			.title {
+				max-width: 295px;
+				margin-bottom: 20px;
+			}
+
+			.button {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+@import "responsive";

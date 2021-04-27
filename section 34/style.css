@@ -1,0 +1,214 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+h1, .h1 {
+  color: #FFFEFF;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+html, body {
+  height: 100%;
+}
+
+p {
+  color: #FFFEFF;
+  font-size: 18px;
+  max-width: 295px;
+}
+
+.btn {
+  color: #FFFEFF;
+  font-weight: 700;
+  max-width: 295px;
+  border-radius: 0px;
+  padding: 20px 25px;
+  background: #313131;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -khtml-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #CDA872;
+}
+
+.slick-slider {
+  height: 100%;
+}
+.slick-slider .slider-item {
+  height: 100%;
+  position: relative;
+  background-image: url("images/img/background.jpg");
+  background: #f9f9f9 url("images/img/background.jpg") no-repeat center center/cover;
+}
+.slick-slider .slider-item .content {
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 100px 10px;
+  position: absolute;
+  background: #1783C7;
+}
+.slick-slider .slider-item .content:before {
+  top: 0;
+  left: -1000%;
+  content: "";
+  width: 1000%;
+  height: 100%;
+  position: absolute;
+  background: #1783C7;
+}
+.slick-slider .slider-item .content:after {
+  z-index: -1;
+  top: 100px;
+  right: -26px;
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #1783C7;
+  transform: rotate(45deg);
+}
+.slick-slider .slider-item .content .title {
+  max-width: 295px;
+  margin-bottom: 20px;
+}
+.slick-slider .slider-item .content .button {
+  margin-top: 30px;
+}
+
+/************************* 
+	Media Queries
+///**********************/
+@media only screen and (max-width: 1199px) {
+  h1, .h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .slick-slider .slider-item .content {
+    padding: 70px 10px;
+  }
+  .slick-slider .slider-item .content:after {
+    top: 80px;
+  }
+  .slick-slider .slider-item .content .title {
+    margin-bottom: 15px;
+  }
+  .slick-slider .slider-item .content .button {
+    margin-top: 25px;
+  }
+}
+/*/// 1199px ///*/
+@media only screen and (max-width: 991px) {
+  h1, .h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .slick-slider .slider-item .content {
+    padding: 60px 10px;
+  }
+  .slick-slider .slider-item .content .title {
+    margin-bottom: 13px;
+  }
+  .slick-slider .slider-item .content .button {
+    margin-top: 20px;
+  }
+}
+/*/// 991px ///*/
+@media only screen and (max-width: 767px) {
+  h1, .h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .slick-slider .slider-item .content {
+    padding: 50px 10px;
+  }
+  .slick-slider .slider-item .content:after {
+    top: 70px;
+  }
+  .slick-slider .slider-item .content .title {
+    margin-bottom: 10px;
+  }
+  .slick-slider .slider-item .content .button {
+    margin-top: 15px;
+  }
+}
+/*/// 767px ///*/
+@media only screen and (max-width: 575px) {
+  h1, .h1 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .slick-slider .slider-item .content {
+    padding: 40px 20px;
+  }
+  .slick-slider .slider-item .content:after {
+    top: 50px;
+  }
+  .slick-slider .slider-item .content .title {
+    margin-bottom: 8px;
+  }
+  .slick-slider .slider-item .content .button {
+    margin-top: 10px;
+  }
+}
+/*/// 575px ///*/
+@media only screen and (max-width: 480px) {
+  .slick-slider .slider-item .content {
+    padding: 30px 20px;
+  }
+}
+/*/// 480px ///*/

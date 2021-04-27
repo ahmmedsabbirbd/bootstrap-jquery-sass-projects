@@ -1,0 +1,23 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+
+// COLOR
+$black: #313131;
+$white: #FFFEFF;
+$primary: #222931;
+$dark_blue: #2B2F41;
+
+h1, .h1 {
+	color: $white;
+	font-size: 38px;
+	line-height: 50px;
+}
+
+@import "responsive";

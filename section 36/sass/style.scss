@@ -1,0 +1,180 @@
+/*
+Theme Name: section36
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+
+// COLOR
+$black: #45484D;
+$white: #FFFEFF;
+$dark_blue: #7BBACF;
+$dark_white: #F5F6FA;
+
+h1, .h1 {color: $black;font-size: 38px;line-height: 50px;}
+h2, .h2 {color: $black;font-size: 30px;line-height: 40px;}
+ 
+p {
+	color: $black;
+	font-size: 16px;
+}
+.btn {
+	color: $white;
+	font-weight: 700;
+	padding: 15px 25px;
+	border-radius: 50px;
+	background: #D9879A;
+	@include transition(all .3s ease);
+ 
+	&:hover {
+		color: $dark_blue;
+		background: $white !important;
+		border: 1px solid $dark_blue;
+	}
+}
+
+.about-us {
+
+	.promo-box {
+		margin-left: -15px;
+
+		.promo-item {
+			width: 50%;
+			float: left;
+			display: flex;
+			height: 400px;
+			overflow: hidden;
+			padding-top: 60px;
+			text-align: center;
+			flex-direction: column;
+			justify-content: center;
+			@include transition(all .3s ease);
+
+			&.base {
+				background: #D9879A;
+
+				.btn {
+					background: #000000;
+				}
+
+				.title {
+
+					&:after {
+						background: $white;
+					}
+				}
+			}
+
+			&.blue {
+				background: $dark_blue;
+
+				.title {
+
+					&:after {
+						background: $white;
+					}
+				}
+			}
+
+			.icon {
+			    height: 110px;
+			    display: flex;
+			    max-width: 200px;
+			    margin-left: auto;
+			    margin-right: auto;
+				margin-bottom: 25px;					
+			    align-items: center;
+			    justify-content: center;
+
+				img {
+					height: auto;
+					max-width: 150px;
+				}
+
+				i {
+					font-size: 105px;
+				}
+			}
+
+			.title {
+				padding-bottom: 25px;
+				margin-bottom: 35px;
+				position: relative;
+
+				&:after {
+					bottom: 0;
+					width: 50px;
+					height: 3px;
+					content: "";
+					position: absolute;
+					background: #D9879A;
+					left: calc(50% - 35px);
+				}
+			}
+
+			.button {
+				width: 100%;
+				height: 56px;
+				overflow: hidden;
+				position: relative;
+
+				.btn {
+					bottom: -60px;
+					position: absolute;
+					right: calc(50% - 56px);
+				}
+			}
+
+			&:hover {
+				padding-top: 0;
+
+				.button {
+
+					.btn {
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.content {
+		padding-left: 100px;
+
+		span {
+			display: block;
+			font-size: 25px;
+			font-weight: 500;
+			color: $dark_blue;
+			font-style: italic;
+		}
+
+		.title {
+			font-weight: 900;
+			margin-bottom: 40px;
+		}
+
+		.sub-title {
+			font-size: 22px;
+			max-width: 595px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			max-width: 610px;
+		}
+
+		.button {
+			margin-top: 20px;
+
+			.btn {
+				background: $dark_blue;
+			}
+		}
+	}
+}
+
+@import "responsive";

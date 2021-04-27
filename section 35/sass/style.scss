@@ -1,0 +1,159 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+
+// COLOR
+$black: #313131;
+$white: #FFFEFF;
+$primary: #222931;
+$dark_blue: #2B2F41;
+
+h1, .h1 {
+	color: $white;
+	font-size: 38px;
+	line-height: 50px;
+}
+ 
+p {
+	color: $white;
+	font-size: 16px;
+}
+.btn {
+	color: $white;
+	font-weight: 700;
+	max-width: 295px;
+	border-radius: 0px;
+	padding: 20px 25px;
+	background: $black;
+	@include transition(all .3s ease);
+
+	&:hover {
+		background: #CDA872;
+	}
+}
+.item-right {
+	margin-left:58.333333%;
+}
+.site-area {
+	background: $primary;
+}
+.site-item {
+	position: relative;
+
+	&:hover {
+
+		.bg {
+
+			&:after {
+				opacity: .5;
+			}
+		}
+	}
+
+	&.right { 
+
+		.bg {
+			right: 0;
+			background: #f9f9f9 url('images/img/background.jpg') no-repeat center center/cover;
+		}
+
+		.item {
+			z-index: 1;
+			position: relative;
+
+			&:after {
+				width: 0;
+	      		height: 0;
+				content: "";
+				z-index: -1;
+				right: -94px;
+				position: absolute;
+				top: calc(50% - 50px);
+	     		border-left: 80px solid $primary;
+	      		border-top: 40px solid transparent;
+	     		border-bottom: 40px solid transparent;
+			}
+		}
+	}
+
+	&.left {
+
+		.bg {
+			left: 0;
+			background: #f9f9f9 url('images/img/background-1.jpg') no-repeat center center/cover;
+		}
+			
+
+		.item {
+			z-index: 1;
+			position: relative;
+
+			&:after {
+				width: 0;
+	      		height: 0;
+				content: "";
+				z-index: -1;
+				left: -180px;
+				position: absolute;
+				top: calc(50% - 50px);
+	     		border-right: 80px solid $primary;
+	      		border-top: 40px solid transparent;
+	     		border-bottom: 40px solid transparent;
+			}
+		}
+	} 
+
+	.bg {
+		top: 0;
+		content: "";
+		width: 50%;
+		height: 100%;
+		position: absolute;
+
+		&:after {
+			top: 0;
+			left: 0;
+			width: 100%;
+			content: "";
+			opacity: 0.3;
+			height: 100%;
+			background: black;
+			position: absolute;
+			@include transition(all .3s ease);
+		}
+	}
+
+	.item {
+		padding: 120px 0;
+
+		.content {
+			padding-left: 50px;
+			position: relative;
+
+			&:before {
+				left: 0;
+				top: 12px;
+				width: 3px;
+				content: "";
+				height: 100px;
+				background: #767A7F;
+				position: absolute;
+			}
+
+			.title {
+				margin-bottom: 20px;
+			}
+
+			.button {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+@import "responsive";

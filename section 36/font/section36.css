@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'section36';
+  src: url('section36.eot?31058236');
+  src: url('section36.eot?31058236#iefix') format('embedded-opentype'),
+       url('section36.woff2?31058236') format('woff2'),
+       url('section36.woff?31058236') format('woff'),
+       url('section36.ttf?31058236') format('truetype'),
+       url('section36.svg?31058236#section36') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'section36';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'section36';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-dambbel:before { content: '\e800'; } /* '' */
+.icon-model:before { content: '\e801'; } /* '' */
+
+
+
+/* 
+@font-face {
+    font-family: 'mrpc';
+    src: url('fonts/mrpc.eot?24229162');
+    src: url('fonts/mrpc.eot?24229162#iefix') format('embedded-opentype'),
+        url('fonts/mrpc.woff2?24229162') format('woff2'),
+        url('fonts/mrpc.woff?24229162') format('woff'),
+        url('fonts/mrpc.ttf?24229162') format('truetype'),
+        url('fonts/mrpc.svg?24229162#mrpc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'mrpc';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'mrpc';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-block:before { content: '\e800'; }
+.icon-logout:before { content: '\e801'; }
+.icon-cancel:before { content: '\e802'; }
+.icon-link:before { content: '\e803'; }
+.icon-ems:before { content: '\e804'; }
+.icon-health-centers:before { content: '\e805'; }
+.icon-hospital:before { content: '\e806'; }
+.icon-hospitals:before { content: '\e807'; }
+.icon-long-term:before { content: '\e808'; }
+.icon-pdf:before { content: '\e809'; }
+.icon-plus:before { content: '\e80a'; }
+.icon-powerpoint:before { content: '\e80b'; }
+.icon-public-health:before { content: '\e80c'; }
+.icon-search:before { content: '\e80d'; }
+.icon-share:before { content: '\e80e'; }
+.icon-skip-left:before { content: '\e80f'; }
+.icon-skip-right:before { content: '\e810'; }
+.icon-ok:before { content: '\e811'; }
+.icon-ambulance:before { content: '\e812'; }
+.icon-user:before { content: '\e813'; }
+.icon-alert:before { content: '\e814'; }
+.icon-town:before { content: '\e815'; }
+.icon-arrow-down:before { content: '\e816'; }
+.icon-arrow-left:before { content: '\e817'; }
+.icon-arrow-right:before { content: '\e818'; }
+.icon-arrow-up:before { content: '\e819'; }
+.icon-calendar:before { content: '\e81a'; }
+.icon-call:before { content: '\e81b'; }
+.icon-caret:before { content: '\e81c'; }
+.icon-clipboard-medical:before { content: '\e81d'; }
+.icon-email:before { content: '\e81e'; }
+.icon-minus:before { content: '\e81f'; }
+.icon-twitter:before { content: '\f099'; }
+.icon-facebook:before { content: '\f09a'; }
+.icon-list-bullet:before { content: '\f0ca'; }
+.icon-gplus:before { content: '\f0d5'; }
+.icon-mail-alt:before { content: '\f0e0'; }
+.icon-linkedin:before { content: '\f0e1'; }
+.icon-youtube-play:before { content: '\f16a'; }
+.icon-instagram:before { content: '\f16d'; }
+.icon-pinterest:before { content: '\f231'; } */
