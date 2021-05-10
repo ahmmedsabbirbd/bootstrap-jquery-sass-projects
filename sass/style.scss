@@ -1,19 +1,37 @@
 /*
 Theme Name: Ribbas
 Author: Ribbas Interactive
-Author URI: https://ahmmedsabbirbd.github.io/ribbAs/html/
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
 Version: 1.0.0
 */
 @import "base"; 
-@import "extend"; 
-@import "mixin"; 
+@import "icon"; 
 
+@mixin box-shadow($px){
+    box-shadow: $px; 
+	-o-box-shadow: $px;
+    -ms-box-shadow: $px;
+    -moz-box-shadow: $px;
+	-khtml-box-shadow: $px;
+	-webkit-box-shadow: $px;
+}
+
+@mixin transition ($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-ms-transition: $seconds;
+	-moz-transition: $seconds;
+	-khtml-transition: $seconds;
+	-webkit-transition: $seconds;
+}
 // Color
+$red: #FF0101;
 $blue: #099999;
 $white: #DDDDDD;
 $black: #3D3D3D;
 $yellow: #FDC124;
 $dark_black: #424C5E;
+$bg: linear-gradient(to top left, #f999, #f1f1f1);
 
 // Font
 $aka: 'Akaya Kanadaka', cursive;
@@ -37,22 +55,28 @@ h5, .h5 {font-size: 22px;line-height: 33px;}
 	background: $blue;
 	border-radius: 5px;
 	padding: 10px 32px;	
-	border: 1px solid $white;
+	border-radius: 40px;
 	@include transition(all .3s ease);
 
 	&:hover, &:focus {
 		color: $black;
+		box-shadow: none;
 		background: $yellow;
 	}
 }
 
 p {
 	font-size: 17px;
-	max-width: 780px;
-	margin-left: auto;
-	line-height: 27px;
-	margin-right: auto;
+	line-height: 25px;
 	color: $dark_black;
+
+	&:first-letter {
+		color: $red;
+		font-weight: 900;
+		font-style: italic;
+		letter-spacing: 4px;
+		font-size: 35px !important;
+	}
 }
 
 body {
@@ -102,6 +126,13 @@ html, body {
 		display: table-cell;
 		vertical-align: middle;
 
+		&.active {
+
+			.ribbas-search {
+				color: $yellow !important;
+			}
+		}
+
 		input[type="search"] {
 			width: 40%;
 			background: #F4EAE8;
@@ -114,7 +145,7 @@ html, body {
 		} 
 
 		button[type="submit"] {
-				top: 46%;
+				top: 45%;
 				left: 62%;
 				border: none;
 				position: absolute;
@@ -196,6 +227,13 @@ html, body {
 
 		.navbar-header {
 
+			.menu-right {
+
+				.search-icon {
+					display: none;
+				}
+			}
+
 			.logo {
  				a {
  					display: block;
@@ -220,6 +258,8 @@ html, body {
 					padding: 10px 15px;
 					display: inline-block;
 
+					@include transition(all .3s ease);
+
 					&:hover, &.active, &:focus {
 						color: $yellow;
 						text-decoration: none;
@@ -241,6 +281,14 @@ html, body {
 		}
 
 		.search-icon {
+			font-size: 30px;
+
+			&.active {
+
+				i {
+					color: $yellow;
+				}
+			}
 
 			.search-triger { 
 				width: 25px;
@@ -259,79 +307,148 @@ html, body {
 /*************************
 	HOME PAGE
 *************************/
-.woner {
-	background: linear-gradient(to top left, #f999, #f1f1f1);
+.histry {
+	z-index: 1;
+	display: flex;
+	background: $bg;
+	padding: 100px 0;
+	min-height: 600px;
+	position: relative;
+	align-items: center;
 
-	.row {
-		height: 670px;
-		display: table;
-		position: relative;
+	.content {
 
-		.content {
-			height: 670px;
-			display: table-cell;
-			vertical-align: middle;
+		&:hover {
 
 			.title {
-				margin: 20px 0;
-			}
 
-			.button {
-				margin-top: 15px;
-
-				.btn {
-					
-
-					.fa-angle-right {
-						font-weight: 600;
-						padding-left: 5px;
-					}
+				&:before {
+					width: 100%;
 				}
 			}
 		}
 
-		.slider-img {
-			left: 63%;
-			bottom: 0;
-			max-width: 520px;
-			max-height: 570px;
-			position: absolute;
+		.title {
+			position: relative;
+			white-space: nowrap;
+			margin-bottom: 20px;
+
+			&:before {
+			    width: 0;
+			    color: $red;
+			    overflow: hidden;
+			    position: absolute;
+			    content: attr(data-text);
+			    transition: all 5s ease;
+			}
+		}
+
+		.button {
+			margin-top: 15px;
+
+			.btn { 
+
+			}
+		}
+	}
+
+	img {
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		max-width: 800px;
+		position: absolute;
+	}
+}
+
+.product-area {
+	padding: 50px 0;
+
+	.content {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+
+		.title {
+			margin-bottom: 10px;
+		}
+	}
+
+	.product-filter-button {
+		padding-left: 16px;
+		margin-bottom: 20px;
+
+		ul {
+			margin-left: -15px;
+			margin-right: -15px;
+
+			button {
+				color: $black;
+				display: inline;
+				font-size: 20px;
+				cursor: pointer;
+				font-weight: 700;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				&.active {
+					color: $white;
+				}		
+			}
+		}
+	}
+
+	.product-filter {
+		margin-left: -14px; 
+
+		.col-4 {
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+		}
+	}
+}
+
+.product-item {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 15px;
+
+	.media {
+
+		img {
+			width: 100%;
+			height: auto;
+			@include transition (all 0.3s ease);
+		}
+	}
+
+	.item-hover { 
+		width: 100%;
+		height: 100%;
+		padding: 15px;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.9);
+		@include transition (all 0.3s ease);
+
+		.title {
+			color: $white;
+			margin-bottom: 15px;
+		}
+
+		.price {
+			font-size: 25px;
+			
+			span {
+				margin-right: 8px;
+			}
 		}
 	}
 }
 /*************************
 	ABOUT PAGE
-*************************/
-.details {
-	background: #011538;
-
-	.content { 
-		padding: 100px 0;
-
-		.title {
-			color: $white; 
-
-			&.profesion {
-				text-align: right;
-				font-size: 30px;
-			}
-		}
-
-		.name {
-			color: $blue;
-			padding: 20px;
-			margin: 20px 0;
-			font-size: 50px;
-			line-height: 70px;
-			margin-left: 300px;
-			text-align: center;
-			font-style: italic;
-			display: inline-block;
-			border: 2px solid $white;
-		} 
-	}	
-}
-
+*************************/ 
 .about-me {
 	margin: 50px 0;
 
@@ -354,10 +471,42 @@ html, body {
 	}
 }
 /*************************
-	ABOUT PAGE
+	PRODUCT PAGE
 *************************/
-.incoming { 
-}
+// .design-area {
+// 	margin: 50px 0;
+
+// 	.design-item {
+// 		width: 100%;
+// 		height: 400px;
+// 		background: #DEE1E6; 
+
+// 		.content {
+// 			right: 0;
+// 			bottom: 0;
+// 			z-index: 1;
+// 			padding: 30px;
+// 			position: absolute;
+
+// 			&:after {
+// 				top: 0;
+// 				left: 0;
+// 				z-index: -1;
+// 				opacity: 0.1;
+// 				content: "";
+// 				width: 96%;
+// 				height: 100%;
+// 				background: #333;
+// 				border-radius: 5%;
+// 				position: absolute;
+// 			}
+
+// 			.title {
+// 				margin-bottom: 10px;
+// 			}
+// 		}
+// 	}
+// }
 /*************************
 	CONTACT PAGE
 *************************/
@@ -376,6 +525,63 @@ html, body {
 
 			.btn {
 				width: fit-content;
+			}
+		}
+	}
+
+	.quick-contact {
+		padding-left: 50px;
+
+		.content {
+
+			.title {
+				margin-bottom: 20px;
+			}
+
+			ul {
+
+				li {
+					position: relative;
+
+					&:hover {
+
+						.icon {
+
+							a {
+								z-index: 1;
+								left: -33px;
+							}
+						}
+					}
+
+					.icon {
+
+						a {
+							left: 0;
+							top: 5px;
+							z-index: -5;
+							font-size: 30px;
+							position: absolute;
+							@include transition(all .6s ease);
+
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+
+					.text {
+
+						.title {
+
+						}
+
+						p {
+							font-size: 20px;
+							line-height: 20px;
+						}
+					}
+				}
 			}
 		}
 	}

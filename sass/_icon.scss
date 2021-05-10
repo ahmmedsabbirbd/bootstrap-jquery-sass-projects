@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'ribbas';
+  src: url('font/ribbas.eot?23948472');
+  src: url('font/ribbas.eot?23948472#iefix') format('embedded-opentype'),
+       url('font/ribbas.woff2?23948472') format('woff2'),
+       url('font/ribbas.woff?23948472') format('woff'),
+       url('font/ribbas.ttf?23948472') format('truetype'),
+       url('font/ribbas.svg?23948472#ribbas') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'ribbas';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ribbas-"]:before,
+[class*=" ribbas-"]:before {
+    speak: none;
+    line-height: 1;
+    font-family: 'ribbas';
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ribbas-mail:before { content: '\e800'; } 
+.ribbas-facebook:before { content: '\e801'; } 
+.ribbas-minus:before { content: '\e802'; } 
+.ribbas-search:before { content: '\e803'; } 
+.ribbas-paper-plane:before { content: '\e804'; } 
+.ribbas-down-open:before { content: '\e805'; } 
+.ribbas-left-open:before { content: '\e806'; } 
+.ribbas-right-open:before { content: '\e807'; } 
+.ribbas-up-open:before { content: '\e808'; } 
+.ribbas-cancel-circled-outline:before { content: '\e80a'; } 
+.ribbas-twitter:before { content: '\f099'; } 
+.ribbas-docs:before { content: '\f0c5'; } 
+.ribbas-gplus:before { content: '\f0d5'; } 
+.ribbas-linkedin:before { content: '\f0e1'; } 
+.ribbas-angle-left:before { content: '\f104'; } 
+.ribbas-angle-right:before { content: '\f105'; } 
+.ribbas-angle-up:before { content: '\f106'; } 
+.ribbas-angle-down:before { content: '\f107'; } 
+.ribbas-youtube-play:before { content: '\f16a'; } 
+.ribbas-instagram:before { content: '\f16d'; } 
+.ribbas-google:before { content: '\f1a0'; } 
+.ribbas-commenting-o:before { content: '\f27b'; } 
+.ribbas-twitter-1:before { content: '\f309'; } 
+.ribbas-linkedin-squared:before { content: '\f30c'; } 
+.ribbas-skype:before { content: '\f339'; } 
