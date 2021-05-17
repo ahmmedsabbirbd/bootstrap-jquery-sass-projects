@@ -548,6 +548,29 @@ html, body {
 }
 
 /*************************
+	WEBSITE COUNTER
+*************************/
+.website-counter {
+  padding-bottom: 50px;
+}
+.website-counter div {
+  width: 50%;
+  display: inline;
+}
+.website-counter div img.counterimg {
+  vertical-align: top;
+}
+.website-counter div svg {
+  height: 88px !important;
+}
+.website-counter div rect:first-child {
+  height: 88px !important;
+}
+.website-counter.web-minus {
+  margin-top: -24px;
+}
+
+/*************************
 	ABOUT PAGE
 *************************/
 .about-me {

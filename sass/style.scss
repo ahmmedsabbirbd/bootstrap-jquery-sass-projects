@@ -447,6 +447,37 @@ html, body {
 	}
 }
 /*************************
+	WEBSITE COUNTER
+*************************/
+.website-counter {
+	padding-bottom: 50px;
+
+	div {
+		width: 50%;
+		display: inline;
+
+		img.counterimg {
+			// width: 100px;
+			// max-height: 70px;
+			vertical-align: top;
+		}
+
+		svg {
+			height: 88px !important;
+		}
+		rect {
+			
+			&:first-child {
+				height: 88px !important;
+			}
+		}
+	}
+
+	&.web-minus {
+		margin-top: -24px;
+	}
+}
+/*************************
 	ABOUT PAGE
 *************************/ 
 .about-me {
