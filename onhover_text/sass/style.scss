@@ -1,0 +1,48 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+
+.hover-area {
+	margin: 40px 0;
+	overflow-x: hidden;
+
+	.content {
+
+		.title {
+		  color: #9E9E9E;
+		  
+		  	span {
+		  		white-space: nowrap;
+
+				&:before {
+				    width: 0;
+				    color: #262626;
+				    overflow: hidden;
+				    position: absolute;
+				    content: attr(data-text);
+				    transition: all 5s;
+				}
+		  	}
+		}
+
+		&:hover {
+
+			.title {
+
+				span {
+
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+@import "responsive";

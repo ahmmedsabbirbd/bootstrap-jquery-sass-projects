@@ -1,0 +1,121 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+@import "extend";
+@import "mixin";
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #2d303a;
+  overflow-y: hidden;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	color: white;
+  height: 100%;
+  font: normal bold 6rem 'El Messiri', sans-serif;
+  white-space: nowrap;
+}
+
+.letter {
+  animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  font: normal 400 6rem 'El Messiri', sans-serif;
+}
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) {
+  animation-delay: 0.0533333333s;
+}
+.letter:nth-child(3) {
+  animation-delay: 0.1066666667s;
+}
+.letter:nth-child(4) {
+  animation-delay: 0.1066666667s;
+}
+.letter:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.letter:nth-child(6) {
+  animation-delay: 0.3333333333s;
+}
+.letter:nth-child(7) {
+  animation-delay: 0.4166666667s;
+}
+.letter:nth-child(8) {
+  animation-delay: 0.4666666667s;
+}
+.letter:nth-child(9) {
+  animation-delay: 0.5666666667s;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  }
+  100% {
+    transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+  }
+}
+
+svg {
+    left: 66%;
+    top: 61%;
+    max-width: 100px;
+    position: absolute;
+}
+#arrow-up {
+  fill: red;
+  animation-name: sabbir;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  // animation-iteration-count: 3;
+  // animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+#subscribe {
+  animation-name: sabbir1;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  // animation-iteration-count: 3;
+  // animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes sabbir{
+
+  0%{
+    fill: pink;
+  }
+  100%{
+    fill: green;
+    transform: translateY(-100px);
+  } 
+}
+@keyframes sabbir1{
+
+  0%{
+    fill: pink;
+  }
+  100%{
+    fill: red;
+  } 
+}
+
+@import "responsive";

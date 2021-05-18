@@ -1,0 +1,120 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, img,
+ol, ul, li, a, p, h1, h2, h3,
+h4, h5, h6, option, legend, label,
+table, th, td, tr, article, aside,
+caption, figure, footer, header, hgroup,
+mark, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scrol;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ex-title {
+  margin: 15px 0;
+  font-size: 40px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+html, body {
+  height: 100%;
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+  display: block;
+}
+
+.rotate-text {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover !important;
+}
+.rotate-text .content h1 {
+  color: #fe2421;
+}
+.rotate-text .content h1 .txt-rotate {
+  color: #267ae9;
+  position: relative;
+  display: inline-block;
+}
+.rotate-text .content h1 .txt-rotate:after {
+  bottom: 0;
+  width: 15px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background: #267ae9;
+}
+
+/************************* 
+	Media Queries
+*************************/
+@media only screen and (max-width: 1199px) {
+  h1, .h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+/* 1199px */
+@media only screen and (max-width: 991px) {
+  h1, .h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+}
+/* 991px */
+@media only screen and (max-width: 767px) {
+  h1, .h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/* 767px */
+@media only screen and (max-width: 575px) {
+  h1, .h1 {
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  span {
+    font-size: 15px;
+  }
+}
+/* 575px */
