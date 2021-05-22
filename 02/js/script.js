@@ -20,6 +20,18 @@ $('documnet').ready(function() {
         $('.show-overly').removeClass('active');
     });/*** sidr-&-overly-close */
 
+    $('.search-triger').on('click',function(){
+        $('.search-bar, .show-overly').addClass('active');
+    });/*** earch-&-overly-open*/
+
+    $('.fabarite-triger').on('click',function(){
+        $('.fabarite-bar, .show-overly').addClass('active');
+    });/*** earch-&-overly-open*/
+
+    $('.search-close, .sidr-close').on('click',function(){
+        $('.search-bar, .show-overly, .fabarite-bar').removeClass('active');
+    });/*** search-&-sidr-&-overly-close*/
+
     /*** Header height = gutter height */
     function setGutterHeight(){
         var header = document.querySelector('.header'),
@@ -46,5 +58,60 @@ $('documnet').ready(function() {
       } else {
          $('.header').removeClass('header-sticky ');
       }
-  });/*** header-sticky */
+    });/*** header-sticky */ 
+
+    // check for saved 'darkMode' in localStorage
+    let darkMode = localStorage.getItem('darkMode'); 
+
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+    const enableDarkMode = () => {
+        document.body.classList.add('darkmode'); /// Add the class to the body
+        localStorage.setItem('darkMode', 'darkMode-active'); /// Update darkMode in localStorage
+    } /*** ES 6 of javascript */
+
+   /* function enableDarkMode () {
+        document.body.classList.add('darkmode');
+        localStorage.setItem('darkMode', 'darkMode-active');
+    }*/ /*** javascript old versiton */
+
+    const disableDarkMode = () => {
+        document.body.classList.remove('darkmode');/// Remove the class from the body
+        localStorage.setItem('darkMode', "darkMode-disactive"); /// Update darkMode in localStorage
+    } /*** ES 6 of javascript */
+     
+    /*function disableDarkMode () {
+        document.body.classList.remove('darkmode');
+        localStorage.setItem('darkMode', 'darkMode-disactive');
+    }*/ /*** javascript old versiton */
+
+    if (darkMode === 'darkMode-active') {
+      enableDarkMode();
+    } /// If the user already visited and enabled darkMode
+
+    darkModeToggle.addEventListener('click', () => {
+       darkMode = localStorage.getItem('darkMode'); 
+
+        if (darkMode !== 'darkMode-active') {
+        enableDarkMode();
+        /// if it not current enabled, enable it
+        } else {  
+        disableDarkMode(); 
+        }/// if it has been enabled, turn it off  
+    }); /*** ES 6 of javascript */
+
+   /* $("#dark-mode-toggle").click(function(){
+        darkMode = localStorage.getItem('darkMode'); 
+
+        if (darkMode !== 'darkMode-active') {
+        enableDarkMode();
+        /// if it not current enabled, enable it
+        } else {  
+        disableDarkMode(); 
+        }/// if it has been enabled, turn it off  
+    });*/ 
+    document.cookie = "usernamasdfe=John Doe";
+    document.cookie = "name=;";
+    document.cookie = "xxxxxxxxxxxxxxxxxxxxxx=John zxxxxxxxxxxxxxxxxxx;";
+
 });
