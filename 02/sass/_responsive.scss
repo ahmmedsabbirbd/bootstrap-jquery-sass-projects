@@ -17,6 +17,11 @@ h1, .h1 {font-size: 32px;line-height: 42px;}
 			display: flex;
 			justify-content: space-between;
 
+			.user-dashboard {
+				display: block;
+				margin-right: 10px;
+			}
+
 			.navbar-toggler {
 				margin: 0;
 			    border: 0;
@@ -70,6 +75,7 @@ h1, .h1 {font-size: 32px;line-height: 42px;}
 .sidr {
 	z-index: 999;
 	display: block ;
+	max-width: 100%;
 	@include box-shadow(4px -5px 9px 4px #1b1919);
 
 	.sidr-inner {
@@ -146,11 +152,93 @@ h1, .h1 {font-size: 32px;line-height: 42px;}
 						li {  
 							border: none;
 							padding: 14px 0;
-							padding-left: 15px;
 							border-bottom: 1px solid rgba(221, 221, 221, 0.3) !important;
 
+							.dropdown-menu {
+								width: 100%;
+								display: none;
+								margin: 0 !important;
+								padding: 0 !important;
+								background: transparent;
+								position: inherit !important;
+
+								&.show {
+									display: block;
+								} 
+
+								li {
+									border: none;
+									padding: 14px 0;
+									border-bottom: 1px solid rgba(221, 221, 221, 0.3) !important;
+
+									&:last-child {
+										border-bottom: none !important;
+									}
+
+									a {
+										color: yellow !important;
+									}
+
+									.dropdown-menu {
+										display: none;
+
+										&.show-01 {
+											display: block;
+										}
+
+										.dropdown-menu {
+											display: none;
+
+											&.show-02 {
+												display: block;
+											}
+
+											.dropdown-menu {
+												display: none;
+
+												&.show-03 {
+													display: block;
+												}
+											}
+										}
+									}
+								}
+							} 
+
+							.mega-menu {
+								left: 0;
+								width: 100%;
+			 
+								.content {
+									padding-left: 15px;
+									padding-right: 15px;
+									max-width: 1140px;
+									margin-left: auto;
+									margin-right: auto;
+
+									.mega-widget {
+										float: left;
+
+										.meag-title {
+											padding: 15px 20px;
+										}
+
+									}
+								}
+							}
+
+							&:hover {
+
+								.dropdown-menu {
+									top: 100%;
+									opacity: 1;
+									visibility: visible;
+								} 
+							}
+
 							a { 
-								font-size: 22px;
+								padding: 0 15px;
+								font-size: 20px;
 								font-weight: 700;
 								line-height: 30px;
 								color: var(--header-text-color);
@@ -171,6 +259,47 @@ h1, .h1 {font-size: 32px;line-height: 42px;}
 @media only screen and(max-width: 767px) {h1, .h1 {font-size: 30px;line-height: 40px;}}/*/// 767px ///*/
 @media only screen and(max-width: 575px) {
 h1, .h1 {font-size: 25px;line-height: 35px;}
+
+// SEARCH-BAR
+.search-bar {
+	width: 260px;
+	right: -260px; 
+
+	.content { 
+
+		input[type="search"] {
+			width: 70%;
+		} 
+
+		button[type="submit"] {
+			left: 74%;
+		}
+	}
+}
+
+// SEARCH-BAR
+.fabarite-bar {
+	width: 260px;
+	right: -260px;
+
+	.content {
+		margin-top: 25%;
+		padding: 10px 10px; 
+
+		.item {
+			margin-bottom: 10px;
+			display: block !important;
+			
+			.media {
+				width: 100%; 
+			}
+
+			.text {
+				text-align: center;
+			}
+		}
+	}
+}
 
 /*************************
 	FOOTER

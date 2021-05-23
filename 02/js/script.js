@@ -20,6 +20,34 @@ $('documnet').ready(function() {
         $('.show-overly').removeClass('active');
     });/*** sidr-&-overly-close */
 
+    $("ul.navbar-nav li.dropdown .dropdown-caret").click(function(e) {
+        e.preventDefault();
+        $(this).parents('.dropdown').toggleClass("show");
+        $(this).parents('.dropdown').children('.dropdown-menu').toggleClass("show");
+        $(this).siblings(".dropdown-menu").slideToggle();
+    }); /*** sidr dropdown */
+
+    $("ul.navbar-nav li.dropdown .dropdown-menu li.dropdown .dropdown-caret-01 ").click(function(e) {
+        e.preventDefault();
+        $(this).parents('.dropdown').toggleClass("show-01");
+        $(this).parents('.dropdown').children('.dropdown-menu').toggleClass("show-01");
+        $(this).siblings(".dropdown-menu").slideToggle();
+    }); /*** sidr dropdown-01 */
+
+    $("ul.navbar-nav li.dropdown .dropdown-menu li.dropdown .dropdown-menu .dropdown-caret-02 ").click(function(e) {
+        e.preventDefault();
+        $(this).parents('.dropdown').toggleClass("show-02");
+        $(this).parents('.dropdown').children('.dropdown-menu').toggleClass("show-02");
+        $(this).siblings(".dropdown-menu").slideToggle();
+    }); /*** sidr dropdown-02 */
+
+    $("ul.navbar-nav li.dropdown .dropdown-menu li.dropdown .dropdown-menu li.dropdown .dropdown-menu .dropdown-caret-03 ").click(function(e) {
+        e.preventDefault();
+        $(this).parents('.dropdown').toggleClass("show-03");
+        $(this).parents('.dropdown').children('.dropdown-menu').toggleClass("show-03");
+        $(this).siblings(".dropdown-menu").slideToggle();
+    }); /*** sidr dropdown-02 */
+
     $('.search-triger').on('click',function(){
         $('.search-bar, .show-overly').addClass('active');
     });/*** earch-&-overly-open*/
