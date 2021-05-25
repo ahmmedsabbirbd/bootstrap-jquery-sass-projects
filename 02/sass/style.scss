@@ -28,11 +28,7 @@ Version: 1.1.0
 
 @mixin letter-spacing($letter-spacing, $line-height) {
 	letter-spacing: ($letter-spacing * $line-height) / 1000 + px;
-}
-
-/// COLOR
-$white: #FEF8FF;
-$primary: #c7c7c7;
+} 
 
 h1, .h1 {color: #83CEF3; font-size: 38px; line-height: 48px; font-weight: 700;}
 html, body {
@@ -70,7 +66,7 @@ body {
 	position: fixed;
 	max-width: 100%;
 	min-height: 100%;
-	background: #f1f1df;
+	background: var(--search-bg-color);
 	@include transition(all .4s ease);
 
 	&.active {
@@ -85,7 +81,7 @@ body {
 		&.active {
 
 			.icon-search {
-				color: red !important;
+				color: var(--header-text-color) !important;
 			}
 		}
 
@@ -108,7 +104,7 @@ body {
 				background: transparent;
 
 				.fa-search { 
-					color: red;
+					color: var(--header-text-color);;
 					font-size: 20px;
 					background: transparent;
 				}
@@ -147,7 +143,7 @@ body {
 		        width: 100%;
 		        display: block;
 		        border-radius: 0;
-		        background-color: red; 
+		        background-color: var(--header-text-color);; 
 
 		        &:nth-child(2) {
 		        	opacity: 0;
@@ -176,8 +172,8 @@ body {
 	position: fixed;
 	max-width: 100%;
 	min-height: 100%;
-	background: #f1f1df;
 	@include transition(all .4s ease);
+	background: var(--fabarite-bg-color);
 
 	&.active {
 		right: 0;
@@ -191,7 +187,7 @@ body {
 		&.active {
 
 			.icon-search {
-				color: red !important;
+				color: var(--header-text-color) !important;
 			}
 		} 
 
@@ -248,7 +244,7 @@ body {
 		        width: 100%;
 		        display: block;
 		        border-radius: 0;
-		        background-color: red; 
+		        background-color: var(--header-text-color); 
 
 		        &:nth-child(2) {
 		        	opacity: 0;
@@ -329,6 +325,7 @@ body {
 					margin: 0 !important;
 					padding: 0 !important;
 					@include transition(all .3s ease);
+					background: var(--dropdown-background);
 
 					li {
 						position: relative;
@@ -404,6 +401,7 @@ body {
 
 							.meag-title {
 								padding: 15px 20px;
+								color: var(--header-text-color);
 							}
 
 						}
@@ -453,7 +451,7 @@ body {
 				&.active {
 
 					i {
-						color: red;
+						color: var(--header-text-color);
 					}
 				}
 
@@ -461,6 +459,10 @@ body {
 					border: 0px;
 					color: black;
 					background: transparent;
+
+					i {
+						color: var(--header-text-color);
+					}
 
 					&:focus {
 						outline: none;
@@ -580,34 +582,42 @@ body {
 body {
 	--title-color: #541743;
 	--logo-color: black;
-	--header-text-color: red;
+	--dark-icon: black;
+	--header-text-color: black;
 	--description-color: #E95123;
 	--header-hover-color: blue;
-	--fotter-text-color: black;
+	--fotter-text-color: #323;
+	--fabarite-bg-color: #323;
+	--search-bg-color: white;
 	--fotter-hover-color: green;
 	--header-fotter-color: white;
+	--dropdown-background: white;
 } /// Default Style
 
 .darkmode {
 	--background: #000;
+	--dark-icon: white;
 	--logo-color: white;
 	--title-color: white;
-	--header-text-color: white;
 	--description-color: white;
 	--header-hover-color: green;
 	--fotter-text-color: white;
-	--fotter-hover-color: black;
+	--fotter-hover-color: green;
+	--fabarite-bg-color: #169999;
+	--search-bg-color: #169999;
 	--header-fotter-color: #161B22;
+	--dropdown-background: #161B22;
+	--header-text-color: white !important;
 } /// Dark mode
 
 .dark-mode-toggle {
-  position: fixed;
-  z-index: 100;
   top: 20%;
   right: 1em;
-  color: var(--foreground);
-  border: 2px solid currentColor;
+  z-index: 100;
   padding: 4px;
+  color: var(--dark-icon);
+  border: 2px solid currentColor;
+  position: fixed;
   background: transparent;
   cursor: pointer;
   border-radius: 5px;
