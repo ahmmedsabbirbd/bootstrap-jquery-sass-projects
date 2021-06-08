@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mousehover</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+	<div class="offset">offset</div>
+	<div class="show">sd</div>
+	<div class="ff">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum non odit illo quod corporis, quos molestiae maiores debitis, magnam ratione incidunt inventore beatae perspiciatis sed aliquid voluptatum fuga, sit.</div><br>
+	<div style="width: 400px; height: 400px; background: green; color: black" id="result"></div>
+	<a href="#" class="btn"><span>Button</span></a>
+	<div class="mouseMove" style="width: 30px; height: 30px; background: red;">DFGHJUYTRERTYUIKUY</div>
+	<div class="mouse" style="width: 30px; height: 30px; background: red;">DFGHJUEEEEEEEEEEEEEEEEEEEEEEEEEEEYTRERTYUIKUY</div>
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+	<script>
+		const btn = document.querySelector('.btn');
+		const ff = document.querySelector('.ff');
+		btn.onmousemove = function(e) {
+			const x = e.pageX - btn.offsetLeft;
+			const y = e.pageY - btn.offsetTop;
+
+			btn.style.setProperty('--x', x + 'px');
+			btn.style.setProperty('--y', y + 'px');
+			console.log("Button offsetTop : "+btn.offsetTop);
+			console.log("Button offsetLeft : "+btn.offsetLeft);
+			console.log("Top value : "+y);
+			console.log("Left value : "+x);
+		}
+
+
+		ff.style.setProperty('--e', 'yellow');
+
+	// offset and pageY in javascript
+	const textShow = document.querySelector('.show');
+	$(document).ready(function(){
+		$(document).mousemove(function(event){
+			var x = event.pageX;
+			var y = event.pageY;
+			$('#result').text("Left : "+x+" Top : "+y);
+			// $('.mouseMove').offset({top:y, left:x})
+		})
+	}); 
+	</script>
+</body>
+</html>
