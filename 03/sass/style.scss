@@ -1,0 +1,237 @@
+/***
+Theme Name: header
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.1.0
+*/
+@import "base";
+@import "icon";
+
+/// MIXIN
+@mixin box-shadow($px){
+    box-shadow: $px; 
+	-o-box-shadow: $px;
+    -ms-box-shadow: $px;
+    -moz-box-shadow: $px;
+	-khtml-box-shadow: $px;
+	-webkit-box-shadow: $px;
+}
+
+@mixin transition ($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-ms-transition: $seconds;
+	-moz-transition: $seconds;
+	-khtml-transition: $seconds;
+	-webkit-transition: $seconds;
+}
+
+@mixin letter-spacing($letter-spacing, $line-height) {
+	letter-spacing: ($letter-spacing * $line-height) / 1000 + px;
+} 
+
+html, body {
+	height: 100%;
+}
+
+body {
+	color: #f99fff;
+	font-size: 18px ;
+}
+
+ 
+/*************************
+	header
+*************************/
+.mm-navbar__title {
+	padding: 10px 0;
+	display: block;
+	font-size: 30px;
+	font-weight: 900;
+	padding-bottom: 5px;
+	letter-spacing: 3px;
+
+	span {
+		color: #f99fff; 
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+} // Mmenu
+.header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	position: absolute;
+	padding: 30px 0;
+	background-color: white; 
+	@include transition(all .3s ease);
+	@include box-shadow(0px 1px 6px #333);
+
+	.navbar {
+		padding: 0px 15px;
+
+		.navbar-header { 
+
+			.logo {
+
+ 				a {
+ 					display: block;
+ 					font-size: 30px;
+ 					font-weight: 900;
+ 					padding-bottom: 5px;
+ 					letter-spacing: 3px;
+ 					color: #f99fff; 
+
+ 					&:hover {
+ 						text-decoration: none;
+ 					}
+ 				}
+			}
+		}
+
+		.navbar-toggler {
+			margin: 0;
+		    border: 0;
+		    padding: 0;
+		    width: 32px;
+		    display: none;
+		    border-radius: 0;
+		    background: transparent;
+
+			span.bar-menu {
+		        height: 6px;
+		        width: 100%;
+		        display: block;
+				border-radius: 20px;
+		        @include transition(all .5s ease);
+		        background-color: red; 
+
+		        &:not(:last-child) {
+		        	margin-bottom: 4px;
+		        }
+		    }
+
+		    &:hover { 
+
+	            span:first-child { 
+	           		transition: 0.5s;
+	           		transform: translateY(-2px);
+	            }
+
+	            span:last-child {
+	            	transition: 0.5s;
+	            	transform: translateY(2px);
+	       		} 
+	   		}
+
+	   		&:focus {
+		    	outline: none;
+		    }
+		}
+
+		.navbar-nav {
+
+			li {
+				padding: 15px; 
+
+				a {
+					display: block;
+					font-size: 18px;
+					font-weight: 700;
+					display: inline-block;
+					color: red;
+					@include transition(all .3s ease);
+					 
+					&:hover, &.active, &:focus {
+						text-decoration: none;
+						color: red;
+					} 
+				}
+			}
+		} 
+	}
+}
+.headergutter {
+	height: 117px;
+} /// header-height controler
+
+.section-title {
+	margin: 20px 0;
+}
+
+/*************************
+	FOOTER
+*************************/
+.content-wrapper {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 87px;
+} ///footer fixed wraper
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 30px 0;
+	font-weight: 700;
+	overflow: hidden;
+	position: absolute;
+	background-color: rgba(11, 22, 65, 0.8);
+
+	.widget {
+
+		ul {
+
+			li {
+				float: left;
+
+				&:not(:last-child) {
+					margin-right: 17px;
+				}
+
+				a {
+					color: black;
+					font-size: 18px;
+					@include transition(all .3s ease);
+
+					&:hover {
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.socail-widget {
+		float: right;
+
+		.follow {
+			color: black;
+			font-size: 18px;
+			margin-right: 17px;
+			@include transition(all .3s ease);
+
+			&:hover {
+				color: black;
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			float: right;
+
+			li {
+
+				a {
+					color: black;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+@import "responsive";

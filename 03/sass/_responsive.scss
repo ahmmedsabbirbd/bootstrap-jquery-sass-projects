@@ -1,0 +1,38 @@
+/************************* 
+	Media Queries
+///**********************/ 
+@media only screen and(max-width: 991px) {
+	.navbar-toggler {
+		display: block !important;
+	}
+}/*/// 991px ///*/
+@media only screen and(max-width: 767px) {
+
+}/*/// 767px ///*/
+@media only screen and(max-width: 575px) {
+/*************************
+	FOOTER
+*************************/
+.footer {
+	padding: 20px 0;
+
+	.widget {
+		text-align: center;
+
+		ul {
+			display: inline-block; 
+		}
+	}
+
+	.socail-widget {
+			float: none;
+			margin-top: 10px;
+			text-align: center; 
+
+			ul { 
+				float: none;
+				margin-bottom: -6px; 
+			}
+	}
+}
+}/*/// 575px ///*/
