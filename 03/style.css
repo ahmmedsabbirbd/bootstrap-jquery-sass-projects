@@ -155,7 +155,7 @@ body {
   left: 0;
   right: 0;
   z-index: 99999;
-  position: absolute;
+  position: sticky;
   padding: 30px 0;
   background-color: white;
   transition: all 0.3s ease;
@@ -240,10 +240,6 @@ body {
 .header .navbar .navbar-nav li a:hover, .header .navbar .navbar-nav li a.active, .header .navbar .navbar-nav li a:focus {
   text-decoration: none;
   color: red;
-}
-
-.headergutter {
-  height: 117px;
 }
 
 .section-title {

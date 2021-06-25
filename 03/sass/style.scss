@@ -64,7 +64,7 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 99999;
-	position: absolute;
+	position: sticky;
 	padding: 30px 0;
 	background-color: white; 
 	@include transition(all .3s ease);
@@ -154,9 +154,6 @@ body {
 		} 
 	}
 }
-.headergutter {
-	height: 117px;
-} /// header-height controler
 
 .section-title {
 	margin: 20px 0;

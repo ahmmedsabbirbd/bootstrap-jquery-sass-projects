@@ -8,20 +8,14 @@ $('documnet').ready(function() {
 
     /*** Header height = gutter height */
     function setGutterHeight(){
-        var header = document.querySelector('.header'),
-            gutter = document.querySelector('.headergutter'),
-            footer = document.querySelector('.footer');
-            footerGutter = document.querySelector('.content-wrapper');
-
-        if ( gutter ) {
-            gutter.style.height = header.offsetHeight + 'px';
-        }
-        
-        console.log(gutter);
+        var    footer = document.querySelector('.footer');
+            footerGutter = document.querySelector('.content-wrapper');  
 
         if ( footerGutter ) {
             footerGutter.style.paddingBottom = footer.offsetHeight + 'px';
         }
+
+        console.log(footerGutter);
     }
     window.onload = setGutterHeight;
     window.onresize = setGutterHeight;      
