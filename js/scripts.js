@@ -213,7 +213,152 @@ $(document).ready(function() {
                         },
                         callbacks: {
                             title: function (context) {
-                                console.log(context[0]);
+                                return textToLines(context[0].formattedValue, 120);
+                            },
+                            label: function (context) {
+                                return false;
+                            }
+                        }
+                    },
+                }
+            }
+        });
+
+        function textToLines(text, maxWidth) {
+            var words = text.split(" ");
+            var lines = [];
+            var currentLine = words[0];
+
+            for (var i = 1; i < words.length; i++) {
+                var word = words[i];
+                var width = ctx.measureText(currentLine + " " + word).width;
+
+                if (width < maxWidth) 
+                {
+                    currentLine += " " + word;
+                } 
+                else 
+                {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+
+            lines.push(currentLine);
+            return lines;
+        }
+    });
+
+
+
+    $('.chart3').each(function ( i, l ) {
+        var id = $(this).attr("id"),
+            type = $(this).data("type"),
+            labels = $(this).data("labels"),
+            series = $(this).data("series"),
+            background = $(this).data("background"),
+            series = $(this).data("series"),
+            max = $(this).data("max"),
+            step = $(this).data("step"),
+            options = $(this).data("options"),
+            ctx = this.getContext("2d");
+
+            // console.log(series[0]);
+
+        new Chart(ctx, {
+            type: type,
+            plugins: [ChartDataLabels],
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "Q1",
+                        backgroundColor: background[0],
+                        maxBarThickness: 20,
+                        data: series[0]
+                    },
+                    {
+                        label: "Median",
+                        backgroundColor: background[1],
+                        maxBarThickness: 20,
+                        data: series[1]
+                    },
+                    {
+                        label: "AVERAGE",
+                        backgroundColor: background[2],
+                        maxBarThickness: 20,
+                        data: series[2]
+                    },
+                    {
+                        label: "Q3",
+                        backgroundColor: background[3],
+                        maxBarThickness: 20,
+                        data: series[3]
+                    },
+                ],
+            },
+            options: { 
+                aspectRatio: 4/2,
+                scales: {
+                    x: { 
+                        grid: {
+                            display: false,
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            color: "#1E101B",
+                            font: {
+                                size: 14,
+                                weight: 400,
+                            },
+                            align: "center",
+                            callback: function (value, index, values) {
+                                // return this.getLabelForValue(value);
+                                return textToLines(this.getLabelForValue(value), 89);
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            color: '#F0F0F0',
+                        },  
+                        min: 0,
+                        max: max,
+                        ticks: {
+                            color: '#1E101B',
+                            stepSize: step,
+                            font: {
+                                size: 14,
+                                weight: 700,
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        display: false,
+                    },
+                    legend: {
+                        position: 'left',
+                    },
+                    tooltip: {
+                        backgroundColor: "#f4f4f4",
+                        titleColor: "#333",
+                        xAlign: "center",
+                        yAlign: "bottom",
+                        padding: {
+                            top: 5,
+                            left: 5,
+                            right: 5,
+                            bottom: 0
+                        },
+                        titleFont: {
+                            size: 16,
+                            weight: 700
+                        },
+                        callbacks: {
+                            title: function (context) {
                                 return textToLines(context[0].formattedValue, 120);
                             },
                             label: function (context) {
