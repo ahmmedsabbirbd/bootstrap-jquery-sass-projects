@@ -88,7 +88,7 @@ $(document).ready(function() {
                         },
                         callbacks: {
                             title: function (context) {
-                                return textToLines(context[0].label, 120);
+                                return textToLines(context[0].formattedValue, 120);
                             },
                             label: function (context) {
                                 return false;
@@ -132,6 +132,8 @@ $(document).ready(function() {
             series = $(this).data("series"),
             background = $(this).data("background"),
             series = $(this).data("series"),
+            max = $(this).data("max"),
+            step = $(this).data("step"),
             options = $(this).data("options"),
             ctx = this.getContext("2d");
 
@@ -157,26 +159,35 @@ $(document).ready(function() {
                             display: false,
                             drawBorder: false,
                         },
-
                         ticks: {
                             color: background,
                             font: {
                                 size: 16,
                                 weight: 400,
                             },
+                            align: "center",
                             callback: function (value, index, values) {
-                                return this.getLabelForValue(value);
+                                // return this.getLabelForValue(value);
+                                return textToLines(this.getLabelForValue(value), 50);
                             }
                         }
                     },
                     y: {
-                        stacked: true,
                         grid: {
                             drawBorder: false,
+                            color: '#F0F0F0',
+                        },  
+                        min: 0,
+                        max: max,
+                        ticks: {
+                            color: '#1E101B',
+                            stepSize: step,
+                            font: {
+                                size: 14,
+                                weight: 700,
+                            }
                         }
-                    }, 
-                    suggestedMin: -10,
-                    suggestedMax: 200
+                    }
                 },
                 plugins: {
                     datalabels: {
@@ -202,7 +213,8 @@ $(document).ready(function() {
                         },
                         callbacks: {
                             title: function (context) {
-                                return textToLines(context[0].series, 120);
+                                console.log(context[0]);
+                                return textToLines(context[0].formattedValue, 120);
                             },
                             label: function (context) {
                                 return false;
@@ -220,7 +232,7 @@ $(document).ready(function() {
 
             for (var i = 1; i < words.length; i++) {
                 var word = words[i];
-                var width = respChartSelector.measureText(currentLine + " " + word).width;
+                var width = ctx.measureText(currentLine + " " + word).width;
 
                 if (width < maxWidth) 
                 {
