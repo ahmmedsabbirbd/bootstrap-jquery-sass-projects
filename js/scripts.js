@@ -72,19 +72,19 @@ $(document).ready(function() {
                         display: false,
                     },
                     tooltip: {
-                        backgroundColor: "#f4f4f4",
-                        titleColor: "#333",
+                        backgroundColor: "#fff",
+                        titleColor: "#1E101B",
                         xAlign: "center",
                         yAlign: "bottom",
                         padding: {
-                            top: 5,
-                            left: 5,
-                            right: 5,
+                            top: 4,
+                            left: 7,
+                            right: 7,
                             bottom: 0
                         },
                         titleFont: {
-                            size: 16,
-                            weight: 700
+                            size: 14,
+                            weight: 400
                         },
                         callbacks: {
                             title: function (context) {
@@ -166,8 +166,7 @@ $(document).ready(function() {
                                 weight: 400,
                             },
                             align: "center",
-                            callback: function (value, index, values) {
-                                // return this.getLabelForValue(value);
+                            callback: function (value, index, values) { 
                                 return textToLines(this.getLabelForValue(value), 50);
                             }
                         }
@@ -197,19 +196,19 @@ $(document).ready(function() {
                         display: false,
                     },
                     tooltip: {
-                        backgroundColor: "#f4f4f4",
-                        titleColor: "#333",
+                        backgroundColor: "#fff",
+                        titleColor: "#1E101B",
                         xAlign: "center",
                         yAlign: "bottom",
                         padding: {
-                            top: 5,
-                            left: 5,
-                            right: 5,
+                            top: 4,
+                            left: 7,
+                            right: 7,
                             bottom: 0
                         },
                         titleFont: {
-                            size: 16,
-                            weight: 700
+                            size: 14,
+                            weight: 400
                         },
                         callbacks: {
                             title: function (context) {
@@ -255,15 +254,13 @@ $(document).ready(function() {
         var id = $(this).attr("id"),
             type = $(this).data("type"),
             labels = $(this).data("labels"),
-            series = $(this).data("series"),
+            labels_left = $(this).data("labels-left"),
             background = $(this).data("background"),
             series = $(this).data("series"),
             max = $(this).data("max"),
             step = $(this).data("step"),
             options = $(this).data("options"),
             ctx = this.getContext("2d");
-
-            // console.log(series[0]);
 
         new Chart(ctx, {
             type: type,
@@ -272,25 +269,25 @@ $(document).ready(function() {
                 labels: labels,
                 datasets: [
                     {
-                        label: "Q1",
+                        label: labels_left[0],
                         backgroundColor: background[0],
                         maxBarThickness: 20,
                         data: series[0]
                     },
                     {
-                        label: "Median",
+                        label: labels_left[1],
                         backgroundColor: background[1],
                         maxBarThickness: 20,
                         data: series[1]
                     },
                     {
-                        label: "AVERAGE",
+                        label: labels_left[2],
                         backgroundColor: background[2],
                         maxBarThickness: 20,
                         data: series[2]
                     },
                     {
-                        label: "Q3",
+                        label: labels_left[3],
                         backgroundColor: background[3],
                         maxBarThickness: 20,
                         data: series[3]
@@ -322,7 +319,8 @@ $(document).ready(function() {
                         grid: {
                             drawBorder: false,
                             color: '#F0F0F0',
-                        },  
+                        }, 
+                        position: 'right', 
                         min: 0,
                         max: max,
                         ticks: {
@@ -343,28 +341,33 @@ $(document).ready(function() {
                         position: 'left',
                     },
                     tooltip: {
-                        backgroundColor: "#f4f4f4",
-                        titleColor: "#333",
+                        mode: 'index',
+                        backgroundColor: "#fff",
+                        titleColor: "#1E101B",
                         xAlign: "center",
                         yAlign: "bottom",
                         padding: {
-                            top: 5,
-                            left: 5,
-                            right: 5,
+                            top: 4,
+                            left: 7,
+                            right: 7,
                             bottom: 0
                         },
                         titleFont: {
-                            size: 16,
-                            weight: 700
+                            size: 14,
+                            weight: 400
                         },
                         callbacks: {
                             title: function (context) {
-                                return textToLines(context[0].formattedValue, 120);
+                                // console.log(l);
+                                for (var i = 0; i < context.length; i++) {
+                                    return '$' + context[i].formattedValue;
+                                }
+                                // return textToLines(context[0].formattedValue, 120);
                             },
                             label: function (context) {
                                 return false;
                             }
-                        }
+                        },
                     },
                 }
             }
