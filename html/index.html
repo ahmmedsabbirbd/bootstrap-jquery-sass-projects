@@ -94,12 +94,102 @@
                                 id="myChart5" 
                                 class="chart4" 
                                 data-type="doughnut"
-                                data-labels="[&quot;US Associate&quot;, &quot;US Manager&quot;]"
+                                data-labels="[&quot;Partner&quot;, &quot;Associate&quot;, &quot;Vice President&quot;, &quot;Manager&quot;, &quot;Director&quot;]"
                                 data-series="[8.5, 11.7, 19.8, 27.6, 32.4]" 
                                 data-background="[&quot;#E06031&quot;, &quot;#4285F4&quot;, &quot;#8B8A96&quot;, &quot;#5ABD7B&quot;, &quot;#372D88&quot;]"></canvas>
                         </div>
 
-                        <div class="sslegend"></div>
+                        <ul id="chart4_legendcontainer"></ul>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Total Cash Compensation</h2>
+                        <div class="compensation">
+
+                            <div class="compensationDiv">
+                                <canvas 
+                                    class="compensationChart" 
+                                    data-type="doughnut"
+                                    data-series="[25, 75]" 
+                                    data-rotations="0" 
+                                    data-background="[&quot;#5ABD7B&quot;, &quot;#1C164E&quot;]"></canvas>
+
+                            </div> 
+
+                            <div class="compensationDiv">
+                                <canvas 
+                                    class="compensationChart" 
+                                    data-type="doughnut"
+                                    data-series="[25, 75]" 
+                                    data-rotations="-150" 
+                                    data-background="[&quot;#5ABD7B&quot;, &quot;#1C164E&quot;]"></canvas>
+
+                            </div> 
+
+                            <div class="compensationDiv">
+                                <canvas 
+                                    class="compensationChart" 
+                                    data-type="doughnut"
+                                    data-series="[25, 75]" 
+                                    data-rotations="105" 
+                                    data-background="[&quot;#5ABD7B&quot;, &quot;#1C164E&quot;]"></canvas>
+
+                            </div> 
+
+                            <div class="compensationDiv">
+                                <canvas 
+                                    class="compensationChart" 
+                                    data-type="doughnut"
+                                    data-series="[25, 75]"
+                                    data-rotations="47"
+                                    data-background="[&quot;#5ABD7B&quot;, &quot;#1C164E&quot;]"></canvas>
+
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>U.S. Total Cash Compensation by Title and Gender</h2>
+                        <div class="gender"> 
+                            <span class="gender-text">Percentage of respondants</span>
+                            <canvas 
+                                class="genderChart" 
+                                data-type="doughnut"
+                                data-series="[29.1, 0.5, 70.4]"  
+                                data-background="[&quot;#5ABD7B&quot;, &quot;#E06031&quot;, &quot;#1C164E&quot;]"></canvas> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Expected Shift in Work Location</h2>
+                        <div class="expected">
+                            <canvas 
+                                class="expectedChart" 
+                                data-type="doughnut"
+                                data-series="[5.6, 8, 14.4, 37.3, 2.7, 32]"  
+                                data-labels="[&quot;xxx&quot;, &quot;yyy&quot;, &quot;$100M to $249M&quot;, &quot;$250M to $499M&quot;, &quot;$500M to $999M&quot;, &quot;$1.0Bn to $2.49Bn&quot;]"  
+                                data-background="[&quot;#FBBC0A&quot;, &quot;#8B8A96&quot;, &quot;#E06031&quot;, &quot;#5ABD7B&quot;, &quot;#372D88&quot;, &quot;#4285F4&quot;]"></canvas>
+
+                                <ul id="legendcontainer"></ul> 
+                        </div>
                     </div>
                 </div>
             </div>

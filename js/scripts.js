@@ -396,7 +396,7 @@ $(document).ready(function() {
     });
 
 
-        // // Register plugin to always show tooltip // ref: https://github.com/chartjs/Chart.js/issues/4045
+        // Register plugin to always show tooltip // ref: https://github.com/chartjs/Chart.js/issues/4045
         // Chart.plugins.register({
         //     beforeRender: function(chart) {
         //         if (chart.config.options.showAllTooltips) {
@@ -552,6 +552,25 @@ $(document).ready(function() {
             series = $(this).data("series"),
             ctx = this.getContext("2d"); 
 
+            // cousom legend show
+            var x_legendContainer = document.getElementById('chart4_legendcontainer');
+            let x_listContainer = x_legendContainer.querySelector('li');
+
+            if (!x_listContainer) {
+
+                function textPass(t) {
+                    x_listContainer = document.createElement('li');
+                    var textnode = document.createTextNode(labels[t]);
+
+                    x_listContainer.appendChild(textnode);
+                    x_legendContainer.appendChild(x_listContainer);
+                }
+
+                for (var i = 0; i < labels.length; i += 1) {
+                    addEventListener("click", textPass(i));
+                }
+            } 
+
         new Chart(ctx, {
             type: type,
             plugins: [ChartDataLabels],
@@ -644,6 +663,249 @@ $(document).ready(function() {
             lines.push(currentLine);
             return lines;
         }
+    });
+
+    var optionsChart  = { 
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }   
+        },
+        aspectRatio: 1/1,
+        scales: {
+            x: { 
+                display: false
+            },
+            y: {
+                display: false
+            }
+        },
+        plugins: {
+            datalabels: {
+                display: false,
+            },
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                mode: 'index',
+                backgroundColor: "#FFEEEE",
+                titleColor: "#1E101B",
+                xAlign: "center",
+                yAlign: "bottom",
+                padding: {
+                    top: 4,
+                    left: 7,
+                    right: 7,
+                    bottom: 0
+                },
+                titleFont: {
+                    size: 14,
+                    weight: 400
+                },
+                callbacks: {
+                    title: function (context) { 
+                            return context[0].formattedValue + '%'; 
+                    },
+                    label: function (context) {
+                        return false;
+                    }
+                },
+            },
+        }
+    }
+
+    function textToLines(text, maxWidth) {
+        var words = text.split(" ");
+        var lines = [];
+        var currentLine = words[0];
+
+        for (var i = 1; i < words.length; i++) {
+            var word = words[i];
+            var width = ctx.measureText(currentLine + " " + word).width;
+
+            if (width < maxWidth) 
+            {
+                currentLine += " " + word;
+            } 
+            else 
+            {
+                lines.push(currentLine);
+                currentLine = word;
+            }
+        }
+
+        lines.push(currentLine);
+        return lines;
+    }
+    
+    $('.compensationChart').each(function ( i, l ) {
+
+        var id = $(this).attr("id"),
+            type = $(this).data("type"),
+            labels = $(this).data("labels"),
+            background = $(this).data("background"),
+            series = $(this).data("series"), 
+            rotations = $(this).data("rotations"), 
+            ctx = this.getContext("2d"); 
+
+        new Chart(ctx, {
+            type: type,
+            plugins: [ChartDataLabels],
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "",
+                        backgroundColor: background,
+                        maxBarThickness: 5,
+                        data: series,
+                        borderWidth: 0,  
+                        rotation: rotations, 
+                        hoverBackgroundColor: background,
+                    }
+                ],
+            },
+            options: optionsChart
+        });
+    });
+    
+    $('.genderChart').each(function ( i, l ) {
+
+        var id = $(this).attr("id"),
+            type = $(this).data("type"),
+            labels = $(this).data("labels"),
+            background = $(this).data("background"),
+            series = $(this).data("series"), 
+            ctx = this.getContext("2d"); 
+
+        new Chart(ctx, {
+            type: type,
+            plugins: [ChartDataLabels],
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "",
+                        backgroundColor: background,
+                        maxBarThickness: 5,
+                        data: series,
+                        borderWidth: 0,  
+                        hoverBackgroundColor: background,
+                    }
+                ],
+            },
+            options: optionsChart
+        });
+    });
+    
+    $('.expectedChart').each(function ( i, l ) {
+
+        var id = $(this).attr("id"),
+            type = $(this).data("type"),
+            labels = $(this).data("labels"),
+            background = $(this).data("background"),
+            series = $(this).data("series"), 
+            ctx = this.getContext("2d");  
+ 
+  
+
+            // console.log(x_id);
+            var x_legendContainer = document.getElementById('legendcontainer');
+            let x_listContainer = x_legendContainer.querySelector('li');
+
+            if (!x_listContainer) {
+
+                function textPass(t) {
+                    x_listContainer = document.createElement('li');
+                    var textnode = document.createTextNode(labels[t]);
+
+                    x_listContainer.appendChild(textnode);
+                    x_legendContainer.appendChild(x_listContainer);
+                }
+
+                for (var i = 0; i < labels.length; i += 1) {
+                    addEventListener("click", textPass(i));
+                }
+            }    
+
+        var chart = new Chart(ctx, {
+            type: type,
+            plugins: [{ChartDataLabels}],
+
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "",
+                        backgroundColor: background,
+                        data: series,
+                        borderWidth: 0,  
+                        hoverBackgroundColor: background,
+
+                        // barPercentage: 0.5,
+                        // barThickness: 100,
+                        // maxBarThickness: 77,
+                        // minBarLength: 4,
+                    }
+                ],
+            },
+            options: { 
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }   
+                },
+                aspectRatio: 1/1,
+                scales: {
+                    x: { 
+                        display: false
+                    },
+                    y: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        display: false,
+                    },
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        backgroundColor: "#FFEEEE",
+                        titleColor: "#1E101B",
+                        xAlign: "center",
+                        yAlign: "bottom",
+                        padding: {
+                            top: 4,
+                            left: 7,
+                            right: 7,
+                            bottom: 0
+                        },
+                        titleFont: {
+                            size: 14,
+                            weight: 400
+                        },
+                        callbacks: {
+                            title: function (context) { 
+                                    return context[0].formattedValue + '%'; 
+                            },
+                            label: function (context) {
+                                return false;
+                            }
+                        },
+                    },
+                }
+            }
+        });
     });
     
 });

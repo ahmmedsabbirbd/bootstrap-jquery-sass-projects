@@ -22,3 +22,29 @@ Chart
 .mychart4 {
 	max-width: 100px;
 }
+
+// compensation
+.compensation {
+	display: flex; 
+	justify-content: space-between;
+}
+
+.compensationDiv {
+	max-width: 110px;
+}
+
+// gender
+.gender {
+	max-width: 300px;
+}
+
+.gender-text {
+	display: none;
+	position: absolute;
+}
+
+
+// gender
+.expected {
+	max-width: 338px;
+} 

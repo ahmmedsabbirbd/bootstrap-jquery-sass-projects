@@ -17,3 +17,29 @@ Chart
 .mychart4 {
   max-width: 100px;
 }
+
+.compensation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.compensationDiv {
+  max-width: 110px;
+}
+
+.gender {
+  max-width: 300px;
+}
+
+.gender-text {
+  display: none;
+  position: absolute;
+}
+
+.expected {
+  max-width: 338px;
+}
