@@ -326,6 +326,10 @@ $(document).ready(function() {
                             font: {
                                 size: 14,
                                 weight: 700,
+                                family: 'Spartan',
+                            },
+                            callback: function(value, index, values) {
+                                return '$' + value + 'K';
                             }
                         }
                     }
@@ -335,7 +339,16 @@ $(document).ready(function() {
                         display: false,
                     },
                     legend: {
-                        position: 'left',
+                        boxWidth: 100,
+                        position: 'bottom',
+                        labels: {
+                            color: '#1E101B',
+                            font: {
+                                size: 16,
+                                weight: '700',
+                                family: 'Spartan',
+                            }
+                        }
                     },
                     tooltip: {
                         mode: 'index',
@@ -396,180 +409,66 @@ $(document).ready(function() {
     });
 
 
-        // Register plugin to always show tooltip // ref: https://github.com/chartjs/Chart.js/issues/4045
-        // Chart.plugins.register({
-        //     beforeRender: function(chart) {
-        //         if (chart.config.options.showAllTooltips) {
-        //             // create an array of tooltips
-        //             // we can't use the chart tooltip because there is only one tooltip per chart
-        //             chart.pluginTooltips = [];
-        //             chart.config.data.datasets.forEach(function(dataset, i) {
-        //                 chart.getDatasetMeta(i).data.forEach(function(sector, j) {
-        //                     chart.pluginTooltips.push(
-        //                         new Chart.Tooltip(
-        //                             {
-        //                                 _chart: chart.chart,
-        //                                 _chartInstance: chart,
-        //                                 _data: chart.data,
-        //                                 _options: chart.options.tooltips,
-        //                                 _active: [sector]
-        //                             },
-        //                             chart
-        //                         )
-        //                     );
-        //                 });
-        //             });
-
-        //             // turn off normal tooltips
-        //             chart.options.tooltips.enabled = false;
-        //         }
-        //     },
-        //     afterDraw: function(chart, easing) {
-        //         if (chart.config.options.showAllTooltips) {
-        //             // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
-        //             if (!chart.allTooltipsOnce) {
-        //                 if (easing !== 1) return;
-        //                 chart.allTooltipsOnce = true;
-        //             }
-
-        //             // turn on tooltips
-        //             chart.options.tooltips.enabled = true;
-        //             Chart.helpers.each(chart.pluginTooltips, function(tooltip) {
-        //                 tooltip.initialize();
-        //                 tooltip._options.bodyFontFamily = "typeka";
-        //                 tooltip._options.bodyFontStyle = "500";
-        //                 tooltip._options.displayColors = false;
-        //                 tooltip._options.bodyFontSize = 16;
-        //                 tooltip._options.bodySpacing = 0;
-        //                 tooltip._options.yPadding =  2;
-        //                 tooltip._options.xPadding = 4;
-        //                 tooltip._options.caretSize = 0;
-        //                 tooltip._options.caretPadding = 0;
-        //                 tooltip._options.cornerRadius = 0;
-        //                 tooltip._options.xAlign = 'center';
-        //                 tooltip._options.position = 'average';
-        //                 // tooltip._options.caretSize = tooltip._options.bodyFontSize * 0.5;
-        //                 //tooltip._options.cornerRadius = tooltip._options.bodyFontSize * 0.5;
-        //                 tooltip.update();
-        //                 // we don't actually need this since we are not animating tooltips
-        //                 tooltip.pivot();
-        //                 tooltip.transition(easing).draw();
-        //             });
-        //             chart.options.tooltips.enabled = false;
-        //         }
-        //     }
-        // });
-
-        // $('.chart4').each(function ( i, l ) {
-
-        //     var id = $(this).attr("id"),
-        //         type = $(this).data("type"),
-        //         labels = $(this).data("labels"),
-        //         background = $(this).data("background"),
-        //         series = $(this).data("series"),
-        //         options = $(this).data("options"),
-        //         ctx = this.getContext("2d");
-        //     var chart = new Chart(ctx, {
-        //         'type': type,
-        //         'data': {
-        //             labels: labels,
-        //             datasets: [{
-        //                 data: series,
-        //                 borderWidth: 1,
-        //                 pointStyle: 'star',
-        //                 backgroundColor: background,
-        //                 borderColor: ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000'],
-        //             }]
-        //         },
-        //         options: {
-        //             animation: {
-        //                 duration: 500,
-        //             },
-        //             legend: {
-        //                 display: false,
-        //             },
-        //             tooltips: {
-        //                 enabled: false,
-        //                 mode: 'nearest',
-        //                 backgroundColor:"#000000",
-        //                 callbacks: {
-        //                     title: function(tooltipItems, data) {
-        //                         return "";
-        //                     },
-        //                     label: function(tooltipItem, data) {
-
-        //                         var datasetLabel = "";
-        //                         var label = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]+'%';
-        //                         return label;
-        //                     }
-        //                 }
-        //             },
-        //             showAllTooltips: true,
-        //         }
-        //     });
-
-        //     var myLegendContainer = document.getElementsByClassName("sslegend");
-        //     // generate HTML legend
-        //     myLegendContainer[i].innerHTML = chart.generateLegend();
-        //     // bind onClick event to all LI-tags of the legend
-        //     var legendItems = myLegendContainer[i].getElementsByTagName('li');
-        //     for (var i = 0; i < legendItems.length; i += 1) {
-        //       legendItems[i].addEventListener("click", legendClickCallback, false);
-        //     }
-
-        //     function legendClickCallback(event) {
-        //       event = event || window.event;
-
-        //       var target = event.target || event.srcElement;
-        //       while (target.nodeName !== 'LI') {
-        //         target = target.parentElement;
-        //       }
-        //       var parent = target.parentElement;
-        //       var chartId = parseInt(parent.classList[0].split("-")[0], 10);
-        //       var chart = Chart.instances[chartId];
-        //       var index = Array.prototype.slice.call(parent.children).indexOf(target);
-        //       var meta = chart.getDatasetMeta(0);
-        //       console.log(index);
-        //         var item = meta.data[index];
-
-        //       if (item.hidden === null || item.hidden === false) {
-        //         item.hidden = true;
-        //         target.classList.add('hidden');
-        //       } else {
-        //         target.classList.remove('hidden');
-        //         item.hidden = null;
-        //       }
-        //       chart.update();
-        //     }
-        // });
     
-    $('.chart4').each(function ( i, l ) {
+    function textToLines(text, maxWidth) {
+        var words = text.split(" ");
+        var lines = [];
+        var currentLine = words[0];
 
-        var id = $(this).attr("id"),
-            type = $(this).data("type"),
+        for (var i = 1; i < words.length; i++) {
+            var word = words[i];
+            var width = ctx.measureText(currentLine + " " + word).width;
+
+            if (width < maxWidth) 
+            {
+                currentLine += " " + word;
+            } 
+            else 
+            {
+                lines.push(currentLine);
+                currentLine = word;
+            }
+        }
+
+        lines.push(currentLine);
+        return lines;
+    }
+
+    $('.ownChart').each(function ( i, l ) {
+
+        var type = $(this).data("type"),
             labels = $(this).data("labels"),
             background = $(this).data("background"),
             series = $(this).data("series"),
-            ctx = this.getContext("2d"); 
+            ctx = this.getContext("2d");
 
-            // cousom legend show
-            var x_legendContainer = document.getElementById('chart4_legendcontainer');
-            let x_listContainer = x_legendContainer.querySelector('li');
+        function  legend_show(id, data, color){
+            var y_legendContainer = document.getElementById(id);
+            let y_listContainer = y_legendContainer.querySelector('li');
 
-            if (!x_listContainer) {
+            if (!y_listContainer) {
 
                 function textPass(t) {
-                    x_listContainer = document.createElement('li');
-                    var textnode = document.createTextNode(labels[t]);
+                    y_listContainer = document.createElement('li');
+                    var textnode = document.createTextNode(data[t]);
 
-                    x_listContainer.appendChild(textnode);
-                    x_legendContainer.appendChild(x_listContainer);
+                    if (color == true) {
+                        y_listContainer.style.color = background[t];
+                    }
+
+                    
+                    y_listContainer.appendChild(textnode);
+                    y_legendContainer.appendChild(y_listContainer);
                 }
 
-                for (var i = 0; i < labels.length; i += 1) {
+                for (var i = 0; i < data.length; i += 1) {
                     addEventListener("click", textPass(i));
                 }
             } 
+        }
+
+        legend_show('won-series-lagend', series, color=true);
+        legend_show('won-series-value', labels, color=false); 
 
         new Chart(ctx, {
             type: type,
@@ -639,30 +538,6 @@ $(document).ready(function() {
                 }
             }
         });
-
-        function textToLines(text, maxWidth) {
-            var words = text.split(" ");
-            var lines = [];
-            var currentLine = words[0];
-
-            for (var i = 1; i < words.length; i++) {
-                var word = words[i];
-                var width = ctx.measureText(currentLine + " " + word).width;
-
-                if (width < maxWidth) 
-                {
-                    currentLine += " " + word;
-                } 
-                else 
-                {
-                    lines.push(currentLine);
-                    currentLine = word;
-                }
-            }
-
-            lines.push(currentLine);
-            return lines;
-        }
     });
 
     var optionsChart  = { 
@@ -717,35 +592,69 @@ $(document).ready(function() {
             },
         }
     }
-
-    function textToLines(text, maxWidth) {
-        var words = text.split(" ");
-        var lines = [];
-        var currentLine = words[0];
-
-        for (var i = 1; i < words.length; i++) {
-            var word = words[i];
-            var width = ctx.measureText(currentLine + " " + word).width;
-
-            if (width < maxWidth) 
-            {
-                currentLine += " " + word;
-            } 
-            else 
-            {
-                lines.push(currentLine);
-                currentLine = word;
-            }
-        }
-
-        lines.push(currentLine);
-        return lines;
-    }
     
-    $('.compensationChart').each(function ( i, l ) {
+    $('.involvementChart').each(function ( i, l ) {
 
         var id = $(this).attr("id"),
             type = $(this).data("type"),
+            labels = $(this).data("labels"),
+            background = $(this).data("background"),
+            series = $(this).data("series"),  
+            ctx = this.getContext("2d");
+
+            function  legend_show(id, data, color){
+                var y_legendContainer = document.getElementById(id);
+                let y_listContainer = y_legendContainer.querySelector('li');
+
+                if (!y_listContainer) {
+
+                    function textPass(t) {
+                        y_listContainer = document.createElement('li');
+                        var textnode = document.createTextNode(data[t]);
+
+
+                        if (color == true) {
+                            y_listContainer.style.color = background[t];
+                        }
+
+                        
+                        y_listContainer.appendChild(textnode);
+                        y_legendContainer.appendChild(y_listContainer);
+                    }
+
+                    for (var i = 0; i < data.length; i += 1) {
+                        addEventListener("click", textPass(i));
+                    }
+                } 
+            }
+
+            legend_show('series-lagend', series, color=true);
+            legend_show('series-value', labels, color=false);
+ 
+
+        new Chart(ctx, {
+            type: type,
+            plugins: [ChartDataLabels],
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "",
+                        backgroundColor: background,
+                        maxBarThickness: 5,
+                        data: series,
+                        borderWidth: 0,   
+                        hoverBackgroundColor: background,
+                    }
+                ],
+            },
+            options: optionsChart
+        });
+    });
+    
+    $('.compensationChart').each(function ( i, l ) {
+
+        var type = $(this).data("type"),
             labels = $(this).data("labels"),
             background = $(this).data("background"),
             series = $(this).data("series"), 
@@ -775,8 +684,7 @@ $(document).ready(function() {
     
     $('.genderChart').each(function ( i, l ) {
 
-        var id = $(this).attr("id"),
-            type = $(this).data("type"),
+        var type = $(this).data("type"),
             labels = $(this).data("labels"),
             background = $(this).data("background"),
             series = $(this).data("series"), 
@@ -804,35 +712,13 @@ $(document).ready(function() {
     
     $('.expectedChart').each(function ( i, l ) {
 
-        var id = $(this).attr("id"),
-            type = $(this).data("type"),
+        var type = $(this).data("type"),
             labels = $(this).data("labels"),
             background = $(this).data("background"),
             series = $(this).data("series"), 
             ctx = this.getContext("2d");  
- 
-  
 
-            // console.log(x_id);
-            var x_legendContainer = document.getElementById('legendcontainer');
-            let x_listContainer = x_legendContainer.querySelector('li');
-
-            if (!x_listContainer) {
-
-                function textPass(t) {
-                    x_listContainer = document.createElement('li');
-                    var textnode = document.createTextNode(labels[t]);
-
-                    x_listContainer.appendChild(textnode);
-                    x_legendContainer.appendChild(x_listContainer);
-                }
-
-                for (var i = 0; i < labels.length; i += 1) {
-                    addEventListener("click", textPass(i));
-                }
-            }    
-
-        var chart = new Chart(ctx, {
+            new Chart(ctx, {
             type: type,
             plugins: [{ChartDataLabels}],
 
@@ -844,12 +730,7 @@ $(document).ready(function() {
                         backgroundColor: background,
                         data: series,
                         borderWidth: 0,  
-                        hoverBackgroundColor: background,
-
-                        // barPercentage: 0.5,
-                        // barThickness: 100,
-                        // maxBarThickness: 77,
-                        // minBarLength: 4,
+                        hoverBackgroundColor: background, 
                     }
                 ],
             },
@@ -909,3 +790,14 @@ $(document).ready(function() {
     });
     
 });
+
+
+
+
+
+let emne_listContainer = document.querySelector('ul');
+emne_listContainer = document.createElement('ul');
+console.log(emne_listContainer);
+
+emne_listContainer.classList.value = "red";
+emne_listContainer;

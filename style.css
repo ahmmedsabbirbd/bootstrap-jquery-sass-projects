@@ -14,7 +14,11 @@ Chart
   max-width: 1160px;
 }
 
-.mychart4 {
+.own {
+  max-width: 160px;
+}
+
+.involvement {
   max-width: 100px;
 }
 
