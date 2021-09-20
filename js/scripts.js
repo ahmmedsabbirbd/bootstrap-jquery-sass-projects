@@ -789,6 +789,121 @@ $(document).ready(function() {
         });
     });
     
+
+    // $('.expected-shift').each(function ( i, l ) {
+    //          var data = [{
+    //            label: "Always Remote",
+    //            data: 5.6,
+    //            color: "#FBBC0A"
+    //         }, {
+    //            label: "Always Flexible",
+    //            data: 8,
+    //            color: "#8B8A96"
+    //         }, {
+    //            label: "Daily in Office → Remote",
+    //            data: 14.4,
+    //            color: "#E06031"
+    //         }, {
+    //            label: "Daily in Office → Flexible",
+    //            data: 37.3,
+    //            color: "#5ABD7B"
+    //         }, {
+    //            label: "Flexible → Remote",
+    //            data: 2.7,
+    //            color: "#372D88"
+    //         }, {
+    //            label: "Daily in Office (No Change)",
+    //            data: 32,
+    //            color: "#4285F4"
+    //         }]; 
+
+    //     var id = $(this).attr("id");
+    //         // labels = $(this).data("labels"),
+    //         // background = $(this).data("background"),
+    //         // series = $(this).data("series");
+    //         console.log(id);
+
+
+
+    //     $.plot(id, data, { 
+    //         series: {
+    //              bars: {
+    //                 show: true,
+    //                 barWidth: 1000,
+    //             },
+    //             pie: {
+    //                 innerRadius: 0.5,
+    //                 show: true,
+    //                 tilt: 1,
+    //                  label: {
+    //                     show: true,
+    //                     radius: 1,
+    //                     formatter: function(label, series) {
+
+    //                         var x_color = series.color;
+    //                         console.log(x_color); 
+    //                         // series is the series object for the label
+    //                         return '<div class="data-legend">' + '<span class="number d-block" style="color:' + x_color + '">'+series.data[0][1]+'%'+'</span>' + label + '</div>';
+    //                     },
+                         
+    //                 }
+    //             }
+    //         }
+    //     }); 
+    // });
+
+    var data = [{
+       label: "Always Remote",
+       data: 5.6,
+       color: "#FBBC0A"
+    }, {
+       label: "Always Flexible",
+       data: 8,
+       color: "#8B8A96"
+    }, {
+       label: "Daily in Office → Remote",
+       data: 14.4,
+       color: "#E06031"
+    }, {
+       label: "Daily in Office → Flexible",
+       data: 37.3,
+       color: "#5ABD7B"
+    }, {
+       label: "Flexible → Remote",
+       data: 2.7,
+       color: "#372D88"
+    }, {
+       label: "Daily in Office (No Change)",
+       data: 32,
+       color: "#4285F4"
+    }];
+
+    $.plot('#placeholder', data, { 
+        series: {
+             bars: {
+                show: true,
+                barWidth: 1000,
+            },
+            pie: {
+                innerRadius: 0.5,
+                show: true,
+                tilt: 1,
+                 label: {
+                    show: true,
+                    radius: 1,
+                    formatter: function(label, series) {
+
+                        var x_color = series.color;
+                        console.log(x_color); 
+                        // series is the series object for the label
+                        return '<div class="data-legend">' + '<span class="number d-block" style="color:' + x_color + '">'+series.data[0][1]+'%'+'</span>' + label + '</div>';
+                    },
+                     
+                }
+            }
+        }
+    });
+    
 });
 
 

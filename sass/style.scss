@@ -1,3 +1,7 @@
+.d-block {
+	display: block;
+}
+
 /***********************************
 Chart
 ***********************************/
@@ -53,3 +57,17 @@ Chart
 .expected {
 	max-width: 338px;
 } 
+
+.pieLabel {
+	display: block;
+
+	.data-legend {
+		max-width: 115px;
+
+		.number {
+			font-size: 36px;
+			line-height: 24px;
+			font-weight: 700;
+		}
+	}
+}
