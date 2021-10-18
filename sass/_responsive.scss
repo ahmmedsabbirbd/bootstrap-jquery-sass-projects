@@ -1,0 +1,241 @@
+/***********************************
+MEDIA QUERIES
+***********************************/
+@media only screen and (max-width: 1366px) {
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    
+
+}/* 1366 */
+
+@media only screen and (max-width: 1199px) {
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+     
+
+}/* 1199 */   
+
+@media only screen and (max-width: 991px) {
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    .comingsoon-header {
+
+        .container-fluid {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-nav--right) {
+
+                        >li {
+
+                            &.multi-language {
+                                margin-left: 0;
+                            }
+
+                            &:not(.multi-language) {
+                                display: none;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}/* 991 */
+
+@media only screen and (max-width: 767px) {
+ 
+    /***********************************
+    COMINGSOON FOOTER
+    ***********************************/
+    .comingsoon-footer {
+
+        &__content {
+            flex-direction: column;
+        } 
+
+        &__copyright {  
+            max-width: 100%; 
+            text-align: center;
+        }
+
+        &__social {  
+            max-width: 100%;
+            margin-top: 20px; 
+        }
+    }
+
+}/* 767 */
+
+@media only screen and (max-width: 680px) {
+ 
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    
+   
+}/* 680 */
+
+@media only screen and (max-width: 575px) { 
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    .comingsoon-header {
+
+        .navbar {
+
+            .navbar-header {
+
+                .navbar-brand {
+                    max-width: 160px;
+                }
+            }
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &.navbar-nav--right {
+                        margin-left: 20px;
+
+                        .menu-btn {
+
+                            a {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidr {
+
+        &.right {
+            left: auto;
+            right: -115%
+        }
+
+        &.left {
+            left: -115%;
+            right: auto
+        }
+
+        .sidr-inner {
+
+            .commingsoon-mobile-header {
+                padding: 22px 15px 32px;
+
+                .navbar-header {
+
+                    .navbar-brand {
+
+                        img {
+                            max-width: 200px;
+                        }
+                    }
+                }
+
+                .navigation {
+
+                    .navbar-nav {
+
+                        > li {
+
+                            &:not(:last-child) {
+                                margin-bottom: 15px;
+                            } 
+                        }
+                    }
+
+                    &__card {
+                        min-height: 200px;
+
+                        .title {
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .comingsoon-header-gutter {
+        height: 66px;
+    }
+
+    .assignment {
+        padding: 20px 0;
+    }
+
+}/* 575 */ 
+
+@media only screen and (max-width: 480px) { 
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    .comingsoon-header {
+
+        .navbar {
+
+            .navbar-header {
+
+                .navbar-brand {
+                    max-width: 160px;
+                }
+            }
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    li {
+
+                        &.multi-language {
+
+                            .dropdown-menu {
+                                margin-left: -100%;
+                            }
+                        }
+                    }
+
+                    &.navbar-nav--right {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .comingsoon-header-gutter {
+        height: 62px;
+    }
+     
+
+}/* 480 */ 
+
+@media only screen and (max-width: 380px) { 
+
+    /***********************************
+    COMINGSOON STYLES
+    ***********************************/
+    
+    
+}/* 380 */ 
