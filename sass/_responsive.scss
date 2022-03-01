@@ -1,0 +1,510 @@
+/***********************************
+MEDIA QUERIES
+***********************************/
+@media only screen and (max-width: 1366px) {
+ 
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+    }
+
+}/* 1366 */
+
+@media only screen and (max-width: 1199px) {
+
+    h1, .h1 { font-size: 50px; line-height: 62px; }
+    h2, .h2 { font-size: 42px; line-height: 54px; }
+    h3, .h3 { font-size: 36px; line-height: 42px; }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/ 
+    .banner {
+        padding: 180px 0;
+
+        .container {
+
+            .tir {
+
+                &:before {
+                    left: 325px;
+                }
+            }
+        }
+
+        &__content {
+
+            &.entry-title {
+
+                .title {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+        padding-top: 180px;
+    } 
+}/* 1199 */
+
+@media only screen and (max-width: 991px) {
+
+    h1, .h1 { font-size: 42px; line-height: 54px; }
+    h2, .h2 { font-size: 36px; line-height: 42px; }
+    h3, .h3 { font-size: 32px; line-height: 38px; }
+    h4, .h4 { font-size: 28px; line-height: 36px; } 
+
+     
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    .banner {
+        padding: 160px 0;
+
+        .container {
+
+            .tir {
+
+                &:before {
+                    top: -35px;
+                    left: 290px;
+                    width: 160px;
+                    height: 112px;
+                }
+            }
+        }
+
+        &__content {
+
+            &.entry-title {
+
+                .title {
+                    max-width: 330px;
+                }
+            }
+
+            &-button {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .call-action {
+        margin-bottom: -83px;
+
+        &__content {
+            padding: 50px 30px;
+        }
+
+        &__content {
+
+            &-entry-title { 
+
+                .title {
+                    font-size: 25px;
+                    line-height: 33px;
+                    letter-spacing: 2px;
+                }
+            }
+
+            &-subscribe {
+
+                form {
+
+                    .form-group {
+
+                        input {
+                            width: 335px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 150px;
+    } 
+}/* 991 */
+
+@media only screen and (max-width: 767px) {
+ 
+    h1, .h1 { font-size: 36px; line-height: 42px; }
+    h2, .h2 { font-size: 32px; line-height: 38px; }
+    h3, .h3 { font-size: 28px; line-height: 36px; }
+    h4, .h4 { font-size: 24px; line-height: 32px; }
+    h5, .h5 { font-size: 20px; line-height: 28px; } 
+
+   /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &.navbar-right {
+
+                        li {
+
+                            &.mobile-navbar-toggler {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    .banner {
+        padding: 150px 0;
+
+        .container {
+
+            .tir {
+
+                &:before {
+                    top: -24px;
+                    left: 250px;
+                    width: 120px;
+                    height: 85px;
+                }
+            }
+        }
+
+        &__content {
+
+            &.entry-title {
+
+                .title {
+                    max-width: 295px;
+                }
+            }
+
+            &-button {
+                margin-top: 35px;
+            }
+        }
+    }
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .call-action {
+        margin-bottom: -100px;
+
+        &__content {
+            padding: 40px 25px;
+
+            &-entry-title {
+                margin-right: 0;
+                margin-bottom: 21px;
+            }
+
+            &-subscribe {
+
+                form {
+
+                    .form-group {
+
+                        input {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 140px;
+    }
+}/* 767 */ 
+
+@media only screen and (max-width: 700px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:nth-child(5) {
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+} /* 700 */
+
+@media only screen and (max-width: 660px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:nth-child(4) {
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+} /* 640 */
+
+@media only screen and (max-width: 575px) {
+
+    h1, .h1 { font-size: 34px; line-height: 40px; }
+    h2, .h2 { font-size: 30px; line-height: 36px; }
+    h3, .h3 { font-size: 26px; line-height: 34px; }
+    h4, .h4 { font-size: 22px; line-height: 30px; } 
+
+    input[type="text"]:not(.select2-input),
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="search"],
+    input[type="password"],
+    input[type="file"],
+    select, textarea {   
+        font-size: 14px !important;  
+        line-height: 24px !important; 
+        padding: 25px 12px !important;     
+        -moz-transform: translate3d(0, 0, 0);
+        @include placeholder(#C5C5C5, 14px, 400); 
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 12px 18px;
+    }
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .scroll-up .header { 
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    .banner {
+        padding: 140px 0;
+
+        &__content {
+
+            &.entry-title {
+
+                .title {
+                    max-width: 275px;
+                }
+            }
+
+            &-button {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .call-action {
+        margin-bottom: -77px;
+
+        &__content {
+            padding: 30px 15px;
+
+            &-entry-title { 
+                margin-bottom: 16px;
+
+                .title {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+
+            &-subscribe {
+
+                form {
+
+                    .form-group {
+
+                        label {
+                            left: 8px;
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+
+                        input {
+                            width: 100% !important;
+                            padding-left: 60px !important;
+                            padding-right: 50px !important; 
+                        }
+
+                        .btn {
+                            right: 5px;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   .footer { 
+        padding-top: 120px;
+
+        &__logo {
+            
+            a {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__widget {
+            text-align: center;
+        }
+    }
+    
+}/* 575 */ 
+
+@media only screen and (max-width: 550px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+} /* 550 */
+
+@media only screen and (max-width: 450px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+} /* 450 */
+
+@media only screen and (max-width: 380px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:nth-child(1) {
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    .banner {
+        padding: 120px 0;
+    }
+}/* 380 */

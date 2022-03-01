@@ -1,0 +1,131 @@
+@font-face {
+	font-family: 'ativency';
+	src: url('fonts/ativency.eot?61797456');
+	src: url('fonts/ativency.eot?61797456#iefix') format('embedded-opentype'),
+	 	url('fonts/ativency.woff2?61797456') format('woff2'),
+		url('fonts/ativency.woff?61797456') format('woff'),
+	 	url('fonts/ativency.ttf?61797456') format('truetype'),
+	 	url('fonts/ativency.svg?61797456#ativency') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	speak: none;
+	line-height: 1;
+	font-family: 'ativency';
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	speak: none;
+	line-height: 1;
+	font-family: 'ativency';
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before { content: '\e800'; }
+.icon-twitch:before { content: '\e801'; }
+.icon-group:before { content: '\e802'; }
+.icon-facebook:before { content: '\e803'; }
+.icon-reddit:before { content: '\e804'; }
+.icon-iconmonsmessenger:before { content: '\e805'; }
+.icon-tiktok:before { content: '\e806'; }
+.icon-plus-1:before { content: '\e807'; }
+.icon-ball:before { content: '\e808'; }
+.icon-crooked-line:before { content: '\e809'; }
+.icon-line:before { content: '\e80a'; }
+.icon-clock:before { content: '\e80b'; }
+.icon-location:before { content: '\e80c'; }
+.icon-github:before { content: '\e817'; }
+.icon-telegram:before { content: '\e818'; }
+.icon-twitter:before { content: '\e819'; }
+.icon-play:before { content: '\f00f'; }
+.icon-linkedin:before { content: '\f0e1'; }
+.icon-youtube:before { content: '\f16a'; }
+.icon-down:before { content: '\f175'; }
+.icon-up:before { content: '\f176'; }
+.icon-left:before { content: '\f177'; }
+.icon-right:before { content: '\f178'; }
+.icon-vkontakte:before { content: '\f189'; }
+.icon-qq:before { content: '\f1d6'; }
+.icon-wechat:before { content: '\f1d7'; }
+.icon-pinterest:before { content: '\f231'; }
+.icon-whatsapp:before { content: '\f232'; }
+.icon-snapchat:before { content: '\f2ac'; }
+.icon-quora:before { content: '\f2c4'; }
+.icon-sina:before { content: '\f33f'; }
+
+/*** Coustom Fonts */
+@font-face {
+	font-family: 'Caros Soft Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Regular'), url('fonts/CarosSoft.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Thin'), url('fonts/CarosSoftThin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft ExtraLight';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft ExtraLight'), url('fonts/CarosSoftExtraLight.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Light'), url('fonts/CarosSoftLight.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Medium'), url('fonts/CarosSoftMedium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Bold'), url('fonts/CarosSoftBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft ExtraBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft ExtraBold'), url('fonts/CarosSoftExtraBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Heavy';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Heavy'), url('fonts/CarosSoftHeavy.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Caros Soft Black';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caros Soft Black'), url('fonts/CarosSoftBlack.woff') format('woff');
+}
