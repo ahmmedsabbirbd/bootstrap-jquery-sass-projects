@@ -21,7 +21,7 @@ MEDIA QUERIES
     HOME STYLES
     ***********************************/ 
     .banner {
-        padding: 180px 0;
+        padding: 180px 0 210px;
 
         .container {
 
@@ -63,7 +63,7 @@ MEDIA QUERIES
     HOME STYLES
     ***********************************/
     .banner {
-        padding: 160px 0;
+        padding-top: 160px;
 
         .container {
 
@@ -171,7 +171,7 @@ MEDIA QUERIES
     HOME STYLES
     ***********************************/
     .banner {
-        padding: 150px 0;
+        padding: 150px 0 200px;
 
         .container {
 
@@ -336,7 +336,7 @@ MEDIA QUERIES
     HOME STYLES
     ***********************************/
     .banner {
-        padding: 140px 0;
+        padding: 140px 0 180px;
 
         &__content {
 
@@ -505,6 +505,14 @@ MEDIA QUERIES
     HOME STYLES
     ***********************************/
     .banner {
-        padding: 120px 0;
+        padding: 120px 0 160px;
     }
+
+    .product {
+
+        &__item {
+            padding: 20px 25px;
+        }
+    }
+
 }/* 380 */
