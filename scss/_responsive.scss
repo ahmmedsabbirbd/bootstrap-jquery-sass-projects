@@ -1,0 +1,520 @@
+/***********************************
+MEDIA QUERIES
+***********************************/  
+@media only screen and (max-width: 1700px) { 
+
+
+}/* 1700 */
+
+@media only screen and (max-width: 1460px) { 
+
+    h1, .h1 { &.lg {font-size: 90px; line-height: 98px; @include letter-spacing(-30, 90) } } 
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    .header-gutter {
+        height: 165px;
+        min-height: 165px;
+    }
+
+    .header {
+
+        .navbar {
+            padding: 60px 0 45px;
+        }
+    }
+
+}/* 1460 */
+
+@media only screen and (max-width: 1366px) { 
+
+    h1, .h1 { &.lg { font-size: 80px; line-height: 90px; @include letter-spacing(-30, 80) } }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer { 
+        padding: 100px 0;
+    }
+
+} /* 1366 */
+
+@media only screen and (max-width: 1199px) {
+ 
+    h1, .h1 { &.lg { font-size: 72px; line-height: 82px; @include letter-spacing(-30, 72) } } 
+    /***********************************
+    HEADER STYLES
+    ***********************************/ 
+    .header-gutter {
+        height: 140px;
+        min-height: 140px;
+    }
+
+    .header {  
+
+        .navbar {
+            padding: 40px 0;
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(2) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }   
+
+                    &.navbar-right {
+
+                        li {
+
+                            &.mobile-navbar-toggler {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+        padding: 80px 0;
+
+        .max-918 {
+            max-width: 100%;
+        }
+
+        &__logo {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+
+        &-bottom {
+            max-width: 100%;
+            padding-top: 40px;
+        }
+    }
+
+}/* 1199 */ 
+
+@media only screen and (max-width: 1080px) {
+
+    .header { 
+
+        .navbar {  
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(3) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+} /* 1080 */
+
+@media only screen and (max-width: 991px) { 
+ 
+    h1, .h1 { font-size: 55px;  line-height: 67px; @include letter-spacing(-30, 55); &.lg { font-size: 60px; line-height: 72px; @include letter-spacing(-30, 60) } }
+
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header-gutter {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .header { 
+
+        .navbar {
+            padding: 30px 0; 
+
+            .navbar-collapse {
+
+                .navbar-nav {
+                    margin-left: -10px;
+                    margin-right: -10px;
+
+                    > li {
+                        margin-left: 10px;
+                        margin-right: 10px; 
+                    }  
+                }
+            }
+        }
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/ 
+    
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+        padding: 60px 0;
+    }
+
+}/* 991 */
+
+@media only screen and (max-width: 920px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {  
+
+        .navbar {  
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(4) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+
+}/* 920 */
+
+@media only screen and (max-width: 790px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {  
+
+        .navbar {  
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(5) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+
+}/* 790 */
+
+@media only screen and (max-width: 767px) {
+ 
+    h1, .h1 { font-size: 48px;  line-height: 60px; @include letter-spacing(-30, 48); &.lg { font-size: 55px; line-height:  67px; @include letter-spacing(-30,  55) } }
+    h2, .h2 { font-size: 42px;  line-height: 54px; @include letter-spacing(-30, 42) }
+
+   /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header { 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav { 
+
+                    > li {
+                        
+                        > a {
+                            font-size: 16px;
+                            line-height: 24px;
+                            @include letter-spacing(-25, 16);
+                        }
+
+                        &.btn-menu {
+                            
+                            > a {
+                                padding: 5px 14px;
+                            }
+
+                            &.border-green, &.border-pink {
+                                 
+                                > a {
+                                    padding: 3px 14px;
+                                }
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    .sidr {
+
+        .sidr-inner {
+
+            .mobile-header {
+
+                .navbar-header {
+
+                    .navbar-brand { 
+                        max-width: 120px; 
+                    }
+                }
+            }
+        }
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/  
+
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+        padding: 50px 0; 
+
+        &-bottom { 
+
+            &__social-media {
+                margin: -5px;
+
+                li {
+                    padding: 5px;
+                }
+            }
+
+            &__copyright-item li {
+                padding-left: 24px;
+            }
+        } 
+    }
+    
+    /***********************************
+    DEFAULT STYLES
+    ***********************************/
+    .default-page {
+        padding: 60px 0;
+    }
+   
+}/* 767 */ 
+
+@media only screen and (max-width: 630px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {  
+
+        .navbar {  
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li { 
+                            display: none; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+} /* 630 */
+
+@media only screen and (max-width: 575px) {
+ 
+    h1, .h1 { font-size: 38px;  line-height: 50px; @include letter-spacing(-30, 38); &.lg { font-size: 42px; line-height:  54px; @include letter-spacing(-30,  42) } }
+    h2, .h2 { font-size: 34px;  line-height: 44px; @include letter-spacing(-30, 34) }
+    h3, .h3 { font-size: 30px;  line-height: 40px; @include letter-spacing(-30, 30) }
+    h4, .h4 { font-size: 26px;  line-height: 38px; @include letter-spacing(-30, 26) } 
+    h5, .h5 { font-size: 22px;  line-height: 34px; @include letter-spacing(-30, 22) } 
+
+    .btn {
+        padding: 10px 18px;
+
+        &.btn-border {
+            padding: 8px 16px;
+        }
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/ 
+    
+    /***********************************
+    FOOTER STYLES
+    ***********************************/
+    .footer {
+        padding: 40px 0;
+
+        &__logo {
+            margin-bottom: 30px;
+        }
+
+        &__top {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+
+            &-menu {
+                margin: -2px -8px;
+
+                li {
+                    margin: 2px 8px;
+                }
+            }
+        }
+
+        &__widget {
+            gap: 30px 20px;
+
+            &-menu li { 
+                margin-bottom: 5px;
+            }
+        }
+
+        &-bottom {
+            padding-top: 30px;
+
+            &__social-media li {
+                padding: 5px;
+            }
+
+            &__copyright-item { 
+                margin-left: -10px;
+            }
+        }
+    }
+
+    /***********************************
+    DEFAULT STYLES
+    ***********************************/
+    .default-page {
+        padding: 40px 0;
+    }
+
+}/* 575 */
+
+@media only screen and (max-width: 480px) {
+
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header-gutter {
+        height: 102px;
+        min-height: 102px;
+    }
+
+    .header {  
+
+        .navbar {  
+
+            .navbar-header {
+
+                .navbar-brand {
+                    max-width: 135px;
+                }
+            }
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    > li { 
+
+                        &:nth-last-child(2) {
+                            display: none;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+   /***********************************
+    HOME STYLES
+    ***********************************/ 
+    
+} /* 480 */
+
+@media only screen and (max-width: 420px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {  
+
+        .navbar {   
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    > li { 
+
+                        &:nth-last-child(2) {
+                            display: none;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+    
+}/* 420 */ 
+
+@media only screen and (max-width: 380px) {
+    
+}/* 380 */ 

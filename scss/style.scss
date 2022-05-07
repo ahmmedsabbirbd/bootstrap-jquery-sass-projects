@@ -1,0 +1,1090 @@
+/*
+Theme Name: smartOne
+Author: GoingClear Interactive
+Author URI: https://www.goingclear.com/
+Version: 1.0.0
+Text Domain: smartone
+*/
+
+/***********************************
+BASE STYLES
+***********************************/
+
+// COLORS
+$white:#FFF;
+$black:#000;   
+$primary:#1D2A45; 
+$secondary: #FF671C;   
+
+// FONT SIZE
+$stl: "stolzl",sans-serif;
+$dmo: "divenire-mono",serif;
+$pts: "pt-sans",sans-serif;
+
+// MIXIN
+@import 'mixin';
+
+// ICON FONTS
+@import 'icon';
+
+@import 'base';
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	color: $black;
+	background: $white;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+    font: 400 18px/26px $pts; 
+}
+
+h1, .h1 { font-size: 60px;	line-height: 72px; @include letter-spacing(-30, 60); 
+	&.lg { font-size: 96px;	line-height: 104px; @include letter-spacing(-30, 96) }  
+} 
+h2, .h2 { font-size: 48px;	line-height: 60px; @include letter-spacing(-30, 48) }
+h3, .h3 { font-size: 36px;	line-height: 46px; @include letter-spacing(-30, 36) }
+h4, .h4 { font-size: 30px;	line-height: 40px; @include letter-spacing(-30, 30) } 
+h5, .h5 { font-size: 24px;	line-height: 36px; @include letter-spacing(-30, 24) } 
+h6, .h6 { font-size: 18px;	line-height: 26px; @include letter-spacing(-30, 18);
+	&.sm { font-size: 16px;	line-height: 22px; @include letter-spacing(-30, 16) }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: $primary;
+	font-weight: 500; 
+	font-family: $stl;
+
+	&.lh-none {
+		letter-spacing: 0 !important
+	}
+}
+
+a, button {
+
+	&:hover, &:focus {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	border-width: 2px;
+	border-color: primary;
+
+	&.h-1 {
+		border-width: 1px;
+		border-color: #F6E343;
+	}
+
+	&.secondary {
+		border-color: #19D3C5;
+	}
+}
+
+section {
+	padding: 40px 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1210px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+input[type="text"]:not(.select2-input),
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="file"],
+select, textarea {
+	@include appearance;
+	border: 0 !important;
+	width: 100% !important;
+	color: $black !important;
+	font-size: 18px !important;
+	font-weight: 400 !important;
+	box-shadow: none !important;
+	line-height: 26px !important; 
+	background: $white !important;
+	border-radius: 500px !important;
+	padding: 14px 16px !important;
+	@include transition(all 0.3s ease);
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12) !important;
+    @include placeholderWithlettertraking(#000, 18px, 26px, 0, 400);
+
+
+	&:hover, &:focus {
+		outline: 0;
+	}
+}
+
+.lr-10 {
+	margin-left: -10px;
+	margin-right: -10px;
+
+	>[class*="col"] {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.btn {
+	border: 0;
+	outline: 0;
+	color: $white; 
+	font-size: 16px;
+	line-height: 24px;
+	box-shadow: none;   
+	font-family: $stl; 
+	font-weight: 500;
+	background: $secondary;   
+	padding: 13px 20.3px;
+	@include border-radius(500px);
+	text-transform: capitalize;
+	@include letter-spacing(-30, 16);
+	@include transition(all 0.3s ease);
+	box-shadow: 0px 26px 24px rgba(0, 0, 0, 0.12);
+
+	&.btn-gray {
+		color: $primary;
+		background: #F6E343;
+	}
+
+	&.btn-border {
+		color: $primary;
+		box-shadow: none;
+		padding: 11px 18.3px;
+		background: transparent;
+		border: 2px solid $primary;
+	}
+
+
+	&:hover, &:focus {
+		outline: 0;  
+		color: $white; 
+		box-shadow: none;   
+		background: $primary;
+	}
+}
+
+.entry-title {
+
+	.title {
+		margin-bottom: 10px;
+	}
+
+	.sub-title-group {
+		margin-bottom: 10px;
+		
+		.sub-title {
+			font-weight: 300;
+			font-family: $dmo;
+			margin-bottom: 5px;
+			border: 1px solid #98E6D8;
+			@include letter-spacing(125, 18);
+		}
+	}
+}
+
+.description {
+
+	p {
+		font-size: 24px;
+		line-height: 36px;
+
+		+ p {
+			margin-top: 10px;
+		}
+	}
+
+	&.sm {
+		
+		p {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	&.lg {
+		
+		p {
+			font-size: 30px;
+			line-height: 42px;
+		}
+	}
+}
+
+.font-stl { font-family: $stl; }
+.font-dmo {	font-family: $dmo; }
+.font-pts {	font-family: $pts; }
+
+.color-black { color: $black; }
+.color-primary { color: $primary; }
+.color-secondary { color: $secondary; }
+
+/***********************************
+HEADER STYLES
+***********************************/
+.scroll-down {
+
+	.header {
+
+		&:not(.sticky) {
+	    	@include transform(translate3d(0, -100%, 0));
+		}
+	}
+}
+
+.header-gutter {
+	height: 196px;
+	min-height: 196px;
+}
+
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1030;
+	position: fixed;
+	background: $white; 
+	@include transition(all 0.3s ease); 
+
+	&.transparent {
+		background: transparent;
+	}
+
+	&.stop {
+		background: $white;
+		filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.06));
+
+		.navbar {
+			padding: 20px 0;
+		}  
+	}
+	
+	.navbar {
+		margin: 0;
+		padding: 40px 0;
+		background-color: transparent;
+		@include transition(all .3s ease);
+
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.navbar-header {
+
+			.navbar-brand {
+				padding: 0;
+				display: block;
+				margin-right: 0;  
+				overflow: hidden; 
+				@include transition(all .3s ease);
+
+				img {
+					@include transition(all 0.3s ease-in-out);
+				} 
+			}
+		}
+
+		.navbar-collapse {
+			flex-grow: initial;
+
+			.navbar-nav {
+				margin-left: -11px;
+				margin-right: -10px;
+				align-items: center;
+
+				> li {
+					margin-left: 11px;
+					margin-right: 11px;
+					@include transition(all .3s ease);
+
+					> a {
+						color: $black;  
+						display: block;
+						font-size: 18px; 
+						font-weight: 600;
+						line-height: 26px; 
+						@include letter-spacing(-25, 18);
+						@include transition(all 0.3s ease);
+					}
+
+					&.btn-menu {
+						margin-left: 10px;
+						margin-right: 10px;
+
+						> a {
+							color: $white;
+							font-weight: 500;
+							font-family: $stl;
+							padding: 13px 20.3px;
+							background: $secondary;
+							@include border-radius(500px);
+							box-shadow: 0px 28px 24px rgba(0, 0, 0, 0.16);
+
+						}
+
+						&.active, &:hover, &:focus {
+
+							> a {
+								color: $white;
+								background: $secondary;
+							}
+						}
+					}
+
+					&.btn-user {
+
+						a { 
+							background: $primary;
+						}
+					}
+
+					&.active, &:hover, &:focus {
+
+						> a { 
+							color: $primary; 
+						}
+					}
+
+					&.dropdown {
+
+						&:hover {
+
+							.dropdown-menu {
+								top: 100%;
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+
+					.dropdown-menu {
+					    left: 0;
+					    top: 120%;
+					    margin: 0;
+						opacity: 0;
+					    padding: 0;
+						display: block;
+						min-width: 12rem;
+					    list-style: none;
+					    border-radius: 4px;
+					    position: absolute;
+					    visibility: hidden;
+					    background-color: $white;
+					    box-shadow: 0px 12px 24px rgb(0 0 0 / 16%);
+					    @include transition(all 0.5s ease);
+
+					    > li {
+
+					    	> a {
+					    		color: $black;  
+								display: block;
+								font-size: 18px; 
+								font-weight: 600;
+								line-height: 26px;
+								// font-family: $pop;
+								padding: 7.5px 15px;
+								@include letter-spacing(-25, 18);
+								@include transition(all 0.3s ease);
+					    	}
+
+					    	&.active, &:hover, &:focus {
+
+					    		> a { 
+					    			color: $primary; 
+					    		}
+					    	}
+					    }
+					}
+				}
+
+				&.navbar-right {
+					padding-left: 20px; 
+
+					li { 
+
+						&.mobile-navbar-toggler {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.navbar-toggle {
+	margin: 0;
+    border: 0;
+    padding: 0;
+    width: 32px;
+    display: block;
+    border-radius: 0;
+    overflow: inherit;
+    background: transparent;
+
+    &:hover {
+
+		.icon-bar {
+
+    		&:nth-child(1) {
+        		@include transform(translateY(-2px));
+        	}
+
+        	&:nth-child(3) {		
+				@include transform(translateY(2px));
+        	}
+        }
+	}
+
+    &:hover, &:focus {
+
+    	&:before {
+			opacity: 1;
+			@include transform(translateX(0));
+    	}
+    }
+
+    &.in {
+
+    	.icon-bar {
+			@include transition(transform 150ms linear 150ms);
+
+			&:nth-child(1) {
+				@include transform(translateY(10px) rotate(45deg));
+        	}
+
+        	&:nth-child(2) {
+        		opacity: 0;
+        	}
+
+        	&:nth-child(3) {	
+        		@include transform(translateY(-10px) rotate(-45deg));
+        	}
+		}
+    }
+
+    .icon-bar {
+    	width: 100%;
+    	height: 4px;
+    	display: block;
+    	border-radius: 500px;
+    	background-color: $primary;
+	    @include transition(transform 150ms linear 150ms);
+
+	    &:not(:last-child) {
+	   		margin-bottom: 6px;
+	    }
+    }
+}
+
+.sidr {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 999999;
+    position: fixed;
+    max-width: 320px;
+    overflow-y: auto;
+    background: $white;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 6px rgba($black, 0.3);
+
+    &.right {
+	    left: auto;
+	    right: -100%
+	}
+
+	&.left {
+	    left: -100%;
+	    right: auto
+	}
+
+	.sidr-inner {
+
+		.mobile-header {
+			display: block !important;
+
+			.navbar-header {
+				float: none;
+				padding: 20px 15px;
+				border-bottom: 1px solid rgba($black, 0.2);
+
+				.navbar-brand {
+					padding: 0;
+					max-width: 150px;
+				}
+
+				.navbar-toggle {
+					display: block;
+					cursor: pointer;
+					margin-left: 20px;
+				}
+			}
+
+			.navigation {
+
+				.navbar-nav {
+
+					>li {
+						width: 100%;
+						display: block;
+						padding: 12px 15px;
+						border-bottom: 1px solid rgba($black, 0.2); 
+
+						> a {
+							color: $black;
+							display: block;  
+							font-size: 18px; 
+							font-weight: 600;
+							line-height: 26px;
+							// font-family: $pop;
+							@include letter-spacing(-25, 18);
+							@include transition(all 0.3s ease);
+						} 
+
+						&.active, &:hover, &:focus {
+
+							> a {
+								color: $secondary;
+							}
+						} 
+
+						&.btn-menu { 
+							border-bottom: none;
+
+							> a {
+								color: $white;
+								padding: 15px;
+								text-align: center;
+								@include border-radius(500px);
+								background: linear-gradient(60deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+
+								&.active, &:hover, &:focus { 
+									color: $white;
+									background: $secondary; 
+								}
+							}
+
+							&.border-green, &.border-pink {
+								
+								> a {
+									color: #000;
+									padding: 13px 15px;
+								}
+							}
+						}
+
+						&.border-green {
+							
+							> a {
+								background: transparent;
+								border: 2px solid #2C8AFC;
+
+								&.active, &:hover, &:focus { 
+									background: #2C8AFC; 
+								}
+							}
+
+						}
+
+						&.border-pink {
+							
+							> a {
+								background: transparent;
+								border: 2px solid #B156F5;
+								
+								&.active, &:hover, &:focus { 
+									background: #B156F5;  
+								}
+							}
+						}
+
+						&.dropdown {
+
+							> a {
+								display: flex;
+								justify-content: space-between;
+
+								.dropdown-toggle {
+								    width: 40px;
+								    height: 30px;
+								    display: flex;
+								    align-items: center;
+								    justify-content: center;
+								}
+							}
+
+							.dropdown-menu {
+								border: 0;
+								border-radius: 0;
+								@include transition(all 0.5s ease);
+
+								> li {
+
+									> a {
+										color: $black;
+										display: block;  
+										font-size: 18px; 
+										font-weight: 600;
+										line-height: 26px;
+										// font-family: $pop;
+										padding: 7.5px 15px;
+										padding-right: 0;
+										@include letter-spacing(-25, 18);
+										@include transition(all 0.3s ease);
+									}
+
+									&.active, &:hover, &:focus {
+
+										> a {
+											color: $secondary;
+										}
+									} 
+								}
+							}
+
+							&.active {
+
+								.dropdown-menu {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/***********************************
+HOME STYLES
+***********************************/
+
+/***********************************
+FOOTER STYLES
+***********************************/
+.call-action {
+	padding: 100px 0 150px;
+
+	.mb-30 {
+		margin-bottom: -30px;
+	}
+
+	&__item {
+		overflow: hidden;
+		position: relative;	
+		margin-bottom: 30px;
+		border-radius: 24px;
+		height: calc(100% - 30px);
+		background: linear-gradient(104deg, #ffe0f5 0%, #cad1fc 49.75%, #d1f7ff 100%);
+
+		&.list-how  {
+
+			.call-action__item-text {
+				padding: 100px 60px;
+			}
+		}
+
+		&:any-link {
+
+			&:hover {
+
+				.call-action__item {
+
+					&-media {
+
+						img {
+							@include transform(scale(1.2));
+						}
+					}
+
+					&-text {
+
+						.link { 
+							color: $secondary;
+
+	 						i {
+								@include transform(translate(20px, 0)); 
+			 				} 
+						}
+					}
+				}
+			} 
+		}
+
+		&.left-image {
+
+			.call-action__item-media {
+				bottom: -80px;
+				top: inherit;
+				left: -350px;
+				right: inherit;
+			}
+		}
+
+		&-media {	
+			top: -120px; 
+			right: -325px;
+			position: absolute;	
+
+			img { 
+				@include transition(all .3s ease); 
+			}
+		}
+
+		&-text {
+			z-index: 1;	
+			position: relative;
+			padding: 60px 38px 60px 60px;
+
+			.sub-title { 
+				background: linear-gradient(111deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+				-webkit-text-fill-color: transparent;
+    			-webkit-background-clip: text;
+				width: fit-content;
+			}
+
+			.title { 
+				margin-bottom: 10px;	 
+			}
+
+			.link {  	
+				font-weight: 600; 	 
+				@include transition(all .3s ease);
+
+				i {
+					font-size: 13px;	
+					margin-left: 10px;	
+					display: inline-block;
+					@include transition(all .3s ease);
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	z-index: 1;
+	overflow: hidden;
+	position: relative;  
+	background: $primary;
+	padding: 100px 0 120px; 
+
+	.max-918 {
+		max-width: 918px;
+	}
+
+	.mb-20 {
+		margin-bottom: -20px;
+	}
+
+	&__logo { 
+		margin-left: 27px;
+
+		a {
+			display: block;
+		}
+	}
+
+	&__top {
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid #19D3C5;
+		
+		&-menu {  
+			padding: 0;
+			margin: -4px -18.28px; 
+
+			li {  
+				display: inline-block;
+				margin: 4px 18.28px; 
+
+				a { 
+					color: $white;
+					font-size: 18px;
+					font-weight: 500;
+					line-height: 26px;
+					font-family: $stl;
+					@include letter-spacing(-30, 18);
+					@include transition(all .3s ease);
+
+					&:any-link {
+
+						&:hover, &:focus {
+							color: $secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__widget {
+		gap: 40px 20px;  
+
+
+		&-menu {
+			margin: 0;
+
+			&:first-child {
+				max-width: 278px;
+			}
+			
+			li {
+				line-height: 0;
+				margin-bottom: 8px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+				
+				a {
+					color: $white; 
+					font-size: 16px;
+					line-height: 26px; 
+					@include transition(all .3s ease);
+
+					&:any-link {
+
+						&:hover, &:focus {
+							color: $secondary;
+						}
+					}
+				}
+
+				&.title {
+
+					a {
+						font-size: 18px;
+						font-weight: 500;
+						line-height: 26px;
+						font-family: $stl;
+						@include letter-spacing(-30, 18);
+					}
+				}
+			}
+		} 
+	}
+
+	&-bottom {
+		gap: 30px 20px;
+		max-width: 747px;
+		padding-top: 60px;
+
+		&__social-media {
+			margin: -7px;
+			font-size: 0;
+			line-height: 0;
+			padding-left: 0;
+			margin-bottom: 0; 
+
+			li { 
+				padding: 7px; 
+				display: inline-block;
+
+				a {
+					width: 36px;
+					height: 36px;
+					color: #FF671C; 
+					display: block;
+					text-align: center;
+					background: $white;
+					align-items: center;  
+					border-radius: 500px;
+					font: 400 15px/36px $pts;
+					@include transition(all 0.3s ease);
+
+					&:hover {
+						color: $white;
+						background: $secondary; 
+						@include transform(translateY(-3px));
+					} 
+				}
+			}
+		}
+
+		&__copyright {
+			color: $white;
+			font-size: 14px;
+			line-height: 20px; 
+
+			&-item {
+				margin: 0;
+				padding: 0;   
+
+				li {
+					padding-left: 25px;
+					position: relative;
+					display: inline-block;
+
+					&:after {
+						top: 50%;
+						width: 5px;
+						height: 5px;
+						left: 10px;
+						content: "";
+						overflow: hidden;
+						position: absolute;
+						border-radius: 500px;
+						background: #98E6D8;
+						@include transform(translate(0, -50%));
+					}
+
+					a {
+						color: $white;
+						text-decoration: underline;
+						@include transition(all 0.3s ease);
+
+						&:any-link {
+
+							&:hover, &:focus {
+								color: $secondary;
+								text-decoration: none;
+							}
+						}
+					} 
+				}
+			}
+		}
+	}
+}
+
+/***********************************
+DEFAULT STYLES
+***********************************/
+.default-page {
+	padding: 80px 0;
+}
+
+.content-editor {
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		margin-bottom: 15px;
+	}
+
+	p {
+		margin: 0 0 30px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		a:not(.btn) {
+			color: $primary; 
+			text-decoration: underline;
+			@include transition(all 0.3s ease);
+
+			&:hover, &:focus {
+				color: $secondary;
+			}
+		}
+	}
+
+	.btn {
+		margin-bottom: 20px;
+	}
+
+	a:not(.btn) {
+
+		&:hover, &:focus {
+			color: $secondary;
+		}
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			padding-left: 15px;
+			position: relative;
+
+			&:before {
+				left: 0;
+				content: "•";
+				position: absolute;
+			}
+
+			ul {
+				margin-top: 15px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	ol {
+		list-style: none;
+		counter-reset: section;
+
+		li {
+			position: relative;
+
+			&:before {
+				counter-increment: section; 
+				content: counters(section, ".") ". ";
+			}
+
+			ol {
+				margin-left: 0;
+				margin-top: 20px;
+				margin-bottom: 20px;
+
+				li {
+					padding-left: 35px;
+
+					ol {
+
+						li {
+							padding-left: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ul, ol {
+		padding: revert;
+		margin-bottom: 30px;
+
+		&.list-unstyled {
+			padding: 0;
+			list-style: none;
+
+			li {
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+	}
+}
+ 
+@import 'responsive';
