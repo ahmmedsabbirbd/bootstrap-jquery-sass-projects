@@ -252,8 +252,8 @@ HEADER STYLES
 }
 
 .header-gutter {
-	height: 196px;
-	min-height: 196px;
+	height: 149px;
+	min-height: 149px;
 }
 
 .header {
@@ -275,6 +275,10 @@ HEADER STYLES
 
 		.navbar {
 			padding: 20px 0;
+
+			.navbar-collapse .navbar-nav > li.btn-menu > a { 
+			    box-shadow: 0px 15px 24px rgb(0 0 0 / 16%);
+			}
 		}  
 	}
 	
@@ -309,7 +313,7 @@ HEADER STYLES
 
 			.navbar-nav {
 				margin-left: -11px;
-				margin-right: -10px;
+				margin-right: -11px;
 				align-items: center;
 
 				> li {
@@ -318,18 +322,17 @@ HEADER STYLES
 					@include transition(all .3s ease);
 
 					> a {
-						color: $black;  
 						display: block;
-						font-size: 18px; 
+						font-size: 16px; 
+						color: $primary; 
 						font-weight: 600;
-						line-height: 26px; 
-						@include letter-spacing(-25, 18);
+						line-height: 24px; 
+						font-family: $stl; 
+						@include letter-spacing(-25, 16);
 						@include transition(all 0.3s ease);
 					}
 
-					&.btn-menu {
-						margin-left: 10px;
-						margin-right: 10px;
+					&.btn-menu { 
 
 						> a {
 							color: $white;
@@ -346,81 +349,51 @@ HEADER STYLES
 
 							> a {
 								color: $white;
-								background: $secondary;
+								background: $primary;
 							}
 						}
-					}
 
-					&.btn-user {
+						&.btn-user {
 
-						a { 
-							background: $primary;
+							a {
+								padding: 0;
+								width: 50px;
+								height: 50px;
+								font-size: 18px;
+								background: $primary;
+
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+
+							&.active, &:hover, &:focus {
+
+								> a { 
+									background: $secondary;
+								}
+							}
 						}
+							
 					}
+
 
 					&.active, &:hover, &:focus {
 
 						> a { 
-							color: $primary; 
+							color: $secondary; 
 						}
-					}
-
-					&.dropdown {
-
-						&:hover {
-
-							.dropdown-menu {
-								top: 100%;
-								opacity: 1;
-								visibility: visible;
-							}
-						}
-					}
-
-					.dropdown-menu {
-					    left: 0;
-					    top: 120%;
-					    margin: 0;
-						opacity: 0;
-					    padding: 0;
-						display: block;
-						min-width: 12rem;
-					    list-style: none;
-					    border-radius: 4px;
-					    position: absolute;
-					    visibility: hidden;
-					    background-color: $white;
-					    box-shadow: 0px 12px 24px rgb(0 0 0 / 16%);
-					    @include transition(all 0.5s ease);
-
-					    > li {
-
-					    	> a {
-					    		color: $black;  
-								display: block;
-								font-size: 18px; 
-								font-weight: 600;
-								line-height: 26px;
-								// font-family: $pop;
-								padding: 7.5px 15px;
-								@include letter-spacing(-25, 18);
-								@include transition(all 0.3s ease);
-					    	}
-
-					    	&.active, &:hover, &:focus {
-
-					    		> a { 
-					    			color: $primary; 
-					    		}
-					    	}
-					    }
 					}
 				}
 
 				&.navbar-right {
-					padding-left: 20px; 
+					margin-left: -5px;
+					margin-right: -5px;
+					padding-left: 18px; 
 
 					li { 
+						margin-left: 5px;
+						margin-right: 5px;
 
 						&.mobile-navbar-toggler {
 							display: none;
@@ -508,7 +481,7 @@ HEADER STYLES
     overflow-y: auto;
     background: $white;
     overflow-x: hidden;
-    box-shadow: 0px 0px 6px rgba($black, 0.3);
+    box-shadow: 0px 0px 6px rgba($primary, 0.3);
 
     &.right {
 	    left: auto;
@@ -528,7 +501,7 @@ HEADER STYLES
 			.navbar-header {
 				float: none;
 				padding: 20px 15px;
-				border-bottom: 1px solid rgba($black, 0.2);
+				border-bottom: 1px solid rgba($primary, 0.2);
 
 				.navbar-brand {
 					padding: 0;
@@ -550,16 +523,16 @@ HEADER STYLES
 						width: 100%;
 						display: block;
 						padding: 12px 15px;
-						border-bottom: 1px solid rgba($black, 0.2); 
+						border-bottom: 1px solid rgba($primary, 0.2); 
 
 						> a {
-							color: $black;
-							display: block;  
-							font-size: 18px; 
+							display: block;
+							font-size: 16px; 
+							color: $primary; 
 							font-weight: 600;
-							line-height: 26px;
-							// font-family: $pop;
-							@include letter-spacing(-25, 18);
+							line-height: 24px; 
+							font-family: $stl; 
+							@include letter-spacing(-25, 16);
 							@include transition(all 0.3s ease);
 						} 
 
@@ -575,102 +548,19 @@ HEADER STYLES
 
 							> a {
 								color: $white;
-								padding: 15px;
+								font-weight: 500;
+								font-family: $stl;
 								text-align: center;
-								@include border-radius(500px);
-								background: linear-gradient(60deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+								padding: 13px 20.3px;
+								background: $secondary;
+								@include border-radius(500px); 
 
 								&.active, &:hover, &:focus { 
 									color: $white;
-									background: $secondary; 
+									background: $primary; 
 								}
 							}
-
-							&.border-green, &.border-pink {
-								
-								> a {
-									color: #000;
-									padding: 13px 15px;
-								}
-							}
-						}
-
-						&.border-green {
-							
-							> a {
-								background: transparent;
-								border: 2px solid #2C8AFC;
-
-								&.active, &:hover, &:focus { 
-									background: #2C8AFC; 
-								}
-							}
-
-						}
-
-						&.border-pink {
-							
-							> a {
-								background: transparent;
-								border: 2px solid #B156F5;
-								
-								&.active, &:hover, &:focus { 
-									background: #B156F5;  
-								}
-							}
-						}
-
-						&.dropdown {
-
-							> a {
-								display: flex;
-								justify-content: space-between;
-
-								.dropdown-toggle {
-								    width: 40px;
-								    height: 30px;
-								    display: flex;
-								    align-items: center;
-								    justify-content: center;
-								}
-							}
-
-							.dropdown-menu {
-								border: 0;
-								border-radius: 0;
-								@include transition(all 0.5s ease);
-
-								> li {
-
-									> a {
-										color: $black;
-										display: block;  
-										font-size: 18px; 
-										font-weight: 600;
-										line-height: 26px;
-										// font-family: $pop;
-										padding: 7.5px 15px;
-										padding-right: 0;
-										@include letter-spacing(-25, 18);
-										@include transition(all 0.3s ease);
-									}
-
-									&.active, &:hover, &:focus {
-
-										> a {
-											color: $secondary;
-										}
-									} 
-								}
-							}
-
-							&.active {
-
-								.dropdown-menu {
-									display: block;
-								}
-							}
-						}
+						} 
 					}
 				}
 			}

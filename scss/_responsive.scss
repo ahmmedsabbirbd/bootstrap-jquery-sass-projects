@@ -13,17 +13,6 @@ MEDIA QUERIES
     /***********************************
     HOME STYLES
     ***********************************/
-    .header-gutter {
-        height: 165px;
-        min-height: 165px;
-    }
-
-    .header {
-
-        .navbar {
-            padding: 60px 0 45px;
-        }
-    }
 
 }/* 1460 */
 
@@ -50,32 +39,13 @@ MEDIA QUERIES
     /***********************************
     HEADER STYLES
     ***********************************/ 
-    .header-gutter {
-        height: 140px;
-        min-height: 140px;
-    }
-
     .header {  
 
-        .navbar {
-            padding: 40px 0;
+        .navbar { 
 
             .navbar-collapse {
 
                 .navbar-nav {
-
-                    &:not(.navbar-right) {
-
-                        > li {
-
-                            &:not(.btn-menu) {
-
-                                &:nth-last-child(2) {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }   
 
                     &.navbar-right {
 
@@ -114,34 +84,6 @@ MEDIA QUERIES
 
 }/* 1199 */ 
 
-@media only screen and (max-width: 1080px) {
-
-    .header { 
-
-        .navbar {  
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    &:not(.navbar-right) {
-
-                        > li {
-
-                            &:not(.btn-menu) {
-
-                                &:nth-last-child(3) {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }    
-                }
-            }
-        }
-    }
-
-} /* 1080 */
 
 @media only screen and (max-width: 991px) { 
  
@@ -152,8 +94,8 @@ MEDIA QUERIES
     HEADER STYLES
     ***********************************/
     .header-gutter {
-        height: 120px;
-        min-height: 120px;
+        height: 129px;
+        min-height: 129px;
     }
 
     .header { 
@@ -163,13 +105,19 @@ MEDIA QUERIES
 
             .navbar-collapse {
 
-                .navbar-nav {
-                    margin-left: -10px;
-                    margin-right: -10px;
+                .navbar-nav { 
 
-                    > li {
-                        margin-left: 10px;
-                        margin-right: 10px; 
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(1) {
+                                    display: none;
+                                }
+                            }
+                        }
                     }  
                 }
             }
@@ -208,7 +156,7 @@ MEDIA QUERIES
 
                             &:not(.btn-menu) {
 
-                                &:nth-last-child(4) {
+                                &:nth-last-child(2) {
                                     display: none;
                                 }
                             }
@@ -220,38 +168,6 @@ MEDIA QUERIES
     }
 
 }/* 920 */
-
-@media only screen and (max-width: 790px) {
-
-    /***********************************
-    HEADER STYLES
-    ***********************************/
-    .header {  
-
-        .navbar {  
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    &:not(.navbar-right) {
-
-                        > li {
-
-                            &:not(.btn-menu) {
-
-                                &:nth-last-child(5) {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }  
-                }
-            }
-        }
-    }
-
-}/* 790 */
 
 @media only screen and (max-width: 767px) {
  
@@ -272,41 +188,27 @@ MEDIA QUERIES
                     > li {
                         
                         > a {
-                            font-size: 16px;
-                            line-height: 24px;
+                            font-size: 14px;
+                            line-height: 22px;
                             @include letter-spacing(-25, 16);
                         }
 
                         &.btn-menu {
                             
                             > a {
-                                padding: 5px 14px;
+                                padding: 9px 18px;
                             }
 
-                            &.border-green, &.border-pink {
+                            &.btn-user {
                                  
                                 > a {
-                                    padding: 3px 14px;
+                                    width: 40px;
+                                    height: 40px;
+                                    font-size: 15px;
                                 }
                             }
                         }
                     }    
-                }
-            }
-        }
-    }
-
-    .sidr {
-
-        .sidr-inner {
-
-            .mobile-header {
-
-                .navbar-header {
-
-                    .navbar-brand { 
-                        max-width: 120px; 
-                    }
                 }
             }
         }
@@ -347,7 +249,39 @@ MEDIA QUERIES
    
 }/* 767 */ 
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 720px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {  
+
+        .navbar {  
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-right) {
+
+                        > li {
+
+                            &:not(.btn-menu) {
+
+                                &:nth-last-child(3) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+
+}/* 720 */
+
+@media only screen and (max-width: 600px) {
 
     /***********************************
     HEADER STYLES
@@ -371,7 +305,7 @@ MEDIA QUERIES
         }
     }
 
-} /* 630 */
+} /* 600 */
 
 @media only screen and (max-width: 575px) {
  
@@ -386,6 +320,28 @@ MEDIA QUERIES
 
         &.btn-border {
             padding: 8px 16px;
+        }
+    }
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header-gutter {
+        height: 106px;
+        min-height: 106px;
+    }
+
+    .header {  
+
+        .navbar {
+            padding: 25px 0;   
+
+            .navbar-header {
+
+                .navbar-brand {
+                    max-width: 180px;
+                }
+            } 
         }
     }
 
@@ -448,55 +404,33 @@ MEDIA QUERIES
 
 @media only screen and (max-width: 480px) {
 
-
     /***********************************
     HEADER STYLES
     ***********************************/
     .header-gutter {
-        height: 102px;
-        min-height: 102px;
+        height: 97px;
+        min-height: 97px;
     }
 
     .header {  
 
-        .navbar {  
+        .navbar {
 
-            .navbar-header {
-
-                .navbar-brand {
-                    max-width: 135px;
-                }
-            }
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    > li { 
-
-                        &:nth-last-child(2) {
-                            display: none;
-                        } 
-                    }
-                }
+            .navbar-header .navbar-brand {
+                max-width: 150px;
             }
         }
     }
-
-   /***********************************
-    HOME STYLES
-    ***********************************/ 
     
 } /* 480 */
-
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 440px) {
 
     /***********************************
     HEADER STYLES
     ***********************************/
     .header {  
 
-        .navbar {   
+        .navbar {
 
             .navbar-collapse {
 
@@ -504,17 +438,13 @@ MEDIA QUERIES
 
                     > li { 
 
-                        &:nth-last-child(2) {
+                        &:not(:nth-last-child(2)) {
                             display: none;
                         } 
                     }
                 }
             }
         }
-    }
+    } 
     
-}/* 420 */ 
-
-@media only screen and (max-width: 380px) {
-    
-}/* 380 */ 
+} /* 440 */

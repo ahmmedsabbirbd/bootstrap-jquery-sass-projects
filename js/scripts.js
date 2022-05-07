@@ -58,14 +58,13 @@
         renaming: false,
     });
 
-    $('.navbar-toggle.in').on('click', function(){
+    $('.navbar-toggle').on('click', function(){
         $.sidr('close', 'sidr-main');
     });
 
     $(window).scroll(function(){
         if($("body").scrollTop() > 0 || $("html").scrollTop() > 0) {
-           $.sidr('close', 'sidr');
-           $('.navbar-toggler').removeClass('in');
+           $.sidr('close', 'sidr-main'); 
         }
     });
 
