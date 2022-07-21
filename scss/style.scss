@@ -169,8 +169,8 @@ HOME STYLES
 				position: absolute;
 				background-size: contain;
 				background-repeat: no-repeat;
-				@include transform(translate(-50%, -50%));
-				background-image: url("images/border-dash.svg");
+				@include transform(translate(-50%, -50%)); 
+				background-image: url("data:image/svg+xml,%3Csvg width='810' height='488' viewBox='0 0 810 488' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='809' height='487' rx='243.5' stroke='%23008C96' stroke-dasharray='8 8'/%3E%3C/svg%3E%0A");
 			}
 
 			li {
