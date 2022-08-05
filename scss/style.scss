@@ -1,0 +1,337 @@
+/*
+Theme Name: teacher
+Author: ahmmedsabbirbd
+Author URI: https://sabbir-me.netlify.app
+Version: 1.0.0
+Text Domain: ahmmedsabbirbd
+*/
+
+/***********************************
+BASE STYLES
+***********************************/
+
+// COLORS
+$white:#FFF;
+$black:#000;   
+$primary:#662D91;   
+
+// FONT SIZE	
+$mon: 'Montserrat', sans-serif;
+
+// MIXIN
+@import 'mixin';
+
+@import 'base';
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	color: $black;
+	background: $white;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+    font: 400 15px/26px $mon; 
+}
+ 
+h1, .h1 { font-size: 60px;	line-height: 80px; }
+h2, .h2 { font-size: 50px;	line-height: 61px; }
+h3, .h3 { font-size: 36px;	line-height: 43px; }
+h4, .h4 { font-size: 28px;	line-height: 35px; }
+h5, .h5 { font-size: 22px;	line-height: 27px; } 
+h6, .h6 { font-size: 17px;	line-height: 21px; } 
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+	font-weight: 700; 
+	font-family: $mon;
+}
+
+a, button {
+
+	&:hover, &:focus {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	border-width: 2px;
+	border-color: #945ACB;
+}
+
+section {
+	padding: 40px 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 575px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+input[type="text"]:not(.select2-input),
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="file"],
+select, textarea {
+	@include appearance;
+	width: 100% !important;
+	color: #495057 !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	box-shadow: none !important;
+	line-height: 23px !important; 
+	background: $white !important;
+	padding: 6px 12px !important;
+	border: 1px solid #ced4da !important;
+	@include border-radius(5px !important);
+	@include transition(all 0.3s ease);
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    box-shadow: 0 !important;
+    @include placeholderWithlettertraking(#ced4da, 15px, 23px, 0, 400);
+
+
+	&:hover, &:focus {
+		outline: 0;
+	}
+
+	&:focus {  
+		border: 2px solid #662d91 !important;
+		box-shadow: 0 0 5px rgb(0 0 0 / 30%) !important;
+	}
+}
+
+.btn {
+	border: 0;
+	outline: 0; 
+	color: $white; 
+	overflow: hidden;
+	font-size: 16px;
+	box-shadow: none; 
+	font-family: $mon; 
+	line-height: 25px;
+	padding: 10.5px 84.2px; 
+	background-color: #8CC63F;
+	@include border-radius(0);
+	@include transition(all .3s ease);
+
+	&:hover, &:focus {
+		outline: 0;  
+		color: $white; 
+		box-shadow: none;
+		background-color: $primary;
+	}
+} 
+
+.content-area {
+	overflow: hidden;
+}
+
+/***********************************
+HEADER STYLES
+***********************************/
+.scroll-down {
+
+	.header {
+
+		&:not(.sticky) {
+	    	@include transform(translate3d(0, -100%, 0));
+		}
+	}
+}
+
+.header-gutter {
+	height: 119px;
+	min-height: 119px;
+}
+
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1030;
+	position: fixed;
+	background: #F9FAFC; 
+	@include transition(all 0.3s ease);
+	filter: drop-shadow(0 0 2px rgb(0 0 0 / 20%));
+
+	&.transparent {
+		background: transparent;
+	}
+
+	&.stop {
+		background:  #F9FAFC;
+
+		.navbar {
+			padding: 20px 0;
+		}
+	}
+	
+	.navbar {
+		margin: 0;
+		padding: 25px 0;
+		background-color: transparent;
+		@include transition(all .3s ease);
+
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.navbar-header {
+
+			.navbar-brand {
+				padding: 0;
+				display: block;
+				margin-right: 0;  
+				overflow: hidden;
+				max-width: 100px;
+			}
+		}
+
+		.navbar-collapse {
+			flex-grow: initial;
+
+			.navbar-nav {
+				margin-left: -10px;
+				margin-right: -10px;
+				align-items: center;
+
+				> li {
+					margin-left: 10px;
+					margin-right: 10px;
+
+					> a {
+						color: $black;  
+						display: block;
+						font-size: 16px; 
+						line-height: 19px;
+						font-family: $mon;
+						position: relative;
+						@include transition(all 0.3s ease);
+
+						&:before {
+							left: 0;
+							bottom: 0;
+							width: 100%;
+							content: "";
+							background: $black;
+							position: absolute;
+							@include transition(all 0.25s ease);
+						}
+					}
+
+					&.active, &:hover, &:focus {
+
+						> a:any-link { 
+
+							&:before {
+								height: 4px;
+								bottom: -8px;
+							}
+						}
+					} 
+				}
+			}
+		}
+	}
+}
+
+/***********************************
+HOME STYLES
+***********************************/
+.bataon {
+	padding: 40px 0;
+	overflow: hidden;
+
+	.slick-dotted.slick-slider {
+	    margin-bottom: 0;
+	}
+
+	&__item {
+		min-height: 210px;
+		padding: 20px 10px;
+ 
+		&-media {
+			width: 76px;
+			padding: 5px;
+			height: 76px;
+			display: inline-flex;
+			background-color: $white;
+			@include border-radius(500px);
+
+			&-wrapper {
+				padding: 5px;
+				margin-bottom: 10px;
+				display: inline-flex;
+				border: 7px solid $white;
+				@include border-radius(500px);
+			}
+		}
+
+		&-text {
+
+			.title {
+				color: $white;
+				margin-bottom: 5px;
+			}
+
+			.sub-title {
+				color: $white;
+			}
+		}
+	}
+}
+
+.login {
+	padding: 40px 0;
+
+	&__form {
+
+		.form-group {
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			margin-top: 10px;
+		}
+
+		.forget-password {
+			color: #707583;
+			margin-top: 10px;
+			@include transition(all .3s ease);
+
+			&:hover {
+				color: $primary;
+			}
+		}
+
+		p {
+			color: #707583;
+
+			a {
+				color: #662d91;
+
+				&:hover {
+					color: #8CC63F;
+				}
+			}
+		}
+	}
+}
+
+@import 'responsive';
