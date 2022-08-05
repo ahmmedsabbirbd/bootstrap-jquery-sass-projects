@@ -392,6 +392,7 @@ input[type=search],
 input[type=password],
 input[type=file],
 select, textarea {
+  min-height: 39px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -709,6 +710,37 @@ HOME STYLES
 .login__form .form-group {
   margin-bottom: 10px;
 }
+.login__form .form-group-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login__form .form-group-number label {
+  height: 100%;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-right: 0 !important;
+  padding: 5.5px 12px !important;
+  border-radius: 5px !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.login__form .form-group-number input {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.login__form .form-group .custom-select {
+  vertical-align: middle;
+  padding-right: 28px !important;
+  background: url(images/svg/option.svg) no-repeat right 0.75rem center/8px 10px !important;
+}
 .login__form .btn {
   margin-top: 10px;
 }
@@ -726,6 +758,8 @@ HOME STYLES
 }
 .login__form p a {
   color: #662d91;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .login__form p a:hover {
   color: #8CC63F;

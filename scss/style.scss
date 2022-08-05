@@ -85,6 +85,7 @@ input[type="search"],
 input[type="password"],
 input[type="file"],
 select, textarea {
+    min-height: 39px;
 	@include appearance;
 	width: 100% !important;
 	color: #495057 !important;
@@ -304,6 +305,33 @@ HOME STYLES
 
 		.form-group {
 			margin-bottom: 10px;
+
+			&-number {
+				display: flex;
+				align-items: center;
+
+				label {
+					height: 100%;
+					background-color: #e9ecef;
+					border: 1px solid #ced4da;
+					border-right: 0 !important;
+					padding: 5.5px 12px !important;
+					@include border-radius(5px !important);
+					border-top-right-radius: 0 !important;
+					border-bottom-right-radius: 0 !important;
+				}
+
+				input {
+					border-top-left-radius: 0 !important;
+					border-bottom-left-radius: 0 !important;
+				}
+			}
+
+			.custom-select {
+				vertical-align: middle;
+				padding-right: 28px !important;
+				background: url(images/svg/option.svg) no-repeat right 0.75rem center/8px 10px !important;
+			}
 		}
 
 		.btn {
@@ -325,6 +353,7 @@ HOME STYLES
 
 			a {
 				color: #662d91;
+				@include transition(all .3s ease);
 
 				&:hover {
 					color: #8CC63F;
