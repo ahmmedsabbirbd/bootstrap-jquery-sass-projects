@@ -1,0 +1,41 @@
+/***********************************
+Template: Mardana
+Author: https://themeforest.net/user/ahmmedsabbirbd
+Author URI: https://themeforest.net/user/ahmmedsabbirbd
+Description: Mardana
+Version: 1.0.0
+***********************************/
+
+// BASIC
+@import 'basic';
+
+// MIXIN
+@import 'variables';
+
+// TYPOGRAPHY
+@import 'typography';
+
+// ANIMATION
+@import 'animation';
+
+// Page Load Animation 
+@import 'pageLoadAnimation';
+
+// Button 
+@import 'btn';
+
+/***********************************
+    Template Section Styles
+***********************************/
+
+// HEADER 
+@import 'header';
+
+// BANNER
+@import 'banner';
+
+// HOME
+@import 'home-page';
+
+// FOOTER 
+@import 'footer';

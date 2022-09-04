@@ -1,0 +1,108 @@
+/***********************************
+   Template Default Button, Input
+***********************************/
+.btn {
+    border: 0;
+    z-index: 1;
+    outline: 0;
+    color: $white;
+    font-size: 22px;
+    box-shadow: none; 
+    overflow: hidden;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 14px 52px;
+    position: relative;
+    @include border-radius(60px);
+    background-color: transparent;
+    @include transition(all .3s ease);
+    -webkit-text-stroke: .5px rgba(15, 141, 191, 0.43);
+
+    @media (max-width: 1199px) {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 12px 40px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 10px 30px;
+    }
+
+    &:after, &:before {
+        top: 0;
+        width: 50%;
+        content: "";
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        @include transition(all .3s ease);
+    }
+
+    &:after {
+        left: 0;
+        background-color: rgba(15, 141, 191, 0.58);
+    }
+
+    &:before {
+        right: 0;
+        background-color: rgba(15, 141, 191, 0.35);
+    }
+
+    &:hover, &:focus {
+        outline: 0;
+        color: $black;
+        box-shadow: none;
+        text-decoration: none;
+
+        &:after, &:before {
+            width: 100%;
+        }
+    }
+}
+
+
+input[type="text"]:not(.select2-input),
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="file"],
+select, textarea {
+    width: 100% !important;
+    color: $black !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    box-shadow: none !important;
+    line-height: 32px !important;
+    padding: 41.5px 30px !important;
+    @include transition(all 0.3s ease);
+    background-color: $white !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border: 2px solid $primary !important;
+    @include border-radius(10px !important);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    @include placeholder($textcolor, 22px, 400);
+
+    @media (max-width: 1199px) {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 36px 25px !important;
+        @include placeholder($textcolor, 20px, 400);
+    }
+
+    @media (max-width: 1199px) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 30px 20px !important;
+        @include placeholder($textcolor, 18px, 400);
+    }
+
+    &:hover, &:focus {
+        outline: 0;
+    }
+}
