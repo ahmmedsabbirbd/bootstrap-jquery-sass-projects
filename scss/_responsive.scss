@@ -1,0 +1,157 @@
+/***********************************
+MEDIA QUERIES
+***********************************/ 
+@media only screen and (max-width: 1700px) { 
+
+    /***********************************
+    HOMES STYLES
+    ***********************************/
+  
+}/* 1700 */
+
+@media only screen and (max-width: 1460px) {
+
+    .entry-title {
+
+        .sub-title { 
+            margin-bottom: 10px;
+        }
+    }
+
+    /***********************************
+    HOMES STYLES
+    ***********************************/
+    
+ 
+
+}/* 1460 */
+
+@media only screen and (max-width: 1366px) {
+
+    /***********************************
+    HOMES STYLES
+    ***********************************/
+   
+
+} /* 1366 */
+
+@media only screen and (max-width: 1199px) {
+
+    .entry-title {
+
+        .sub-title { 
+            margin-bottom: 5px;
+        }
+    } 
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+   
+    
+
+}/* 1199 */ 
+
+@media only screen and (max-width: 991px) {
+
+    h1, .h1 { font-size: 50px;  line-height: 61px; }
+    h2, .h2 { font-size: 42px;  line-height: 53px; } 
+
+    .btn {
+        padding: 14px 30px;
+    }
+
+    input[type="text"]:not(.select2-input),
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="search"],
+    input[type="password"],
+    input[type="file"],
+    select, textarea {    
+        padding: 13px 20px !important;
+    }
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+   
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    
+
+}/* 991 */
+
+@media only screen and (max-width: 767px) { 
+
+    h1, .h1 { font-size: 42px;  line-height: 53px; }
+    h2, .h2 { font-size: 36px;  line-height: 43px; }
+    h3, .h3 { font-size: 32px;  line-height: 39px; }
+    h4, .h4 { font-size: 26px;  line-height: 34px; } 
+
+    .btn {
+        padding: 10px 22px;
+    }
+
+    .entry-title {
+
+        .sub-title { 
+            margin-bottom: 0;
+        }
+    }
+
+    input[type="text"]:not(.select2-input),
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="search"],
+    input[type="password"],
+    input[type="file"],
+    select, textarea {    
+        padding: 10px 15px !important;
+    }
+
+    #scrollToTop {
+        width: 35px;
+        right: 10px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    
+   
+}/* 767 */ 
+
+@media only screen and (max-width: 575px) { 
+
+    h1, .h1 { font-size: 36px;  line-height: 43px; }
+    h2, .h2 { font-size: 32px;  line-height: 39px; }
+    h3, .h3 { font-size: 26px;  line-height: 34px; }
+    h4, .h4 { font-size: 22px;  line-height: 27px; }
+    h5, .h5 { font-size: 20px;  line-height: 25px; } 
+
+    .btn {
+        padding: 7px 15px;
+    }
+
+    /***********************************
+    HOME STYLES
+    ***********************************/
+    
+
+}/* 575 */
+
+@media only screen and (max-width: 480px) {
+
+    h1, .h1 { font-size: 32px;  line-height: 39px; }
+    h2, .h2 { font-size: 28px;  line-height: 35px; }
+    h3, .h3 { font-size: 24px;  line-height: 32px; }
+
+     
+
+} /* 480 */
